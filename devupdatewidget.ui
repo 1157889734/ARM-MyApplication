@@ -21,7 +21,7 @@
     <rect>
      <x>350</x>
      <y>520</y>
-     <width>203</width>
+     <width>206</width>
      <height>102</height>
     </rect>
    </property>
@@ -32,7 +32,10 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/monres/bitmap19.bmp);}
+background-image: url(:/monres/bitmap19.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
@@ -113,10 +116,10 @@ background-color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="trainTypeSetPushButton">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>340</x>
      <y>45</y>
-     <width>110</width>
-     <height>30</height>
+     <width>112</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -126,7 +129,10 @@ background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/monres/sure.bmp);}
+background-image: url(:/monres/sure.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
@@ -395,7 +401,7 @@ background-color: rgb(255, 255, 255);</string>
     <rect>
      <x>40</x>
      <y>40</y>
-     <width>944</width>
+     <width>91</width>
      <height>31</height>
     </rect>
    </property>
@@ -457,8 +463,8 @@ background-color: rgb(255, 255, 255);</string>
     <rect>
      <x>590</x>
      <y>570</y>
-     <width>80</width>
-     <height>34</height>
+     <width>82</width>
+     <height>36</height>
     </rect>
    </property>
    <property name="font">
@@ -468,7 +474,10 @@ background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/monres/alertoff.bmp);}
+background-image: url(:/monres/alertoff.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 
 QPushButton:pressed
@@ -507,8 +516,8 @@ QPushButton:pressed
     <rect>
      <x>760</x>
      <y>570</y>
-     <width>80</width>
-     <height>34</height>
+     <width>82</width>
+     <height>36</height>
     </rect>
    </property>
    <property name="font">
@@ -518,7 +527,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/monres/cancel.bmp);}
+background-image: url(:/monres/cancel.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
@@ -564,9 +576,9 @@ QPushButton:pressed
    <widget class="QLineEdit" name="configFileDisplayLineEdit">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>5</x>
       <y>310</y>
-      <width>311</width>
+      <width>121</width>
       <height>27</height>
      </rect>
     </property>
@@ -579,8 +591,8 @@ QPushButton:pressed
    <widget class="QLineEdit" name="brightnessLineEdit">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>300</y>
+      <x>580</x>
+      <y>270</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -597,8 +609,8 @@ QPushButton:pressed
    <widget class="QLabel" name="carriageLabel">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>264</y>
+      <x>520</x>
+      <y>244</y>
       <width>51</width>
       <height>17</height>
      </rect>
@@ -618,10 +630,10 @@ QPushButton:pressed
    <widget class="QPushButton" name="configFilelookPushButton">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>310</y>
-      <width>110</width>
-      <height>30</height>
+      <x>130</x>
+      <y>308</y>
+      <width>112</width>
+      <height>32</height>
      </rect>
     </property>
     <property name="font">
@@ -631,7 +643,10 @@ QPushButton:pressed
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-background-image: url(:/monres/browse.bmp);}
+background-image: url(:/monres/browse.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 
 QPushButton:pressed
@@ -647,8 +662,8 @@ QPushButton:pressed
     </property>
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>260</y>
+      <x>580</x>
+      <y>240</y>
       <width>121</width>
       <height>24</height>
      </rect>
@@ -682,7 +697,7 @@ QPushButton:pressed
     <property name="geometry">
      <rect>
       <x>800</x>
-      <y>260</y>
+      <y>240</y>
       <width>121</width>
       <height>24</height>
      </rect>
@@ -709,8 +724,8 @@ QPushButton:pressed
    <widget class="QLineEdit" name="contrastLineEdit">
     <property name="geometry">
      <rect>
-      <x>840</x>
-      <y>300</y>
+      <x>580</x>
+      <y>350</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -747,13 +762,16 @@ QPushButton:pressed
      <rect>
       <x>190</x>
       <y>140</y>
-      <width>135</width>
-      <height>37</height>
+      <width>137</width>
+      <height>39</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-background-image: url(:/monres/timing.bmp);}
+background-image: url(:/monres/timing.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
@@ -798,8 +816,8 @@ QPushButton:pressed
    <widget class="QLineEdit" name="saturationLineEdit">
     <property name="geometry">
      <rect>
-      <x>690</x>
-      <y>300</y>
+      <x>580</x>
+      <y>310</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -816,10 +834,10 @@ QPushButton:pressed
    <widget class="QPushButton" name="imageParamSetPushButton">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>700</x>
       <y>340</y>
-      <width>159</width>
-      <height>40</height>
+      <width>161</width>
+      <height>43</height>
      </rect>
     </property>
     <property name="font">
@@ -829,7 +847,10 @@ QPushButton:pressed
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-background-image: url(:/monres/settingconfig.bmp);}
+background-image: url(:/monres/settingconfig.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
@@ -841,8 +862,8 @@ QPushButton:pressed
    <widget class="QLabel" name="systimeAdjustLabel">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>100</y>
+      <x>260</x>
+      <y>110</y>
       <width>91</width>
       <height>21</height>
      </rect>
@@ -854,8 +875,8 @@ QPushButton:pressed
    <widget class="QLabel" name="saturationLabel">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>300</y>
+      <x>520</x>
+      <y>310</y>
       <width>52</width>
       <height>24</height>
      </rect>
@@ -875,8 +896,8 @@ QPushButton:pressed
    <widget class="QLabel" name="brightnessLabel">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>300</y>
+      <x>520</x>
+      <y>270</y>
       <width>51</width>
       <height>24</height>
      </rect>
@@ -898,8 +919,8 @@ QPushButton:pressed
      <rect>
       <x>810</x>
       <y>150</y>
-      <width>80</width>
-      <height>35</height>
+      <width>82</width>
+      <height>36</height>
      </rect>
     </property>
     <property name="font">
@@ -909,7 +930,10 @@ QPushButton:pressed
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-background-image: url(:/monres/restat.bmp);}
+background-image: url(:/monres/restat.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
@@ -921,7 +945,7 @@ QPushButton:pressed
    <widget class="QLabel" name="configFileSelectionLabel">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>280</y>
       <width>101</width>
       <height>17</height>
@@ -943,7 +967,7 @@ QPushButton:pressed
     <property name="geometry">
      <rect>
       <x>736</x>
-      <y>264</y>
+      <y>244</y>
       <width>61</width>
       <height>17</height>
      </rect>
@@ -958,8 +982,8 @@ QPushButton:pressed
    <widget class="QLabel" name="contrastLabel">
     <property name="geometry">
      <rect>
-      <x>780</x>
-      <y>300</y>
+      <x>520</x>
+      <y>350</y>
       <width>52</width>
       <height>24</height>
      </rect>
@@ -981,8 +1005,8 @@ QPushButton:pressed
      <rect>
       <x>50</x>
       <y>350</y>
-      <width>80</width>
-      <height>35</height>
+      <width>82</width>
+      <height>37</height>
      </rect>
     </property>
     <property name="font">
@@ -992,7 +1016,10 @@ QPushButton:pressed
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-background-image: url(:/monres/in.bmp);}
+background-image: url(:/monres/in.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
@@ -1004,9 +1031,9 @@ QPushButton:pressed
    <widget class="QLabel" name="sysDataAdjustLabel">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>100</y>
-      <width>161</width>
+      <x>110</x>
+      <y>110</y>
+      <width>131</width>
       <height>21</height>
      </rect>
     </property>
@@ -1080,8 +1107,8 @@ QPushButton:pressed
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>100</y>
+      <x>20</x>
+      <y>110</y>
       <width>67</width>
       <height>17</height>
      </rect>
@@ -1100,8 +1127,8 @@ QPushButton:pressed
      <rect>
       <x>550</x>
       <y>150</y>
-      <width>110</width>
-      <height>30</height>
+      <width>112</width>
+      <height>32</height>
      </rect>
     </property>
     <property name="font">
@@ -1111,7 +1138,10 @@ QPushButton:pressed
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-background-image: url(:/monres/kaishigegnxin.bmp);}
+background-image: url(:/monres/kaishigegnxin.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
@@ -1125,8 +1155,8 @@ QPushButton:pressed
      <rect>
       <x>300</x>
       <y>350</y>
-      <width>80</width>
-      <height>35</height>
+      <width>112</width>
+      <height>32</height>
      </rect>
     </property>
     <property name="font">
@@ -1136,8 +1166,11 @@ QPushButton:pressed
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-background-image: url(:/monres/restat.bmp);
-}
+background-image: url(:/monres/downlog.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
     </property>
@@ -1202,7 +1235,7 @@ background-color: rgb(172, 209, 178);</string>
      <rect>
       <x>0</x>
       <y>195</y>
-      <width>461</width>
+      <width>501</width>
       <height>201</height>
      </rect>
     </property>
@@ -1216,14 +1249,178 @@ background-color: rgb(172, 209, 178);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>510</x>
       <y>195</y>
-      <width>471</width>
+      <width>431</width>
       <height>201</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="configFileDisplayLineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>310</y>
+      <width>121</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>280</y>
+      <width>101</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>选择升级文件:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="configFilelookPushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>310</y>
+      <width>112</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-image: url(:/monres/browse.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
+
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>日期</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>时间</string>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="dateEdit">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>40</y>
+      <width>118</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="dateTime">
+     <datetime>
+      <hour>0</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>2021</year>
+      <month>8</month>
+      <day>1</day>
+     </datetime>
+    </property>
+    <property name="maximumTime">
+     <time>
+      <hour>23</hour>
+      <minute>59</minute>
+      <second>59</second>
+     </time>
+    </property>
+    <property name="displayFormat">
+     <string>yyyy-MM-dd</string>
+    </property>
+   </widget>
+   <widget class="QTimeEdit" name="timeEdit">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>70</y>
+      <width>118</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="dateTime">
+     <datetime>
+      <hour>10</hour>
+      <minute>3</minute>
+      <second>3</second>
+      <year>2000</year>
+      <month>1</month>
+      <day>1</day>
+     </datetime>
+    </property>
+    <property name="displayFormat">
+     <string>hh:mm:ss</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="timeSetPushButton">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>60</y>
+      <width>112</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-image: url(:/monres/sure.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
    <zorder>lineEdit_4</zorder>
@@ -1259,6 +1456,14 @@ background-color: rgb(172, 209, 178);</string>
    <zorder>clientRebootPushButton_2</zorder>
    <zorder>systimeAdjustLabel</zorder>
    <zorder>updateStatueTextEdit</zorder>
+   <zorder>configFileDisplayLineEdit_2</zorder>
+   <zorder>label_19</zorder>
+   <zorder>configFilelookPushButton_2</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_12</zorder>
+   <zorder>dateEdit</zorder>
+   <zorder>timeEdit</zorder>
+   <zorder>timeSetPushButton</zorder>
   </widget>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
@@ -1271,6 +1476,62 @@ background-color: rgb(172, 209, 178);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="PISSetcomboBox">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>45</y>
+     <width>181</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>40</y>
+     <width>67</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>PIS设置:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PISSetPushButton">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>45</y>
+     <width>112</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-image: url(:/monres/sure.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
    </property>
    <property name="text">
     <string/>
@@ -1301,6 +1562,9 @@ background-color: rgb(172, 209, 178);</string>
   <zorder>label_17</zorder>
   <zorder>permissonManagePushButton</zorder>
   <zorder>deviceManagewidget</zorder>
+  <zorder>PISSetcomboBox</zorder>
+  <zorder>label_10</zorder>
+  <zorder>PISSetPushButton</zorder>
  </widget>
  <resources/>
  <connections/>

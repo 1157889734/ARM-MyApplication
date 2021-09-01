@@ -12,11 +12,13 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
+#include <QtWidgets/QDateEdit>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QTextEdit>
+#include <QtWidgets/QTimeEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -81,7 +83,18 @@ public:
     QLineEdit *lineEdit_2;
     QLineEdit *lineEdit_3;
     QLineEdit *lineEdit_4;
+    QLineEdit *configFileDisplayLineEdit_2;
+    QLabel *label_19;
+    QPushButton *configFilelookPushButton_2;
+    QLabel *label_8;
+    QLabel *label_12;
+    QDateEdit *dateEdit;
+    QTimeEdit *timeEdit;
+    QPushButton *timeSetPushButton;
     QLabel *label_6;
+    QComboBox *PISSetcomboBox;
+    QLabel *label_10;
+    QPushButton *PISSetPushButton;
 
     void setupUi(QWidget *devUpdateWidget)
     {
@@ -91,12 +104,15 @@ public:
         devUpdateWidget->setStyleSheet(QString::fromUtf8(""));
         permissonManagePushButton = new QPushButton(devUpdateWidget);
         permissonManagePushButton->setObjectName(QString::fromUtf8("permissonManagePushButton"));
-        permissonManagePushButton->setGeometry(QRect(350, 520, 203, 102));
+        permissonManagePushButton->setGeometry(QRect(350, 520, 206, 102));
         QFont font;
         font.setPointSize(12);
         permissonManagePushButton->setFont(font);
         permissonManagePushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/bitmap19.bmp);}\n"
+"background-image: url(:/monres/bitmap19.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
@@ -123,10 +139,13 @@ public:
 " }"));
         trainTypeSetPushButton = new QPushButton(devUpdateWidget);
         trainTypeSetPushButton->setObjectName(QString::fromUtf8("trainTypeSetPushButton"));
-        trainTypeSetPushButton->setGeometry(QRect(390, 45, 110, 30));
+        trainTypeSetPushButton->setGeometry(QRect(340, 45, 112, 32));
         trainTypeSetPushButton->setFont(font);
         trainTypeSetPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/sure.bmp);}\n"
+"background-image: url(:/monres/sure.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
@@ -198,7 +217,7 @@ public:
         pollingTimeSetRadioButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         label = new QLabel(devUpdateWidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(40, 40, 944, 31));
+        label->setGeometry(QRect(40, 40, 91, 31));
         label->setFont(font);
         label->setStyleSheet(QString::fromUtf8(" #label { \n"
 "    background-color: rgb(255, 255, 255);\n"
@@ -217,10 +236,13 @@ public:
         presetReturnTimeSetLineEdit->setReadOnly(false);
         alarmPushButton = new QPushButton(devUpdateWidget);
         alarmPushButton->setObjectName(QString::fromUtf8("alarmPushButton"));
-        alarmPushButton->setGeometry(QRect(590, 570, 80, 34));
+        alarmPushButton->setGeometry(QRect(590, 570, 82, 36));
         alarmPushButton->setFont(font);
         alarmPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/alertoff.bmp);}\n"
+"background-image: url(:/monres/alertoff.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "\n"
 "QPushButton:pressed\n"
@@ -233,10 +255,13 @@ public:
         label_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         canselPushButton = new QPushButton(devUpdateWidget);
         canselPushButton->setObjectName(QString::fromUtf8("canselPushButton"));
-        canselPushButton->setGeometry(QRect(760, 570, 80, 34));
+        canselPushButton->setGeometry(QRect(760, 570, 82, 36));
         canselPushButton->setFont(font);
         canselPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/cancel.bmp);}\n"
+"background-image: url(:/monres/cancel.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
@@ -252,23 +277,26 @@ public:
         deviceManagewidget->setGeometry(QRect(40, 115, 944, 401));
         configFileDisplayLineEdit = new QLineEdit(deviceManagewidget);
         configFileDisplayLineEdit->setObjectName(QString::fromUtf8("configFileDisplayLineEdit"));
-        configFileDisplayLineEdit->setGeometry(QRect(20, 310, 311, 27));
+        configFileDisplayLineEdit->setGeometry(QRect(5, 310, 121, 27));
         configFileDisplayLineEdit->setFont(font);
         brightnessLineEdit = new QLineEdit(deviceManagewidget);
         brightnessLineEdit->setObjectName(QString::fromUtf8("brightnessLineEdit"));
-        brightnessLineEdit->setGeometry(QRect(540, 300, 81, 31));
+        brightnessLineEdit->setGeometry(QRect(580, 270, 81, 31));
         brightnessLineEdit->setFont(font);
         carriageLabel = new QLabel(deviceManagewidget);
         carriageLabel->setObjectName(QString::fromUtf8("carriageLabel"));
-        carriageLabel->setGeometry(QRect(480, 264, 51, 17));
+        carriageLabel->setGeometry(QRect(520, 244, 51, 17));
         carriageLabel->setFont(font);
         carriageLabel->setStyleSheet(QString::fromUtf8(""));
         configFilelookPushButton = new QPushButton(deviceManagewidget);
         configFilelookPushButton->setObjectName(QString::fromUtf8("configFilelookPushButton"));
-        configFilelookPushButton->setGeometry(QRect(350, 310, 110, 30));
+        configFilelookPushButton->setGeometry(QRect(130, 308, 112, 32));
         configFilelookPushButton->setFont(font);
         configFilelookPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/browse.bmp);}\n"
+"background-image: url(:/monres/browse.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "\n"
 "QPushButton:pressed\n"
@@ -278,7 +306,7 @@ public:
         carriageSelectionComboBox->addItem(QString());
         carriageSelectionComboBox->setObjectName(QString::fromUtf8("carriageSelectionComboBox"));
         carriageSelectionComboBox->setEnabled(true);
-        carriageSelectionComboBox->setGeometry(QRect(540, 260, 121, 24));
+        carriageSelectionComboBox->setGeometry(QRect(580, 240, 121, 24));
         carriageSelectionComboBox->setFont(font);
         carriageSelectionComboBox->setMinimumContentsLength(0);
         cameraSelectionComboBox = new QComboBox(deviceManagewidget);
@@ -286,11 +314,11 @@ public:
         cameraSelectionComboBox->addItem(QString());
         cameraSelectionComboBox->setObjectName(QString::fromUtf8("cameraSelectionComboBox"));
         cameraSelectionComboBox->setEnabled(true);
-        cameraSelectionComboBox->setGeometry(QRect(800, 260, 121, 24));
+        cameraSelectionComboBox->setGeometry(QRect(800, 240, 121, 24));
         cameraSelectionComboBox->setFont(font);
         contrastLineEdit = new QLineEdit(deviceManagewidget);
         contrastLineEdit->setObjectName(QString::fromUtf8("contrastLineEdit"));
-        contrastLineEdit->setGeometry(QRect(840, 300, 81, 31));
+        contrastLineEdit->setGeometry(QRect(580, 350, 81, 31));
         contrastLineEdit->setFont(font);
         label_9 = new QLabel(deviceManagewidget);
         label_9->setObjectName(QString::fromUtf8("label_9"));
@@ -298,9 +326,12 @@ public:
         label_9->setFont(font);
         timeAdjustPushButton = new QPushButton(deviceManagewidget);
         timeAdjustPushButton->setObjectName(QString::fromUtf8("timeAdjustPushButton"));
-        timeAdjustPushButton->setGeometry(QRect(190, 140, 135, 37));
+        timeAdjustPushButton->setGeometry(QRect(190, 140, 137, 39));
         timeAdjustPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/timing.bmp);}\n"
+"background-image: url(:/monres/timing.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
@@ -314,65 +345,74 @@ public:
         comboBox->setGeometry(QRect(220, 250, 86, 25));
         saturationLineEdit = new QLineEdit(deviceManagewidget);
         saturationLineEdit->setObjectName(QString::fromUtf8("saturationLineEdit"));
-        saturationLineEdit->setGeometry(QRect(690, 300, 81, 31));
+        saturationLineEdit->setGeometry(QRect(580, 310, 81, 31));
         saturationLineEdit->setFont(font);
         imageParamSetPushButton = new QPushButton(deviceManagewidget);
         imageParamSetPushButton->setObjectName(QString::fromUtf8("imageParamSetPushButton"));
-        imageParamSetPushButton->setGeometry(QRect(640, 340, 159, 40));
+        imageParamSetPushButton->setGeometry(QRect(700, 340, 161, 43));
         imageParamSetPushButton->setFont(font);
         imageParamSetPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/settingconfig.bmp);}\n"
+"background-image: url(:/monres/settingconfig.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         systimeAdjustLabel = new QLabel(deviceManagewidget);
         systimeAdjustLabel->setObjectName(QString::fromUtf8("systimeAdjustLabel"));
-        systimeAdjustLabel->setGeometry(QRect(330, 100, 91, 21));
+        systimeAdjustLabel->setGeometry(QRect(260, 110, 91, 21));
         saturationLabel = new QLabel(deviceManagewidget);
         saturationLabel->setObjectName(QString::fromUtf8("saturationLabel"));
-        saturationLabel->setGeometry(QRect(630, 300, 52, 24));
+        saturationLabel->setGeometry(QRect(520, 310, 52, 24));
         saturationLabel->setFont(font);
         saturationLabel->setStyleSheet(QString::fromUtf8(""));
         brightnessLabel = new QLabel(deviceManagewidget);
         brightnessLabel->setObjectName(QString::fromUtf8("brightnessLabel"));
-        brightnessLabel->setGeometry(QRect(480, 300, 51, 24));
+        brightnessLabel->setGeometry(QRect(520, 270, 51, 24));
         brightnessLabel->setFont(font);
         brightnessLabel->setStyleSheet(QString::fromUtf8(""));
         clientRebootPushButton = new QPushButton(deviceManagewidget);
         clientRebootPushButton->setObjectName(QString::fromUtf8("clientRebootPushButton"));
-        clientRebootPushButton->setGeometry(QRect(810, 150, 80, 35));
+        clientRebootPushButton->setGeometry(QRect(810, 150, 82, 36));
         clientRebootPushButton->setFont(font);
         clientRebootPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/restat.bmp);}\n"
+"background-image: url(:/monres/restat.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         configFileSelectionLabel = new QLabel(deviceManagewidget);
         configFileSelectionLabel->setObjectName(QString::fromUtf8("configFileSelectionLabel"));
-        configFileSelectionLabel->setGeometry(QRect(20, 280, 101, 17));
+        configFileSelectionLabel->setGeometry(QRect(10, 280, 101, 17));
         configFileSelectionLabel->setFont(font);
         configFileSelectionLabel->setStyleSheet(QString::fromUtf8(""));
         cameraLabel = new QLabel(deviceManagewidget);
         cameraLabel->setObjectName(QString::fromUtf8("cameraLabel"));
-        cameraLabel->setGeometry(QRect(736, 264, 61, 17));
+        cameraLabel->setGeometry(QRect(736, 244, 61, 17));
         cameraLabel->setStyleSheet(QString::fromUtf8(""));
         contrastLabel = new QLabel(deviceManagewidget);
         contrastLabel->setObjectName(QString::fromUtf8("contrastLabel"));
-        contrastLabel->setGeometry(QRect(780, 300, 52, 24));
+        contrastLabel->setGeometry(QRect(520, 350, 52, 24));
         contrastLabel->setFont(font);
         contrastLabel->setStyleSheet(QString::fromUtf8(""));
         configFileImportPushButton = new QPushButton(deviceManagewidget);
         configFileImportPushButton->setObjectName(QString::fromUtf8("configFileImportPushButton"));
-        configFileImportPushButton->setGeometry(QRect(50, 350, 80, 35));
+        configFileImportPushButton->setGeometry(QRect(50, 350, 82, 37));
         configFileImportPushButton->setFont(font);
         configFileImportPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/in.bmp);}\n"
+"background-image: url(:/monres/in.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         sysDataAdjustLabel = new QLabel(deviceManagewidget);
         sysDataAdjustLabel->setObjectName(QString::fromUtf8("sysDataAdjustLabel"));
-        sysDataAdjustLabel->setGeometry(QRect(160, 100, 161, 21));
+        sysDataAdjustLabel->setGeometry(QRect(110, 110, 131, 21));
         QFont font1;
         font1.setPointSize(10);
         sysDataAdjustLabel->setFont(font1);
@@ -392,24 +432,30 @@ public:
         label_18->setGeometry(QRect(140, 250, 67, 17));
         label_5 = new QLabel(deviceManagewidget);
         label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(70, 100, 67, 17));
+        label_5->setGeometry(QRect(20, 110, 67, 17));
         label_5->setFont(font);
         updateBeginPushButton = new QPushButton(deviceManagewidget);
         updateBeginPushButton->setObjectName(QString::fromUtf8("updateBeginPushButton"));
-        updateBeginPushButton->setGeometry(QRect(550, 150, 110, 30));
+        updateBeginPushButton->setGeometry(QRect(550, 150, 112, 32));
         updateBeginPushButton->setFont(font);
         updateBeginPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/kaishigegnxin.bmp);}\n"
+"background-image: url(:/monres/kaishigegnxin.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         clientRebootPushButton_2 = new QPushButton(deviceManagewidget);
         clientRebootPushButton_2->setObjectName(QString::fromUtf8("clientRebootPushButton_2"));
-        clientRebootPushButton_2->setGeometry(QRect(300, 350, 80, 35));
+        clientRebootPushButton_2->setGeometry(QRect(300, 350, 112, 32));
         clientRebootPushButton_2->setFont(font);
         clientRebootPushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/restat.bmp);\n"
-"}\n"
+"background-image: url(:/monres/downlog.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
+"\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         updateStatueTextEdit = new QTextEdit(deviceManagewidget);
@@ -431,13 +477,60 @@ public:
         lineEdit_3 = new QLineEdit(deviceManagewidget);
         lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
         lineEdit_3->setEnabled(false);
-        lineEdit_3->setGeometry(QRect(0, 195, 461, 201));
+        lineEdit_3->setGeometry(QRect(0, 195, 501, 201));
         lineEdit_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lineEdit_4 = new QLineEdit(deviceManagewidget);
         lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
         lineEdit_4->setEnabled(false);
-        lineEdit_4->setGeometry(QRect(470, 195, 471, 201));
+        lineEdit_4->setGeometry(QRect(510, 195, 431, 201));
         lineEdit_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        configFileDisplayLineEdit_2 = new QLineEdit(deviceManagewidget);
+        configFileDisplayLineEdit_2->setObjectName(QString::fromUtf8("configFileDisplayLineEdit_2"));
+        configFileDisplayLineEdit_2->setGeometry(QRect(250, 310, 121, 27));
+        configFileDisplayLineEdit_2->setFont(font);
+        label_19 = new QLabel(deviceManagewidget);
+        label_19->setObjectName(QString::fromUtf8("label_19"));
+        label_19->setGeometry(QRect(270, 280, 101, 17));
+        configFilelookPushButton_2 = new QPushButton(deviceManagewidget);
+        configFilelookPushButton_2->setObjectName(QString::fromUtf8("configFilelookPushButton_2"));
+        configFilelookPushButton_2->setGeometry(QRect(380, 310, 112, 32));
+        configFilelookPushButton_2->setFont(font);
+        configFilelookPushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-image: url(:/monres/browse.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
+"\n"
+"\n"
+"QPushButton:pressed\n"
+"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+        label_8 = new QLabel(deviceManagewidget);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+        label_8->setGeometry(QRect(20, 40, 67, 17));
+        label_12 = new QLabel(deviceManagewidget);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+        label_12->setGeometry(QRect(20, 70, 67, 17));
+        dateEdit = new QDateEdit(deviceManagewidget);
+        dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
+        dateEdit->setGeometry(QRect(100, 40, 118, 26));
+        dateEdit->setDateTime(QDateTime(QDate(2021, 8, 1), QTime(0, 0, 0)));
+        dateEdit->setMaximumTime(QTime(23, 59, 59));
+        timeEdit = new QTimeEdit(deviceManagewidget);
+        timeEdit->setObjectName(QString::fromUtf8("timeEdit"));
+        timeEdit->setGeometry(QRect(100, 70, 118, 26));
+        timeEdit->setDateTime(QDateTime(QDate(2000, 1, 1), QTime(10, 3, 3)));
+        timeSetPushButton = new QPushButton(deviceManagewidget);
+        timeSetPushButton->setObjectName(QString::fromUtf8("timeSetPushButton"));
+        timeSetPushButton->setGeometry(QRect(250, 60, 112, 32));
+        timeSetPushButton->setFont(font);
+        timeSetPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-image: url(:/monres/sure.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
+"\n"
+"QPushButton:pressed\n"
+"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         lineEdit_4->raise();
         lineEdit_3->raise();
         lineEdit_2->raise();
@@ -471,10 +564,37 @@ public:
         clientRebootPushButton_2->raise();
         systimeAdjustLabel->raise();
         updateStatueTextEdit->raise();
+        configFileDisplayLineEdit_2->raise();
+        label_19->raise();
+        configFilelookPushButton_2->raise();
+        label_8->raise();
+        label_12->raise();
+        dateEdit->raise();
+        timeEdit->raise();
+        timeSetPushButton->raise();
         label_6 = new QLabel(devUpdateWidget);
         label_6->setObjectName(QString::fromUtf8("label_6"));
         label_6->setGeometry(QRect(0, 0, 1024, 630));
         label_6->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        PISSetcomboBox = new QComboBox(devUpdateWidget);
+        PISSetcomboBox->setObjectName(QString::fromUtf8("PISSetcomboBox"));
+        PISSetcomboBox->setGeometry(QRect(650, 45, 181, 27));
+        label_10 = new QLabel(devUpdateWidget);
+        label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setGeometry(QRect(570, 40, 67, 31));
+        label_10->setFont(font);
+        PISSetPushButton = new QPushButton(devUpdateWidget);
+        PISSetPushButton->setObjectName(QString::fromUtf8("PISSetPushButton"));
+        PISSetPushButton->setGeometry(QRect(880, 45, 112, 32));
+        PISSetPushButton->setFont(font);
+        PISSetPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-image: url(:/monres/sure.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
+"\n"
+"QPushButton:pressed\n"
+"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         label_6->raise();
         label_2->raise();
         label_3->raise();
@@ -500,6 +620,9 @@ public:
         label_17->raise();
         permissonManagePushButton->raise();
         deviceManagewidget->raise();
+        PISSetcomboBox->raise();
+        label_10->raise();
+        PISSetPushButton->raise();
 
         retranslateUi(devUpdateWidget);
 
@@ -567,7 +690,16 @@ public:
         label_5->setText(QCoreApplication::translate("devUpdateWidget", "\347\263\273\347\273\237\346\227\266\351\227\264", nullptr));
         updateBeginPushButton->setText(QString());
         clientRebootPushButton_2->setText(QString());
+        label_19->setText(QCoreApplication::translate("devUpdateWidget", "\351\200\211\346\213\251\345\215\207\347\272\247\346\226\207\344\273\266:", nullptr));
+        configFilelookPushButton_2->setText(QString());
+        label_8->setText(QCoreApplication::translate("devUpdateWidget", "\346\227\245\346\234\237", nullptr));
+        label_12->setText(QCoreApplication::translate("devUpdateWidget", "\346\227\266\351\227\264", nullptr));
+        dateEdit->setDisplayFormat(QCoreApplication::translate("devUpdateWidget", "yyyy-MM-dd", nullptr));
+        timeEdit->setDisplayFormat(QCoreApplication::translate("devUpdateWidget", "hh:mm:ss", nullptr));
+        timeSetPushButton->setText(QString());
         label_6->setText(QString());
+        label_10->setText(QCoreApplication::translate("devUpdateWidget", "PIS\350\256\276\347\275\256:", nullptr));
+        PISSetPushButton->setText(QString());
     } // retranslateUi
 
 };

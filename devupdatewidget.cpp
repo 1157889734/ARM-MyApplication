@@ -104,7 +104,7 @@ devUpdateWidget::devUpdateWidget(QWidget *parent) :
     connect(ui->pollingTimeSetLineEdit,SIGNAL(textChanged(const QString &)),this,SLOT(lineEditpollingTimeChange(const QString &)));
     connect(ui->presetReturnTimeSetLineEdit,SIGNAL(textChanged(const QString &)),this,SLOT(lineEditpresetReturnTimeChange(const QString &)));
 
-//    connect(ui->timeSetPushButton,SIGNAL(clicked()),this,SLOT(monitorSysTime()));
+    connect(ui->timeSetPushButton,SIGNAL(clicked()),this,SLOT(monitorSysTime()));
     connect(ui->timeAdjustPushButton,SIGNAL(clicked()),this,SLOT(systimeSlot()));
     connect(ui->imageParamSetPushButton, SIGNAL(clicked(bool)), this, SLOT(setCameraImageParamSlot()));     //图像参数设置
 
@@ -150,13 +150,13 @@ void devUpdateWidget::registOutButtonClick()
 
 void devUpdateWidget::monitorSysTime()
 {
-//    timeTd = QDateTime::currentDateTime();
+    timeTd = QDateTime::currentDateTime();
 
-//    timeTd.setDate(ui->dateEdit->date());
-//    timeTd.setTime(ui->timeEdit->time());
+    timeTd.setDate(ui->dateEdit->date());
+    timeTd.setTime(ui->timeEdit->time());
 
-//    time_t tt = (time_t)timeTd.toTime_t();
-//    stime(&tt);
+    time_t tt = (time_t)timeTd.toTime_t();
+    stime(&tt);
 
 
 }

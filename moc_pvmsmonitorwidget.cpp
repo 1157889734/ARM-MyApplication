@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_pvmsMonitorWidget_t {
-    QByteArrayData data[58];
-    char stringdata0[1146];
+    QByteArrayData data[59];
+    char stringdata0[1167];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -63,33 +63,34 @@ QT_MOC_LITERAL(27, 506, 26), // "manualSwitchNextCameraSlot"
 QT_MOC_LITERAL(28, 533, 17), // "presetSetCtrlSlot"
 QT_MOC_LITERAL(29, 551, 17), // "presetGetCtrlSlot"
 QT_MOC_LITERAL(30, 569, 22), // "temporarySaveBeginSlot"
-QT_MOC_LITERAL(31, 592, 16), // "cameraSwitchSlot"
-QT_MOC_LITERAL(32, 609, 19), // "fillLightSwitchSlot"
-QT_MOC_LITERAL(33, 629, 19), // "manualSwitchEndSlot"
-QT_MOC_LITERAL(34, 649, 25), // "closePresetPasswdPageSlot"
-QT_MOC_LITERAL(35, 675, 13), // "setPresetSlot"
-QT_MOC_LITERAL(36, 689, 20), // "registOutButtonClick"
-QT_MOC_LITERAL(37, 710, 22), // "fillLightSwitchEndSlot"
-QT_MOC_LITERAL(38, 733, 22), // "chLabelDisplayCtrlSlot"
-QT_MOC_LITERAL(39, 756, 15), // "alarmHappenSlot"
-QT_MOC_LITERAL(40, 772, 14), // "alarmClearSlot"
-QT_MOC_LITERAL(41, 787, 17), // "setRecordPlayFlag"
-QT_MOC_LITERAL(42, 805, 22), // "videoPollingSignalCtrl"
-QT_MOC_LITERAL(43, 828, 23), // "setFullScreenSignalCtrl"
-QT_MOC_LITERAL(44, 852, 22), // "presetReturnSignalCtrl"
-QT_MOC_LITERAL(45, 875, 18), // "recordPlayCtrlSlot"
-QT_MOC_LITERAL(46, 894, 24), // "chStateLabelTextCtrlSlot"
-QT_MOC_LITERAL(47, 919, 27), // "camSwitchButtonTextCtrlSlot"
-QT_MOC_LITERAL(48, 947, 33), // "fillLightSwitchButtonTextCtrl..."
-QT_MOC_LITERAL(49, 981, 17), // "cmpOptionCtrlSlot"
-QT_MOC_LITERAL(50, 999, 16), // "pvmsDownEndSlot1"
-QT_MOC_LITERAL(51, 1016, 16), // "pvmsDownEndSlot2"
-QT_MOC_LITERAL(52, 1033, 16), // "pvmsDownEndSlot3"
-QT_MOC_LITERAL(53, 1050, 16), // "pvmsDownEndSlot4"
-QT_MOC_LITERAL(54, 1067, 14), // "systimeSetSlot"
-QT_MOC_LITERAL(55, 1082, 19), // "blackScreenCtrlSlot"
-QT_MOC_LITERAL(56, 1102, 23), // "blackScreenExitCtrlSlot"
-QT_MOC_LITERAL(57, 1126, 19) // "cameraSwitchEndSlot"
+QT_MOC_LITERAL(31, 592, 20), // "temporarySaveEndSlot"
+QT_MOC_LITERAL(32, 613, 16), // "cameraSwitchSlot"
+QT_MOC_LITERAL(33, 630, 19), // "fillLightSwitchSlot"
+QT_MOC_LITERAL(34, 650, 19), // "manualSwitchEndSlot"
+QT_MOC_LITERAL(35, 670, 25), // "closePresetPasswdPageSlot"
+QT_MOC_LITERAL(36, 696, 13), // "setPresetSlot"
+QT_MOC_LITERAL(37, 710, 20), // "registOutButtonClick"
+QT_MOC_LITERAL(38, 731, 22), // "fillLightSwitchEndSlot"
+QT_MOC_LITERAL(39, 754, 22), // "chLabelDisplayCtrlSlot"
+QT_MOC_LITERAL(40, 777, 15), // "alarmHappenSlot"
+QT_MOC_LITERAL(41, 793, 14), // "alarmClearSlot"
+QT_MOC_LITERAL(42, 808, 17), // "setRecordPlayFlag"
+QT_MOC_LITERAL(43, 826, 22), // "videoPollingSignalCtrl"
+QT_MOC_LITERAL(44, 849, 23), // "setFullScreenSignalCtrl"
+QT_MOC_LITERAL(45, 873, 22), // "presetReturnSignalCtrl"
+QT_MOC_LITERAL(46, 896, 18), // "recordPlayCtrlSlot"
+QT_MOC_LITERAL(47, 915, 24), // "chStateLabelTextCtrlSlot"
+QT_MOC_LITERAL(48, 940, 27), // "camSwitchButtonTextCtrlSlot"
+QT_MOC_LITERAL(49, 968, 33), // "fillLightSwitchButtonTextCtrl..."
+QT_MOC_LITERAL(50, 1002, 17), // "cmpOptionCtrlSlot"
+QT_MOC_LITERAL(51, 1020, 16), // "pvmsDownEndSlot1"
+QT_MOC_LITERAL(52, 1037, 16), // "pvmsDownEndSlot2"
+QT_MOC_LITERAL(53, 1054, 16), // "pvmsDownEndSlot3"
+QT_MOC_LITERAL(54, 1071, 16), // "pvmsDownEndSlot4"
+QT_MOC_LITERAL(55, 1088, 14), // "systimeSetSlot"
+QT_MOC_LITERAL(56, 1103, 19), // "blackScreenCtrlSlot"
+QT_MOC_LITERAL(57, 1123, 23), // "blackScreenExitCtrlSlot"
+QT_MOC_LITERAL(58, 1147, 19) // "cameraSwitchEndSlot"
 
     },
     "pvmsMonitorWidget\0alarmPushButoonClickSignal\0"
@@ -107,14 +108,15 @@ QT_MOC_LITERAL(57, 1126, 19) // "cameraSwitchEndSlot"
     "pausePollingSlot\0manualSwitchLastCameraSlot\0"
     "manualSwitchNextCameraSlot\0presetSetCtrlSlot\0"
     "presetGetCtrlSlot\0temporarySaveBeginSlot\0"
-    "cameraSwitchSlot\0fillLightSwitchSlot\0"
-    "manualSwitchEndSlot\0closePresetPasswdPageSlot\0"
-    "setPresetSlot\0registOutButtonClick\0"
-    "fillLightSwitchEndSlot\0chLabelDisplayCtrlSlot\0"
-    "alarmHappenSlot\0alarmClearSlot\0"
-    "setRecordPlayFlag\0videoPollingSignalCtrl\0"
-    "setFullScreenSignalCtrl\0presetReturnSignalCtrl\0"
-    "recordPlayCtrlSlot\0chStateLabelTextCtrlSlot\0"
+    "temporarySaveEndSlot\0cameraSwitchSlot\0"
+    "fillLightSwitchSlot\0manualSwitchEndSlot\0"
+    "closePresetPasswdPageSlot\0setPresetSlot\0"
+    "registOutButtonClick\0fillLightSwitchEndSlot\0"
+    "chLabelDisplayCtrlSlot\0alarmHappenSlot\0"
+    "alarmClearSlot\0setRecordPlayFlag\0"
+    "videoPollingSignalCtrl\0setFullScreenSignalCtrl\0"
+    "presetReturnSignalCtrl\0recordPlayCtrlSlot\0"
+    "chStateLabelTextCtrlSlot\0"
     "camSwitchButtonTextCtrlSlot\0"
     "fillLightSwitchButtonTextCtrlSlot\0"
     "cmpOptionCtrlSlot\0pvmsDownEndSlot1\0"
@@ -131,7 +133,7 @@ static const uint qt_meta_data_pvmsMonitorWidget[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      51,   14, // methods
+      52,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -139,59 +141,60 @@ static const uint qt_meta_data_pvmsMonitorWidget[] = {
       15,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,  269,    2, 0x06 /* Public */,
-       3,    0,  270,    2, 0x06 /* Public */,
-       4,    1,  271,    2, 0x06 /* Public */,
-       6,    1,  274,    2, 0x06 /* Public */,
-       7,    0,  277,    2, 0x06 /* Public */,
-       8,    1,  278,    2, 0x06 /* Public */,
-       9,    0,  281,    2, 0x06 /* Public */,
-      10,    0,  282,    2, 0x06 /* Public */,
-      11,    0,  283,    2, 0x06 /* Public */,
-      12,    0,  284,    2, 0x06 /* Public */,
-      13,    0,  285,    2, 0x06 /* Public */,
-      14,    1,  286,    2, 0x06 /* Public */,
-      16,    2,  289,    2, 0x06 /* Public */,
-      19,    0,  294,    2, 0x06 /* Public */,
-      20,    0,  295,    2, 0x06 /* Public */,
+       1,    0,  274,    2, 0x06 /* Public */,
+       3,    0,  275,    2, 0x06 /* Public */,
+       4,    1,  276,    2, 0x06 /* Public */,
+       6,    1,  279,    2, 0x06 /* Public */,
+       7,    0,  282,    2, 0x06 /* Public */,
+       8,    1,  283,    2, 0x06 /* Public */,
+       9,    0,  286,    2, 0x06 /* Public */,
+      10,    0,  287,    2, 0x06 /* Public */,
+      11,    0,  288,    2, 0x06 /* Public */,
+      12,    0,  289,    2, 0x06 /* Public */,
+      13,    0,  290,    2, 0x06 /* Public */,
+      14,    1,  291,    2, 0x06 /* Public */,
+      16,    2,  294,    2, 0x06 /* Public */,
+      19,    0,  299,    2, 0x06 /* Public */,
+      20,    0,  300,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      21,    1,  296,    2, 0x0a /* Public */,
-      23,    0,  299,    2, 0x0a /* Public */,
-      24,    0,  300,    2, 0x0a /* Public */,
-      25,    0,  301,    2, 0x0a /* Public */,
-      26,    0,  302,    2, 0x0a /* Public */,
-      27,    0,  303,    2, 0x0a /* Public */,
-      28,    0,  304,    2, 0x0a /* Public */,
-      29,    0,  305,    2, 0x0a /* Public */,
-      30,    0,  306,    2, 0x0a /* Public */,
-      31,    0,  307,    2, 0x0a /* Public */,
-      32,    0,  308,    2, 0x0a /* Public */,
-      33,    0,  309,    2, 0x0a /* Public */,
-      34,    0,  310,    2, 0x0a /* Public */,
-      35,    0,  311,    2, 0x0a /* Public */,
-      36,    0,  312,    2, 0x0a /* Public */,
-      37,    0,  313,    2, 0x0a /* Public */,
-      38,    0,  314,    2, 0x0a /* Public */,
-      39,    0,  315,    2, 0x0a /* Public */,
-      40,    0,  316,    2, 0x0a /* Public */,
-      41,    1,  317,    2, 0x0a /* Public */,
-      42,    0,  320,    2, 0x0a /* Public */,
-      43,    0,  321,    2, 0x0a /* Public */,
-      44,    1,  322,    2, 0x0a /* Public */,
-      45,    0,  325,    2, 0x0a /* Public */,
-      46,    1,  326,    2, 0x0a /* Public */,
-      47,    1,  329,    2, 0x0a /* Public */,
-      48,    1,  332,    2, 0x0a /* Public */,
-      49,    2,  335,    2, 0x0a /* Public */,
-      50,    0,  340,    2, 0x0a /* Public */,
-      51,    0,  341,    2, 0x0a /* Public */,
-      52,    0,  342,    2, 0x0a /* Public */,
-      53,    0,  343,    2, 0x0a /* Public */,
-      54,    0,  344,    2, 0x0a /* Public */,
-      55,    0,  345,    2, 0x0a /* Public */,
-      56,    0,  346,    2, 0x0a /* Public */,
-      57,    0,  347,    2, 0x0a /* Public */,
+      21,    1,  301,    2, 0x0a /* Public */,
+      23,    0,  304,    2, 0x0a /* Public */,
+      24,    0,  305,    2, 0x0a /* Public */,
+      25,    0,  306,    2, 0x0a /* Public */,
+      26,    0,  307,    2, 0x0a /* Public */,
+      27,    0,  308,    2, 0x0a /* Public */,
+      28,    0,  309,    2, 0x0a /* Public */,
+      29,    0,  310,    2, 0x0a /* Public */,
+      30,    0,  311,    2, 0x0a /* Public */,
+      31,    0,  312,    2, 0x0a /* Public */,
+      32,    0,  313,    2, 0x0a /* Public */,
+      33,    0,  314,    2, 0x0a /* Public */,
+      34,    0,  315,    2, 0x0a /* Public */,
+      35,    0,  316,    2, 0x0a /* Public */,
+      36,    0,  317,    2, 0x0a /* Public */,
+      37,    0,  318,    2, 0x0a /* Public */,
+      38,    0,  319,    2, 0x0a /* Public */,
+      39,    0,  320,    2, 0x0a /* Public */,
+      40,    0,  321,    2, 0x0a /* Public */,
+      41,    0,  322,    2, 0x0a /* Public */,
+      42,    1,  323,    2, 0x0a /* Public */,
+      43,    0,  326,    2, 0x0a /* Public */,
+      44,    0,  327,    2, 0x0a /* Public */,
+      45,    1,  328,    2, 0x0a /* Public */,
+      46,    0,  331,    2, 0x0a /* Public */,
+      47,    1,  332,    2, 0x0a /* Public */,
+      48,    1,  335,    2, 0x0a /* Public */,
+      49,    1,  338,    2, 0x0a /* Public */,
+      50,    2,  341,    2, 0x0a /* Public */,
+      51,    0,  346,    2, 0x0a /* Public */,
+      52,    0,  347,    2, 0x0a /* Public */,
+      53,    0,  348,    2, 0x0a /* Public */,
+      54,    0,  349,    2, 0x0a /* Public */,
+      55,    0,  350,    2, 0x0a /* Public */,
+      56,    0,  351,    2, 0x0a /* Public */,
+      57,    0,  352,    2, 0x0a /* Public */,
+      58,    0,  353,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -212,6 +215,7 @@ static const uint qt_meta_data_pvmsMonitorWidget[] = {
 
  // slots: parameters
     QMetaType::Void, QMetaType::Int,   22,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -281,33 +285,34 @@ void pvmsMonitorWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         case 21: _t->presetSetCtrlSlot(); break;
         case 22: _t->presetGetCtrlSlot(); break;
         case 23: _t->temporarySaveBeginSlot(); break;
-        case 24: _t->cameraSwitchSlot(); break;
-        case 25: _t->fillLightSwitchSlot(); break;
-        case 26: _t->manualSwitchEndSlot(); break;
-        case 27: _t->closePresetPasswdPageSlot(); break;
-        case 28: _t->setPresetSlot(); break;
-        case 29: _t->registOutButtonClick(); break;
-        case 30: _t->fillLightSwitchEndSlot(); break;
-        case 31: _t->chLabelDisplayCtrlSlot(); break;
-        case 32: _t->alarmHappenSlot(); break;
-        case 33: _t->alarmClearSlot(); break;
-        case 34: _t->setRecordPlayFlag((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 35: _t->videoPollingSignalCtrl(); break;
-        case 36: _t->setFullScreenSignalCtrl(); break;
-        case 37: _t->presetReturnSignalCtrl((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 38: _t->recordPlayCtrlSlot(); break;
-        case 39: _t->chStateLabelTextCtrlSlot((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 40: _t->camSwitchButtonTextCtrlSlot((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 41: _t->fillLightSwitchButtonTextCtrlSlot((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 42: _t->cmpOptionCtrlSlot((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 43: _t->pvmsDownEndSlot1(); break;
-        case 44: _t->pvmsDownEndSlot2(); break;
-        case 45: _t->pvmsDownEndSlot3(); break;
-        case 46: _t->pvmsDownEndSlot4(); break;
-        case 47: _t->systimeSetSlot(); break;
-        case 48: _t->blackScreenCtrlSlot(); break;
-        case 49: _t->blackScreenExitCtrlSlot(); break;
-        case 50: _t->cameraSwitchEndSlot(); break;
+        case 24: _t->temporarySaveEndSlot(); break;
+        case 25: _t->cameraSwitchSlot(); break;
+        case 26: _t->fillLightSwitchSlot(); break;
+        case 27: _t->manualSwitchEndSlot(); break;
+        case 28: _t->closePresetPasswdPageSlot(); break;
+        case 29: _t->setPresetSlot(); break;
+        case 30: _t->registOutButtonClick(); break;
+        case 31: _t->fillLightSwitchEndSlot(); break;
+        case 32: _t->chLabelDisplayCtrlSlot(); break;
+        case 33: _t->alarmHappenSlot(); break;
+        case 34: _t->alarmClearSlot(); break;
+        case 35: _t->setRecordPlayFlag((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 36: _t->videoPollingSignalCtrl(); break;
+        case 37: _t->setFullScreenSignalCtrl(); break;
+        case 38: _t->presetReturnSignalCtrl((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 39: _t->recordPlayCtrlSlot(); break;
+        case 40: _t->chStateLabelTextCtrlSlot((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 41: _t->camSwitchButtonTextCtrlSlot((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 42: _t->fillLightSwitchButtonTextCtrlSlot((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 43: _t->cmpOptionCtrlSlot((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 44: _t->pvmsDownEndSlot1(); break;
+        case 45: _t->pvmsDownEndSlot2(); break;
+        case 46: _t->pvmsDownEndSlot3(); break;
+        case 47: _t->pvmsDownEndSlot4(); break;
+        case 48: _t->systimeSetSlot(); break;
+        case 49: _t->blackScreenCtrlSlot(); break;
+        case 50: _t->blackScreenExitCtrlSlot(); break;
+        case 51: _t->cameraSwitchEndSlot(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -449,13 +454,13 @@ int pvmsMonitorWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 51)
+        if (_id < 52)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 51;
+        _id -= 52;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 51)
+        if (_id < 52)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 51;
+        _id -= 52;
     }
     return _id;
 }

@@ -54,19 +54,25 @@ public:
         TrainNumberlabel->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);background-color: rgb(255, 255, 255);"));
         TrainNumberSetPushButton = new QPushButton(devManageWidget);
         TrainNumberSetPushButton->setObjectName(QString::fromUtf8("TrainNumberSetPushButton"));
-        TrainNumberSetPushButton->setGeometry(QRect(270, 10, 135, 33));
+        TrainNumberSetPushButton->setGeometry(QRect(270, 10, 137, 35));
         TrainNumberSetPushButton->setFont(font);
         TrainNumberSetPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/ccsz.bmp);}\n"
+"background-image: url(:/monres/ccsz.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         alarmPushButton = new QPushButton(devManageWidget);
         alarmPushButton->setObjectName(QString::fromUtf8("alarmPushButton"));
-        alarmPushButton->setGeometry(QRect(480, 590, 80, 35));
+        alarmPushButton->setGeometry(QRect(480, 590, 82, 36));
         alarmPushButton->setFont(font);
         alarmPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/alertoff.bmp);}\n"
+"background-image: url(:/monres/alertoff.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "\n"
 "QPushButton:pressed\n"
@@ -74,9 +80,12 @@ public:
         alarmPushButton->setCheckable(true);
         canselPushButton = new QPushButton(devManageWidget);
         canselPushButton->setObjectName(QString::fromUtf8("canselPushButton"));
-        canselPushButton->setGeometry(QRect(720, 590, 80, 35));
+        canselPushButton->setGeometry(QRect(720, 590, 82, 36));
         canselPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/cancel.bmp);}\n"
+"background-image: url(:/monres/cancel.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));

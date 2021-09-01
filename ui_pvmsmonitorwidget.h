@@ -79,10 +79,13 @@ public:
 " }"));
         presetNoPushButton_8 = new QPushButton(pvmsMonitorWidget);
         presetNoPushButton_8->setObjectName(QString::fromUtf8("presetNoPushButton_8"));
-        presetNoPushButton_8->setGeometry(QRect(970, 370, 51, 31));
+        presetNoPushButton_8->setGeometry(QRect(970, 370, 53, 32));
         presetNoPushButton_8->setFont(font);
         presetNoPushButton_8->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/8.bmp);}\n"
+"background-image: url(:/res/8.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
@@ -90,19 +93,25 @@ public:
         presetNoPushButton_8->setCheckable(true);
         zoomOutPushButton = new QPushButton(pvmsMonitorWidget);
         zoomOutPushButton->setObjectName(QString::fromUtf8("zoomOutPushButton"));
-        zoomOutPushButton->setGeometry(QRect(808, 170, 69, 30));
+        zoomOutPushButton->setGeometry(QRect(808, 170, 71, 32));
         zoomOutPushButton->setFont(font);
         zoomOutPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/plus.bmp);}\n"
+"background-image: url(:/res/plus.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
 ""));
         focusNearPushButton = new QPushButton(pvmsMonitorWidget);
         focusNearPushButton->setObjectName(QString::fromUtf8("focusNearPushButton"));
-        focusNearPushButton->setGeometry(QRect(930, 220, 69, 30));
+        focusNearPushButton->setGeometry(QRect(930, 220, 71, 32));
         focusNearPushButton->setFont(font);
         focusNearPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/near.bmp);}\n"
+"background-image: url(:/res/near.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
 ""));
@@ -121,10 +130,13 @@ public:
 "color: rgb(0, 0, 0);"));
         cameraSwitchPushButton = new QPushButton(pvmsMonitorWidget);
         cameraSwitchPushButton->setObjectName(QString::fromUtf8("cameraSwitchPushButton"));
-        cameraSwitchPushButton->setGeometry(QRect(785, 470, 110, 30));
+        cameraSwitchPushButton->setGeometry(QRect(785, 470, 112, 32));
         cameraSwitchPushButton->setFont(font);
         cameraSwitchPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/cameraoff.bmp);}\n"
+"background-image: url(:/monres/cameraoff.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
@@ -138,19 +150,25 @@ public:
 "color: rgb(0, 0, 0);"));
         focusFarPushButton = new QPushButton(pvmsMonitorWidget);
         focusFarPushButton->setObjectName(QString::fromUtf8("focusFarPushButton"));
-        focusFarPushButton->setGeometry(QRect(808, 220, 69, 30));
+        focusFarPushButton->setGeometry(QRect(808, 220, 71, 32));
         focusFarPushButton->setFont(font);
         focusFarPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/fare.bmp);}\n"
+"background-image: url(:/res/fare.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
 ""));
         presetNoPushButton_3 = new QPushButton(pvmsMonitorWidget);
         presetNoPushButton_3->setObjectName(QString::fromUtf8("presetNoPushButton_3"));
-        presetNoPushButton_3->setGeometry(QRect(910, 310, 51, 31));
+        presetNoPushButton_3->setGeometry(QRect(910, 310, 53, 32));
         presetNoPushButton_3->setFont(font);
         presetNoPushButton_3->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/3.bmp);}\n"
+"background-image: url(:/res/3.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
@@ -165,21 +183,27 @@ public:
         pausePollingPushButton->setFlat(true);
         zoomInPushButton = new QPushButton(pvmsMonitorWidget);
         zoomInPushButton->setObjectName(QString::fromUtf8("zoomInPushButton"));
-        zoomInPushButton->setGeometry(QRect(930, 170, 69, 30));
+        zoomInPushButton->setGeometry(QRect(930, 170, 71, 32));
         zoomInPushButton->setFont(font);
         zoomInPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/substruct.bmp);}\n"
+"background-image: url(:/res/substruct.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
 "\n"
 ""));
         presetNoPushButton_2 = new QPushButton(pvmsMonitorWidget);
         presetNoPushButton_2->setObjectName(QString::fromUtf8("presetNoPushButton_2"));
-        presetNoPushButton_2->setGeometry(QRect(850, 310, 51, 31));
+        presetNoPushButton_2->setGeometry(QRect(850, 310, 53, 32));
         presetNoPushButton_2->setFont(font);
         presetNoPushButton_2->setStyleSheet(QString::fromUtf8("\n"
 "QPushButton\n"
-"{background-image: url(:/monres/2.bmp);}\n"
+"{background-image: url(:/monres/2.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
 "\n"
@@ -188,9 +212,13 @@ public:
         presetNoPushButton_2->setCheckable(true);
         ptzRightPushButton = new QPushButton(pvmsMonitorWidget);
         ptzRightPushButton->setObjectName(QString::fromUtf8("ptzRightPushButton"));
-        ptzRightPushButton->setGeometry(QRect(950, 90, 69, 30));
+        ptzRightPushButton->setGeometry(QRect(950, 90, 71, 32));
         ptzRightPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/right.bmp);}\n"
+"background-image: url(:/res/right.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
+"\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
 ""));
@@ -202,9 +230,13 @@ public:
 "color: rgb(0, 0, 0);"));
         ptzLeftPushButton = new QPushButton(pvmsMonitorWidget);
         ptzLeftPushButton->setObjectName(QString::fromUtf8("ptzLeftPushButton"));
-        ptzLeftPushButton->setGeometry(QRect(790, 90, 69, 30));
+        ptzLeftPushButton->setGeometry(QRect(790, 90, 71, 32));
         ptzLeftPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/left.bmp);}\n"
+"background-image: url(:/res/left.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
+"\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
 ""));
@@ -222,10 +254,13 @@ public:
 " }"));
         presetSetPushButton = new QPushButton(pvmsMonitorWidget);
         presetSetPushButton->setObjectName(QString::fromUtf8("presetSetPushButton"));
-        presetSetPushButton->setGeometry(QRect(785, 430, 110, 30));
+        presetSetPushButton->setGeometry(QRect(785, 430, 112, 32));
         presetSetPushButton->setFont(font);
         presetSetPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/setuse.bmp);}\n"
+"background-image: url(:/res/setuse.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
 ""));
@@ -233,10 +268,13 @@ public:
         presetSetPushButton->setChecked(false);
         presetNoPushButton_7 = new QPushButton(pvmsMonitorWidget);
         presetNoPushButton_7->setObjectName(QString::fromUtf8("presetNoPushButton_7"));
-        presetNoPushButton_7->setGeometry(QRect(910, 370, 51, 31));
+        presetNoPushButton_7->setGeometry(QRect(910, 370, 53, 32));
         presetNoPushButton_7->setFont(font);
         presetNoPushButton_7->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/7.bmp);}\n"
+"background-image: url(:/res/7.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
@@ -244,37 +282,49 @@ public:
         presetNoPushButton_7->setCheckable(true);
         ptzDownPushButton = new QPushButton(pvmsMonitorWidget);
         ptzDownPushButton->setObjectName(QString::fromUtf8("ptzDownPushButton"));
-        ptzDownPushButton->setGeometry(QRect(850, 130, 110, 30));
+        ptzDownPushButton->setGeometry(QRect(850, 130, 112, 32));
         ptzDownPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/down.bmp);}\n"
+"background-image: url(:/res/down.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
 ""));
         ptzDownPushButton->setIconSize(QSize(50, 50));
         temporarySavePushButton = new QPushButton(pvmsMonitorWidget);
         temporarySavePushButton->setObjectName(QString::fromUtf8("temporarySavePushButton"));
-        temporarySavePushButton->setGeometry(QRect(830, 550, 151, 31));
+        temporarySavePushButton->setGeometry(QRect(830, 550, 166, 32));
         temporarySavePushButton->setFont(font);
         temporarySavePushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/savevedio.bmp);}\n"
+"background-image: url(:/monres/savevedio.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
 ""));
         alarmPushButton = new QPushButton(pvmsMonitorWidget);
         alarmPushButton->setObjectName(QString::fromUtf8("alarmPushButton"));
-        alarmPushButton->setGeometry(QRect(810, 590, 71, 31));
+        alarmPushButton->setGeometry(QRect(810, 590, 82, 36));
         alarmPushButton->setFont(font);
         alarmPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/alertoff.bmp);}\n"
+"background-image: url(:/monres/alertoff.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         alarmPushButton->setCheckable(true);
         fillLightSwitchPushButton = new QPushButton(pvmsMonitorWidget);
         fillLightSwitchPushButton->setObjectName(QString::fromUtf8("fillLightSwitchPushButton"));
-        fillLightSwitchPushButton->setGeometry(QRect(910, 470, 110, 30));
+        fillLightSwitchPushButton->setGeometry(QRect(910, 470, 112, 32));
         fillLightSwitchPushButton->setFont(font);
         fillLightSwitchPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-image: url(:/monres/ligtoff.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;\n"
 "}\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
@@ -282,10 +332,13 @@ public:
         fillLightSwitchPushButton->setCheckable(true);
         presetNoPushButton_4 = new QPushButton(pvmsMonitorWidget);
         presetNoPushButton_4->setObjectName(QString::fromUtf8("presetNoPushButton_4"));
-        presetNoPushButton_4->setGeometry(QRect(970, 310, 51, 31));
+        presetNoPushButton_4->setGeometry(QRect(970, 310, 53, 32));
         presetNoPushButton_4->setFont(font);
         presetNoPushButton_4->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/4.bmp);}\n"
+"background-image: url(:/res/4.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
@@ -312,9 +365,12 @@ public:
         pollingNextOnePushButton->setFlat(true);
         ptzUpPushButton = new QPushButton(pvmsMonitorWidget);
         ptzUpPushButton->setObjectName(QString::fromUtf8("ptzUpPushButton"));
-        ptzUpPushButton->setGeometry(QRect(850, 50, 110, 30));
+        ptzUpPushButton->setGeometry(QRect(850, 50, 112, 32));
         ptzUpPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/up.bmp);}\n"
+"background-image: url(:/res/up.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
@@ -349,10 +405,13 @@ public:
         label_3->setTextFormat(Qt::AutoText);
         presetNoPushButton_6 = new QPushButton(pvmsMonitorWidget);
         presetNoPushButton_6->setObjectName(QString::fromUtf8("presetNoPushButton_6"));
-        presetNoPushButton_6->setGeometry(QRect(850, 370, 51, 31));
+        presetNoPushButton_6->setGeometry(QRect(850, 370, 53, 32));
         presetNoPushButton_6->setFont(font);
         presetNoPushButton_6->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/6.bmp);}\n"
+"background-image: url(:/res/6.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
@@ -360,12 +419,15 @@ public:
         presetNoPushButton_6->setCheckable(true);
         presetNoPushButton = new QPushButton(pvmsMonitorWidget);
         presetNoPushButton->setObjectName(QString::fromUtf8("presetNoPushButton"));
-        presetNoPushButton->setGeometry(QRect(790, 310, 51, 31));
+        presetNoPushButton->setGeometry(QRect(790, 310, 53, 32));
         presetNoPushButton->setFont(font);
         presetNoPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/11.bmp);}\n"
+"background-image: url(:/monres/11.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
-"\n"
+"QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         presetNoPushButton->setCheckable(true);
@@ -373,10 +435,13 @@ public:
         presetNoPushButton->setFlat(false);
         presetNoPushButton_5 = new QPushButton(pvmsMonitorWidget);
         presetNoPushButton_5->setObjectName(QString::fromUtf8("presetNoPushButton_5"));
-        presetNoPushButton_5->setGeometry(QRect(790, 370, 51, 31));
+        presetNoPushButton_5->setGeometry(QRect(790, 370, 53, 32));
         presetNoPushButton_5->setFont(font);
         presetNoPushButton_5->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/5.bmp);}\n"
+"background-image: url(:/res/5.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
@@ -404,10 +469,13 @@ public:
 " }"));
         presetGetPushButton = new QPushButton(pvmsMonitorWidget);
         presetGetPushButton->setObjectName(QString::fromUtf8("presetGetPushButton"));
-        presetGetPushButton->setGeometry(QRect(910, 430, 110, 30));
+        presetGetPushButton->setGeometry(QRect(910, 430, 112, 32));
         presetGetPushButton->setFont(font);
         presetGetPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/res/usepreset.bmp);}\n"
+"background-image: url(:/res/usepreset.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(255, 255, 255);color: rgb(255, 255, 255);border-color: rgb(86, 164, 246);border-width: 6px;border-style: solid;}"));
         label_7 = new QLabel(pvmsMonitorWidget);
@@ -425,10 +493,13 @@ public:
         label_7->setTextFormat(Qt::AutoText);
         canselPushButton = new QPushButton(pvmsMonitorWidget);
         canselPushButton->setObjectName(QString::fromUtf8("canselPushButton"));
-        canselPushButton->setGeometry(QRect(930, 590, 71, 31));
+        canselPushButton->setGeometry(QRect(930, 590, 82, 36));
         canselPushButton->setFont(font);
         canselPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/cancel.bmp);}\n"
+"background-image: url(:/monres/cancel.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         canselPushButton->setCheckable(true);

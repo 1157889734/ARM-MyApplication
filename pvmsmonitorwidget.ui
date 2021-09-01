@@ -45,8 +45,8 @@
     <rect>
      <x>970</x>
      <y>370</y>
-     <width>51</width>
-     <height>31</height>
+     <width>53</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -56,7 +56,10 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/8.bmp);}
+background-image: url(:/res/8.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
 
 QPushButton:pressed
@@ -74,8 +77,8 @@ QPushButton:pressed
     <rect>
      <x>808</x>
      <y>170</y>
-     <width>69</width>
-     <height>30</height>
+     <width>71</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -85,7 +88,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/plus.bmp);}
+background-image: url(:/res/plus.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
 </string>
@@ -99,8 +105,8 @@ QPushButton:pressed
     <rect>
      <x>930</x>
      <y>220</y>
-     <width>69</width>
-     <height>30</height>
+     <width>71</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -110,7 +116,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/near.bmp);}
+background-image: url(:/res/near.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
 </string>
@@ -172,8 +181,8 @@ color: rgb(0, 0, 0);</string>
     <rect>
      <x>785</x>
      <y>470</y>
-     <width>110</width>
-     <height>30</height>
+     <width>112</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -183,7 +192,10 @@ color: rgb(0, 0, 0);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/monres/cameraoff.bmp);}
+background-image: url(:/monres/cameraoff.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
@@ -219,8 +231,8 @@ color: rgb(0, 0, 0);</string>
     <rect>
      <x>808</x>
      <y>220</y>
-     <width>69</width>
-     <height>30</height>
+     <width>71</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -230,7 +242,10 @@ color: rgb(0, 0, 0);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/fare.bmp);}
+background-image: url(:/res/fare.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
 </string>
@@ -244,8 +259,8 @@ QPushButton:pressed
     <rect>
      <x>910</x>
      <y>310</y>
-     <width>51</width>
-     <height>31</height>
+     <width>53</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -255,7 +270,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/3.bmp);}
+background-image: url(:/res/3.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
 
 QPushButton:pressed
@@ -301,8 +319,8 @@ QPushButton:pressed
     <rect>
      <x>930</x>
      <y>170</y>
-     <width>69</width>
-     <height>30</height>
+     <width>71</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -312,7 +330,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/substruct.bmp);}
+background-image: url(:/res/substruct.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
 
@@ -327,8 +348,8 @@ QPushButton:pressed
     <rect>
      <x>850</x>
      <y>310</y>
-     <width>51</width>
-     <height>31</height>
+     <width>53</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -339,7 +360,10 @@ QPushButton:pressed
    <property name="styleSheet">
     <string notr="true">
 QPushButton
-{background-image: url(:/monres/2.bmp);}
+{background-image: url(:/monres/2.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
 
@@ -358,13 +382,17 @@ QPushButton:pressed
     <rect>
      <x>950</x>
      <y>90</y>
-     <width>69</width>
-     <height>30</height>
+     <width>71</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/right.bmp);}
+background-image: url(:/res/right.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
 </string>
@@ -401,13 +429,17 @@ color: rgb(0, 0, 0);</string>
     <rect>
      <x>790</x>
      <y>90</y>
-     <width>69</width>
-     <height>30</height>
+     <width>71</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/left.bmp);}
+background-image: url(:/res/left.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
 </string>
@@ -454,8 +486,8 @@ QPushButton:pressed
     <rect>
      <x>785</x>
      <y>430</y>
-     <width>110</width>
-     <height>30</height>
+     <width>112</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -465,7 +497,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/setuse.bmp);}
+background-image: url(:/res/setuse.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
 </string>
@@ -485,8 +520,8 @@ QPushButton:pressed
     <rect>
      <x>910</x>
      <y>370</y>
-     <width>51</width>
-     <height>31</height>
+     <width>53</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -496,7 +531,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/7.bmp);}
+background-image: url(:/res/7.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
 
 QPushButton:pressed
@@ -514,13 +552,16 @@ QPushButton:pressed
     <rect>
      <x>850</x>
      <y>130</y>
-     <width>110</width>
-     <height>30</height>
+     <width>112</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/down.bmp);}
+background-image: url(:/res/down.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
 </string>
@@ -540,8 +581,8 @@ QPushButton:pressed
     <rect>
      <x>830</x>
      <y>550</y>
-     <width>151</width>
-     <height>31</height>
+     <width>166</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -551,7 +592,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/monres/savevedio.bmp);}
+background-image: url(:/monres/savevedio.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
 </string>
@@ -565,8 +609,8 @@ QPushButton:pressed
     <rect>
      <x>810</x>
      <y>590</y>
-     <width>71</width>
-     <height>31</height>
+     <width>82</width>
+     <height>36</height>
     </rect>
    </property>
    <property name="font">
@@ -576,7 +620,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/monres/alertoff.bmp);}
+background-image: url(:/monres/alertoff.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
    </property>
@@ -592,8 +639,8 @@ QPushButton:pressed
     <rect>
      <x>910</x>
      <y>470</y>
-     <width>110</width>
-     <height>30</height>
+     <width>112</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -604,6 +651,9 @@ QPushButton:pressed
    <property name="styleSheet">
     <string notr="true">QPushButton{
 background-image: url(:/monres/ligtoff.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;
 }
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
@@ -621,8 +671,8 @@ QPushButton:pressed
     <rect>
      <x>970</x>
      <y>310</y>
-     <width>51</width>
-     <height>31</height>
+     <width>53</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -632,7 +682,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/4.bmp);}
+background-image: url(:/res/4.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
 
 QPushButton:pressed
@@ -700,13 +753,16 @@ QPushButton:pressed
     <rect>
      <x>850</x>
      <y>50</y>
-     <width>110</width>
-     <height>30</height>
+     <width>112</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/up.bmp);}
+background-image: url(:/res/up.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
@@ -793,8 +849,8 @@ QPushButton:pressed
     <rect>
      <x>850</x>
      <y>370</y>
-     <width>51</width>
-     <height>31</height>
+     <width>53</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -804,7 +860,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/6.bmp);}
+background-image: url(:/res/6.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
 
 QPushButton:pressed
@@ -822,8 +881,8 @@ QPushButton:pressed
     <rect>
      <x>790</x>
      <y>310</y>
-     <width>51</width>
-     <height>31</height>
+     <width>53</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -833,9 +892,12 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/monres/11.bmp);}
+background-image: url(:/monres/11.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
-
+QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
    </property>
@@ -857,8 +919,8 @@ QPushButton:pressed
     <rect>
      <x>790</x>
      <y>370</y>
-     <width>51</width>
-     <height>31</height>
+     <width>53</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -868,7 +930,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/5.bmp);}
+background-image: url(:/res/5.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
 
 QPushButton:pressed
@@ -934,8 +999,8 @@ QPushButton:pressed
     <rect>
      <x>910</x>
      <y>430</y>
-     <width>110</width>
-     <height>30</height>
+     <width>112</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="font">
@@ -945,7 +1010,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/res/usepreset.bmp);}
+background-image: url(:/res/usepreset.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:pressed
 {background-color: rgb(255, 255, 255);color: rgb(255, 255, 255);border-color: rgb(86, 164, 246);border-width: 6px;border-style: solid;}</string>
    </property>
@@ -991,8 +1059,8 @@ QPushButton:pressed
     <rect>
      <x>930</x>
      <y>590</y>
-     <width>71</width>
-     <height>31</height>
+     <width>82</width>
+     <height>36</height>
     </rect>
    </property>
    <property name="font">
@@ -1002,7 +1070,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/monres/cancel.bmp);}
+background-image: url(:/monres/cancel.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
    </property>

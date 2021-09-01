@@ -54,8 +54,8 @@
     <rect>
      <x>270</x>
      <y>10</y>
-     <width>135</width>
-     <height>33</height>
+     <width>137</width>
+     <height>35</height>
     </rect>
    </property>
    <property name="font">
@@ -65,7 +65,10 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/monres/ccsz.bmp);}
+background-image: url(:/monres/ccsz.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
@@ -79,8 +82,8 @@ QPushButton:pressed
     <rect>
      <x>480</x>
      <y>590</y>
-     <width>80</width>
-     <height>35</height>
+     <width>82</width>
+     <height>36</height>
     </rect>
    </property>
    <property name="font">
@@ -90,7 +93,10 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/monres/alertoff.bmp);}
+background-image: url(:/monres/alertoff.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 
 QPushButton:pressed
@@ -108,13 +114,16 @@ QPushButton:pressed
     <rect>
      <x>720</x>
      <y>590</y>
-     <width>80</width>
-     <height>35</height>
+     <width>82</width>
+     <height>36</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/monres/cancel.bmp);}
+background-image: url(:/monres/cancel.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
 
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>

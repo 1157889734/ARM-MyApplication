@@ -111,10 +111,13 @@ public:
 " }"));
         alarmPushButton = new QPushButton(recordPlayWidget);
         alarmPushButton->setObjectName(QString::fromUtf8("alarmPushButton"));
-        alarmPushButton->setGeometry(QRect(720, 585, 80, 35));
+        alarmPushButton->setGeometry(QRect(715, 585, 82, 36));
         alarmPushButton->setFont(font);
         alarmPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/alertoff.bmp);}\n"
+"background-image: url(:/monres/alertoff.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "\n"
 "QPushButton:pressed\n"
@@ -165,10 +168,13 @@ public:
         playLastOnePushButton->setFlat(true);
         queryPushButton = new QPushButton(recordPlayWidget);
         queryPushButton->setObjectName(QString::fromUtf8("queryPushButton"));
-        queryPushButton->setGeometry(QRect(90, 195, 110, 31));
+        queryPushButton->setGeometry(QRect(90, 195, 112, 32));
         queryPushButton->setFont(font);
         queryPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/search.bmp);}\n"
+"background-image: url(:/monres/search.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "\n"
 "QPushButton:pressed\n"
@@ -198,18 +204,24 @@ public:
 " }"));
         downLoadPushButton = new QPushButton(recordPlayWidget);
         downLoadPushButton->setObjectName(QString::fromUtf8("downLoadPushButton"));
-        downLoadPushButton->setGeometry(QRect(30, 585, 205, 41));
+        downLoadPushButton->setGeometry(QRect(30, 585, 207, 43));
         downLoadPushButton->setFont(font);
         downLoadPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/videodownload.bmp);}\n"
+"background-image: url(:/monres/videodownload.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         minusStepPushButton = new QPushButton(recordPlayWidget);
         minusStepPushButton->setObjectName(QString::fromUtf8("minusStepPushButton"));
-        minusStepPushButton->setGeometry(QRect(880, 570, 67, 57));
+        minusStepPushButton->setGeometry(QRect(880, 570, 68, 58));
         minusStepPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/mslow.bmp);}\n"
+"background-image: url(:/monres/mslow.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
@@ -283,9 +295,12 @@ public:
         carSeletionComboBox->setFont(font);
         plusStepPushButton = new QPushButton(recordPlayWidget);
         plusStepPushButton->setObjectName(QString::fromUtf8("plusStepPushButton"));
-        plusStepPushButton->setGeometry(QRect(950, 570, 67, 57));
+        plusStepPushButton->setGeometry(QRect(950, 570, 68, 58));
         plusStepPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/mfast.bmp);}\n"
+"background-image: url(:/monres/mfast.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
@@ -322,10 +337,13 @@ public:
         label_14->setGeometry(QRect(190, 95, 31, 21));
         canselPushButton = new QPushButton(recordPlayWidget);
         canselPushButton->setObjectName(QString::fromUtf8("canselPushButton"));
-        canselPushButton->setGeometry(QRect(800, 585, 80, 35));
+        canselPushButton->setGeometry(QRect(800, 585, 82, 36));
         canselPushButton->setFont(font);
         canselPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/cancel.bmp);}\n"
+"background-image: url(:/monres/cancel.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));

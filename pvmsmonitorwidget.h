@@ -190,6 +190,7 @@ public slots:
     void presetSetCtrlSlot();
     void presetGetCtrlSlot();
     void temporarySaveBeginSlot();
+    void temporarySaveEndSlot();
     void cameraSwitchSlot();
     void fillLightSwitchSlot();
     void manualSwitchEndSlot();

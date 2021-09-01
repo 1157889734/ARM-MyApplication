@@ -971,6 +971,25 @@ void pvmsMonitorWidget::cameraSwitchEndSlot()
         m_cameraSwitchTimer = NULL;
     }
 }
+void pvmsMonitorWidget::temporarySaveEndSlot()
+{
+//    ui->temporarySavePushButton->setText(tr("立即保存"));
+    ui->temporarySavePushButton->setStyleSheet("background-image:url(:/monres/savevedio.bmp)");
+
+    ui->temporarySavePushButton->setEnabled(true);
+
+
+    if (m_temporarySaveTimer != NULL)
+    {
+        if (m_temporarySaveTimer->isActive())   //判断定时器是否正在运行，是则停止运行
+        {
+            m_temporarySaveTimer->stop();
+        }
+        delete m_temporarySaveTimer;
+        m_temporarySaveTimer = NULL;
+    }
+}
+
 void pvmsMonitorWidget::temporarySaveBeginSlot()
 {
     char acSendBuf[4] = {0};
@@ -994,7 +1013,8 @@ void pvmsMonitorWidget::temporarySaveBeginSlot()
     }
 //    DebugPrint(DEBUG_UI_OPTION_PRINT, "pvmsMonitorWidget temporarySave confirm!\n");
 
-    ui->temporarySavePushButton->setText(tr("保存中"));
+//    ui->temporarySavePushButton->setText(tr("保存中"));
+    ui->temporarySavePushButton->setStyleSheet("background-image:url(:/monres/saveing.bmp)");
     ui->temporarySavePushButton->setEnabled(false);
 
     if (NULL == m_temporarySaveTimer)
