@@ -1,0 +1,50 @@
+﻿#ifndef DEFINE_H
+#define DEFINE_H
+
+
+#define FONT_SIZE  16
+#define MONITOR_FONT_SIZE 14
+
+//控件之间间距
+
+#define GRAPS_BETWEEN_CONTROLS  3
+/*************************w1024*768***********************/
+#define MAIN_FUNCTION_BUTTON_GRAPS 6
+//window size
+#define SYSTEM_WIN_WIDTH 1024
+#define SYSTEM_WIN_HEIGHT 768
+
+
+//键盘界面
+#define MMS_LOGIN_BUTTON_WIDTH				164
+#define MMS_LOGIN_BUTTON_HEIGHT				50
+#define MMS_LOGIN_EDIT_FRAME_WIDTH			275
+#define MMS_LOGIN_EDIT_FRAME_HEIGHT			54
+#define MMS_LOGIN_EDIT_WIDTH				275
+#define MMS_LOGIN_EDIT_HEIGHT				30
+#define MMS_LOGIN_KEYBOARD_WIDTH			924
+#define MMS_LOGIN_KEYBOARD_HEIGHT			200
+#define MMS_LOGIN_KEYBOARD_NEW_HEIGHT       700
+
+
+/*****************800*600****************************/
+#define MAIN_FUNCTION_BUTTON_GRAPS_600P  3
+
+//window size
+#define SYSTEM_WIN_WIDTH_600P 1024
+#define SYSTEM_WIN_HEIGHT_600P 768
+
+
+//slider
+#define PlayBackByFileSliderHeight_600P 20
+//键盘界面
+#define MMS_LOGIN_BUTTON_WIDTH_600P				136
+#define MMS_LOGIN_BUTTON_HEIGHT_600P			47
+#define MMS_LOGIN_EDIT_FRAME_WIDTH_600P			240
+#define MMS_LOGIN_EDIT_FRAME_HEIGHT_600P		43
+#define MMS_LOGIN_KEYBOARD_WIDTH_600P			552
+#define MMS_LOGIN_KEYBOARD_HEIGHT_600P			134
+
+
+
+#endif // DEFINE_H

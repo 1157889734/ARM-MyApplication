@@ -60,12 +60,24 @@ public:
 "border-width: 1px;border-style: solid;"));
         addpushButton = new QPushButton(usergroupManage);
         addpushButton->setObjectName(QString::fromUtf8("addpushButton"));
-        addpushButton->setGeometry(QRect(50, 340, 135, 37));
-        addpushButton->setStyleSheet(QString::fromUtf8("background-image: url(:/monres/useradd.bmp);"));
+        addpushButton->setGeometry(QRect(50, 340, 137, 39));
+        addpushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-image: url(:/monres/useradd.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
+"QPushButton:pressed\n"
+"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         deletepushButton = new QPushButton(usergroupManage);
         deletepushButton->setObjectName(QString::fromUtf8("deletepushButton"));
-        deletepushButton->setGeometry(QRect(230, 340, 135, 37));
-        deletepushButton->setStyleSheet(QString::fromUtf8("background-image: url(:/monres/userdel.bmp);"));
+        deletepushButton->setGeometry(QRect(230, 340, 137, 39));
+        deletepushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-image: url(:/monres/userdel.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
+"QPushButton:pressed\n"
+"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         radioButton = new QRadioButton(usergroupManage);
         radioButton->setObjectName(QString::fromUtf8("radioButton"));
         radioButton->setGeometry(QRect(570, 80, 112, 23));
@@ -98,8 +110,14 @@ public:
         surelineEdit->setStyleSheet(QString::fromUtf8("QLineEdit:focus{background-color: rgb(204, 232, 207);}"));
         savepushButton = new QPushButton(usergroupManage);
         savepushButton->setObjectName(QString::fromUtf8("savepushButton"));
-        savepushButton->setGeometry(QRect(610, 340, 135, 37));
-        savepushButton->setStyleSheet(QString::fromUtf8("background-image: url(:/monres/usersave.bmp);"));
+        savepushButton->setGeometry(QRect(610, 340, 137, 39));
+        savepushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-image: url(:/monres/usersave.bmp);\n"
+"border-color: rgb(255, 255, 255);\n"
+"border-width: 1px;\n"
+"border-style: solid;}\n"
+"QPushButton:pressed\n"
+"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         label_7 = new QLabel(usergroupManage);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setGeometry(QRect(60, 35, 67, 17));

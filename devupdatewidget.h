@@ -1,7 +1,8 @@
 #ifndef DEVUPDATEWIDGET_H
 #define DEVUPDATEWIDGET_H
 
-
+#include <QEvent>
+#include <QObject>
 #include <QWidget>
 #include <QTimer>
 #include <QDateTime>
@@ -11,6 +12,7 @@
 #include "pvmsmonitorwidget.h"
 
 #include "usergroupmanage.h"
+#include "ckeyboard.h"
 
 
 namespace Ui {
@@ -25,7 +27,8 @@ public:
     explicit devUpdateWidget(QWidget *parent = 0);
     ~devUpdateWidget();
     QDateTime timeTd;
-
+    bool eventFilter(QObject *obj, QEvent *e);
+    void ShowKeyboardSlots(int nShow);
 
 public slots:
 
@@ -56,12 +59,14 @@ public slots:
 
     void setTimeSignalCtrl();
 
+    void KeyboardPressKeySlots(char key);
+
 
 signals:
     void alarmPushButoonClickSignal();
     void registOutSignal();     //注销信号，iType:表示执行注销的页面类型，这里应该为2，表示受电弓监控页面,
     void systimeSetSignal();
-
+    void show_hide_Signal(int value);
 private:
     Ui::devUpdateWidget *ui;
     QTimer *m_alarmHappenTimer;
@@ -80,6 +85,7 @@ private:
     QString m_saturationText;
     QString m_contrastText;
     usergroupManage *gusergroupManage;
+    CKeyboard *mCkeybord;
 
 
 };

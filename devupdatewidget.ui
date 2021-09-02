@@ -10,6 +10,9 @@
     <height>665</height>
    </rect>
   </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -542,28 +545,6 @@ QPushButton:pressed
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_17">
-   <property name="geometry">
-    <rect>
-     <x>1100</x>
-     <y>430</y>
-     <width>16</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QWidget" name="deviceManagewidget" native="true">
    <property name="geometry">
     <rect>
@@ -572,6 +553,9 @@ QPushButton:pressed
      <width>944</width>
      <height>401</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
    </property>
    <widget class="QLineEdit" name="configFileDisplayLineEdit">
     <property name="geometry">
@@ -783,7 +767,7 @@ QPushButton:pressed
    <widget class="QLabel" name="label_15">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>680</x>
       <y>210</y>
       <width>101</width>
       <height>17</height>
@@ -1474,6 +1458,9 @@ QPushButton:pressed
      <height>630</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
@@ -1559,7 +1546,6 @@ QPushButton:pressed
   <zorder>pollingTimeSetLineEdit</zorder>
   <zorder>presetReturnTimeSetLabel</zorder>
   <zorder>canselPushButton</zorder>
-  <zorder>label_17</zorder>
   <zorder>permissonManagePushButton</zorder>
   <zorder>deviceManagewidget</zorder>
   <zorder>PISSetcomboBox</zorder>

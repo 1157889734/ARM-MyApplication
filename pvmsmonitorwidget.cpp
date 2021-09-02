@@ -566,7 +566,7 @@ void pvmsMonitorWidget::startVideoPolling()    //开启视频轮询的处理
 
     m_playWin = new QVideoWidget(this->parentWidget());   //新建一个与目前窗体同属一个父窗体的播放子窗体，方便实现全屏
 //    m_playWin->setGeometry(0, 0, 1024, 768);      //设置窗体在父窗体中的位置，默认一开始为全屏
-    m_playWin->setGeometry(0, 138, 775, 656);
+    m_playWin->setGeometry(0, 138, 782, 630);
     m_playWin->show();  //默认显示
     m_playWin->setObjectName("m_playWin");
     m_playWin->setStyleSheet("QWidget{background-color: rgb(0, 0, 0);}");     //设置播放窗口背景色为黑色
@@ -576,13 +576,13 @@ void pvmsMonitorWidget::startVideoPolling()    //开启视频轮询的处理
 
     m_channelStateLabel = new QLabel(this->parentWidget());
     m_channelStateLabel->setGeometry(452, 360, 130, 50);
-    m_channelStateLabel->setStyleSheet("QLabel{color:rgb(255, 255, 255);font: 24pt;background-color: rgb(0, 0, 0);}");
+    m_channelStateLabel->setStyleSheet("QLabel{color:rgb(55, 82, 103);font: 24pt;background-color: rgb(0, 0, 0);}");
     m_channelStateLabel->setAttribute(Qt::WA_TranslucentBackground, true); //设置控件背景透明
     m_channelStateLabel->show();
 
     m_channelNoLabel = new QLabel(this->parentWidget());
     m_channelNoLabel->setGeometry(20, 690, 100, 50);
-    m_channelNoLabel->setStyleSheet("QLabel{color:rgb(255, 255, 255);font: 24pt;background-color: rgb(0, 0, 0);}");
+    m_channelNoLabel->setStyleSheet("QLabel{color:rgb(55, 82, 103);font: 24pt;background-color: rgb(0, 0, 0);}");
     m_channelNoLabel->setAttribute(Qt::WA_TranslucentBackground, true);
     m_channelNoLabel->show();
 
@@ -954,6 +954,11 @@ void pvmsMonitorWidget::presetGetCtrlSlot()
       sysinfo(&s_info);
       this->m_tCameraInfo[m_iCameraPlayNo].tPtzOprateTime = s_info.uptime;
       this->m_tCameraInfo[m_iCameraPlayNo].iPresetNo = m_iSelectPresetNo;
+
+      QMessageBox box(QMessageBox::Information,QString::fromUtf8("注意"),QString::fromUtf8("预置点调用成功!"));
+      box.setStandardButtons (QMessageBox::Ok);
+      box.setButtonText (QMessageBox::Ok,QString::fromUtf8("确 定"));
+      box.exec();
 
 }
 
@@ -1615,6 +1620,28 @@ void pvmsMonitorWidget::cmpOptionCtrlSlot(int iType, int iCh)
         m_tCameraInfo[iCh].iCmpOpenFlag = 0;
 
     }
+    else if (CMP_CMD_ENABLE_CH == iType)
+    {
+
+
+
+    }
+    else if (CMP_CMD_DISABLE_CH == iType)
+    {
+
+
+    }
+    else if (CMP_CMD_CHG_ALL_VIDEOWIN == iType)
+    {
+
+
+    }
+    else if (CMP_CMD_GET_STREAM_STATE == iType)
+    {
+
+
+
+    }
 
 }
 
@@ -1823,7 +1850,7 @@ void pvmsMonitorWidget::alarmHappenSlot()
         sysinfo(&s_info);
         m_lastActionTime = s_info.uptime;  //更新最后一次操作计时
         m_playWin->move(0, 138);
-        m_playWin->resize(782, 656);
+        m_playWin->resize(782, 630);
         m_iFullScreenFlag = 0;
 
         tPkt.iMsgCmd = CMP_CMD_CHG_ALL_VIDEOWIN;
@@ -1913,7 +1940,7 @@ bool pvmsMonitorWidget::eventFilter(QObject *target, QEvent *event)    //事件�
 
                 m_iFullScreenFlag = 0;
                 m_playWin->move(0, 138);
-                m_playWin->resize(782, 656);
+                m_playWin->resize(782, 630);
 
 
 
@@ -2292,7 +2319,7 @@ void pvmsMonitorWidget::blackScreenCtrlSlot()     //黑屏触发信号处理，�
         sysinfo(&s_info);
         m_lastActionTime = s_info.uptime;  //更新最后一次操作计时
         m_playWin->move(0, 138);
-        m_playWin->resize(782, 656);
+        m_playWin->resize(782, 630);
         m_iFullScreenFlag = 0;
 
         tPkt.iMsgCmd = CMP_CMD_CHG_ALL_VIDEOWIN;
@@ -2325,15 +2352,6 @@ void pvmsMonitorWidget::blackScreenExitCtrlSlot()  //黑屏退出触发信号处
     m_iBlackScreenFlag = 0;
 }
 
-
-void pvmsMonitorWidget::createMeadia()
-{
-
-
-
-
-
-}
 
 void pvmsMonitorWidget::pvmsUpdownCtrl(char *pcMsgData)
 {

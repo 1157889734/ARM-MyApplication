@@ -48,7 +48,6 @@ public:
     QPushButton *alarmPushButton;
     QLabel *label_4;
     QPushButton *canselPushButton;
-    QLabel *label_17;
     QWidget *deviceManagewidget;
     QLineEdit *configFileDisplayLineEdit;
     QLineEdit *brightnessLineEdit;
@@ -101,6 +100,7 @@ public:
         if (devUpdateWidget->objectName().isEmpty())
             devUpdateWidget->setObjectName(QString::fromUtf8("devUpdateWidget"));
         devUpdateWidget->resize(1024, 665);
+        devUpdateWidget->setFocusPolicy(Qt::StrongFocus);
         devUpdateWidget->setStyleSheet(QString::fromUtf8(""));
         permissonManagePushButton = new QPushButton(devUpdateWidget);
         permissonManagePushButton->setObjectName(QString::fromUtf8("permissonManagePushButton"));
@@ -266,15 +266,10 @@ public:
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         canselPushButton->setCheckable(true);
-        label_17 = new QLabel(devUpdateWidget);
-        label_17->setObjectName(QString::fromUtf8("label_17"));
-        label_17->setGeometry(QRect(1100, 430, 16, 18));
-        label_17->setFont(font);
-        label_17->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
-""));
         deviceManagewidget = new QWidget(devUpdateWidget);
         deviceManagewidget->setObjectName(QString::fromUtf8("deviceManagewidget"));
         deviceManagewidget->setGeometry(QRect(40, 115, 944, 401));
+        deviceManagewidget->setFocusPolicy(Qt::StrongFocus);
         configFileDisplayLineEdit = new QLineEdit(deviceManagewidget);
         configFileDisplayLineEdit->setObjectName(QString::fromUtf8("configFileDisplayLineEdit"));
         configFileDisplayLineEdit->setGeometry(QRect(5, 310, 121, 27));
@@ -337,7 +332,7 @@ public:
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         label_15 = new QLabel(deviceManagewidget);
         label_15->setObjectName(QString::fromUtf8("label_15"));
-        label_15->setGeometry(QRect(650, 210, 101, 17));
+        label_15->setGeometry(QRect(680, 210, 101, 17));
         label_15->setFont(font);
         comboBox = new QComboBox(deviceManagewidget);
         comboBox->addItem(QString());
@@ -575,6 +570,7 @@ public:
         label_6 = new QLabel(devUpdateWidget);
         label_6->setObjectName(QString::fromUtf8("label_6"));
         label_6->setGeometry(QRect(0, 0, 1024, 630));
+        label_6->setFocusPolicy(Qt::StrongFocus);
         label_6->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         PISSetcomboBox = new QComboBox(devUpdateWidget);
         PISSetcomboBox->setObjectName(QString::fromUtf8("PISSetcomboBox"));
@@ -617,7 +613,6 @@ public:
         pollingTimeSetLineEdit->raise();
         presetReturnTimeSetLabel->raise();
         canselPushButton->raise();
-        label_17->raise();
         permissonManagePushButton->raise();
         deviceManagewidget->raise();
         PISSetcomboBox->raise();
@@ -657,7 +652,6 @@ public:
         alarmPushButton->setText(QString());
         label_4->setText(QCoreApplication::translate("devUpdateWidget", "\347\247\222", nullptr));
         canselPushButton->setText(QString());
-        label_17->setText(QString());
         brightnessLineEdit->setText(QCoreApplication::translate("devUpdateWidget", "128", nullptr));
         carriageLabel->setText(QCoreApplication::translate("devUpdateWidget", "\350\275\246\345\216\242\345\217\267:", nullptr));
         configFilelookPushButton->setText(QString());

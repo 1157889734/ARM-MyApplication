@@ -15,7 +15,7 @@
 #include <netinet/in.h>
 #include <QProcess>
 
-
+static int g_ibShowKeyboard = 0;
 static int g_ichagepage = 0;
 static int g_iVNum = 0;
 #define PVMSPAGETYPE  2    //此页面类型，2表示受电弓监控页面
@@ -63,6 +63,14 @@ devUpdateWidget::devUpdateWidget(QWidget *parent) :
 //    gusergroupManage = new usergroupManage(this);   //受电弓监控页面
 //    gusergroupManage->setGeometry(40, 120, gusergroupManage->width(), gusergroupManage->height());   //设置位置
 //    gusergroupManage->hide();
+
+    ui->pollingTimeSetLineEdit->installEventFilter(this);
+    ui->presetReturnTimeSetLineEdit->installEventFilter(this);
+    ui->brightnessLineEdit->installEventFilter(this);
+    ui->contrastLineEdit->installEventFilter(this);
+    ui->saturationLineEdit->installEventFilter(this);
+    ui->dateEdit->installEventFilter(this);
+    ui->timeEdit->installEventFilter(this);
 
 
     connect(ui->permissonManagePushButton, SIGNAL(clicked(bool)), this, SLOT(userManageSlot()));
@@ -130,14 +138,12 @@ devUpdateWidget::devUpdateWidget(QWidget *parent) :
     setPollingTimeRadioButton();  //设置轮询时间单选按钮组的样式
     setPresetReturnTimeRadioButton(); //设置预置点返回时间单选按钮组的样式
 
-
 }
 
 devUpdateWidget::~devUpdateWidget()
 {
     delete ui;
 }
-
 
 void devUpdateWidget::registOutButtonClick()
 {
@@ -147,6 +153,146 @@ void devUpdateWidget::registOutButtonClick()
     emit registOutSignal();    //触发注销信号，带上当前设备类型
 
 }
+//ui->pollingTimeSetLineEdit->installEventFilter(this);
+//ui->presetReturnTimeSetLineEdit->installEventFilter(this);
+//ui->brightnessLineEdit->installEventFilter(this);
+//ui->contrastLineEdit->installEventFilter(this);
+//ui->saturationLineEdit->installEventFilter(this);
+//ui->dateEdit->installEventFilter(this);
+//ui->timeEdit->installEventFilter(this);
+
+void devUpdateWidget::KeyboardPressKeySlots(char key)
+{
+    if(key==BSPACE)
+     {
+         if(ui->pollingTimeSetLineEdit->hasFocus())//输入框1焦点
+         {
+             if(!ui->pollingTimeSetLineEdit->selectedText().isEmpty())
+             {
+                  ui->pollingTimeSetLineEdit->del();
+             }
+             else
+             {
+                 ui->pollingTimeSetLineEdit->backspace();
+             }
+         }
+         else if(ui->presetReturnTimeSetLineEdit->hasFocus())//输入框1焦点
+         {
+             if(!ui->presetReturnTimeSetLineEdit->selectedText().isEmpty())
+             {
+                  ui->presetReturnTimeSetLineEdit->del();
+             }
+             else
+             {
+                 ui->presetReturnTimeSetLineEdit->backspace();
+             }
+         }
+         else if(ui->brightnessLineEdit->hasFocus())//输入框1焦点
+         {
+             if(!ui->brightnessLineEdit->selectedText().isEmpty())
+             {
+                  ui->brightnessLineEdit->del();
+             }
+             else
+             {
+                 ui->brightnessLineEdit->backspace();
+             }
+         }
+         else if(ui->contrastLineEdit->hasFocus())//输入框1焦点
+         {
+             if(!ui->contrastLineEdit->selectedText().isEmpty())
+             {
+                  ui->contrastLineEdit->del();
+             }
+             else
+             {
+                 ui->contrastLineEdit->backspace();
+             }
+         }
+         else if(ui->saturationLineEdit->hasFocus())//输入框1焦点
+         {
+             if(!ui->saturationLineEdit->selectedText().isEmpty())
+             {
+                  ui->saturationLineEdit->del();
+             }
+             else
+             {
+                 ui->saturationLineEdit->backspace();
+             }
+         }
+
+     }
+    else if(key == ENTER)
+    {
+        ShowKeyboardSlots(0);
+    }
+    else
+    {
+     if(ui->pollingTimeSetLineEdit->hasFocus())//输入框1焦点
+     {
+         ui->pollingTimeSetLineEdit->insert(QString( key));
+     }
+     else if(ui->presetReturnTimeSetLineEdit->hasFocus())//输入框1焦点
+     {
+         ui->presetReturnTimeSetLineEdit->insert(QString( key));
+     }
+     else if(ui->brightnessLineEdit->hasFocus())//输入框1焦点
+     {
+         ui->brightnessLineEdit->insert(QString( key));
+     }
+     else if(ui->contrastLineEdit->hasFocus())//输入框1焦点
+     {
+         ui->contrastLineEdit->insert(QString( key));
+     }
+     else if(ui->saturationLineEdit->hasFocus())//输入框1焦点
+     {
+         ui->saturationLineEdit->insert(QString( key));
+     }
+    }
+}
+
+void devUpdateWidget::ShowKeyboardSlots(int nShow)
+{
+    if(0 == nShow)
+    {
+        emit show_hide_Signal(nShow);
+        g_ibShowKeyboard =0;
+    }
+    else
+    {
+        if(g_ibShowKeyboard ==0)
+        {
+            emit show_hide_Signal(nShow);
+            g_ibShowKeyboard =1;
+        }
+    }
+}
+
+bool devUpdateWidget::eventFilter(QObject *obj, QEvent *e)
+{
+    if(e->type() == QEvent::MouseButtonPress)
+    {
+        if((obj == ui->pollingTimeSetLineEdit && ui->pollingTimeSetLineEdit->isEnabled()) || (obj ==  ui->presetReturnTimeSetLineEdit && ui->presetReturnTimeSetLineEdit->isEnabled())
+        ||  (obj == ui->brightnessLineEdit &&  ui->brightnessLineEdit->isEnabled()) || (obj == ui->contrastLineEdit && ui->contrastLineEdit->isEnabled())
+        ||  (obj == ui->saturationLineEdit &&  ui->saturationLineEdit->isEnabled()))                    //判断是不是我创建的label触发了事件
+        {
+            ShowKeyboardSlots(1);
+        }
+
+    }
+    else if(e->type() == QEvent::FocusOut)
+    {
+        if(obj == ui->pollingTimeSetLineEdit || obj == ui->presetReturnTimeSetLineEdit || obj == ui->brightnessLineEdit ||
+           obj == ui->contrastLineEdit  || obj == ui->saturationLineEdit)
+        {
+            ShowKeyboardSlots(0);
+        }
+
+    }
+    return QWidget::eventFilter(obj, e);
+
+}
+
 
 void devUpdateWidget::monitorSysTime()
 {

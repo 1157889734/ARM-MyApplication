@@ -30,6 +30,7 @@ public:
         if (pvmsMenuWidget->objectName().isEmpty())
             pvmsMenuWidget->setObjectName(QString::fromUtf8("pvmsMenuWidget"));
         pvmsMenuWidget->resize(1024, 768);
+        pvmsMenuWidget->setFocusPolicy(Qt::StrongFocus);
         pvmsMenuWidget->setLayoutDirection(Qt::LeftToRight);
         pvmsMenuWidget->setStyleSheet(QString::fromUtf8("#pvmsMenuWidget { \n"
 "border-image: url(:/monres/Pantobg.bmp); \n"

@@ -48,12 +48,18 @@ border-width: 1px;border-style: solid;</string>
     <rect>
      <x>50</x>
      <y>340</y>
-     <width>135</width>
-     <height>37</height>
+     <width>137</width>
+     <height>39</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/monres/useradd.bmp);</string>
+    <string notr="true">QPushButton{
+background-image: url(:/monres/useradd.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
    </property>
    <property name="text">
     <string/>
@@ -64,12 +70,18 @@ border-width: 1px;border-style: solid;</string>
     <rect>
      <x>230</x>
      <y>340</y>
-     <width>135</width>
-     <height>37</height>
+     <width>137</width>
+     <height>39</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/monres/userdel.bmp);</string>
+    <string notr="true">QPushButton{
+background-image: url(:/monres/userdel.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
    </property>
    <property name="text">
     <string/>
@@ -197,12 +209,18 @@ border-width: 1px;border-style: solid;</string>
     <rect>
      <x>610</x>
      <y>340</y>
-     <width>135</width>
-     <height>37</height>
+     <width>137</width>
+     <height>39</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/monres/usersave.bmp);</string>
+    <string notr="true">QPushButton{
+background-image: url(:/monres/usersave.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
    </property>
    <property name="text">
     <string/>

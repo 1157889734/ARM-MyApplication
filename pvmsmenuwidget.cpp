@@ -18,6 +18,7 @@ pvmsMenuWidget::pvmsMenuWidget(QWidget *parent) :
 //    this->setWindowFlags(this->windowFlags() | Qt::WindowStaysOnTopHint | Qt::FramelessWindowHint);  //设置窗体属性，无标题栏，总是在最上端
 //    this->setGeometry(0,0,1024,768);
 //    this->setWindowFlags(this->windowFlags()&~Qt::WindowCloseButtonHint);
+
     this->showFullScreen();
 
     this->setAutoFillBackground(true);
@@ -51,6 +52,7 @@ pvmsMenuWidget::pvmsMenuWidget(QWidget *parent) :
 
 
 
+
     m_pvmsMonitorPage = new pvmsMonitorWidget(this);   //受电弓监控页面
     m_pvmsMonitorPage->setGeometry(0, 138, m_pvmsMonitorPage->width(), m_pvmsMonitorPage->height());   //设置位置
     m_recordPlayPage = new recordPlayWidget(this);     //录像回放页面
@@ -61,6 +63,18 @@ pvmsMenuWidget::pvmsMenuWidget(QWidget *parent) :
     m_devManagePage->setGeometry(0, 138, m_devManagePage->width(), m_devManagePage->height());
     m_devUpdatePage = new devUpdateWidget(this);       //设备更新页面
     m_devUpdatePage->setGeometry(0, 138, m_devUpdatePage->width(), m_devUpdatePage->height());
+
+
+    mCkeybord = new CKeyboard(this,0);
+    mCkeybord->setGeometry(50,330,924,200);
+    mCkeybord->hide();
+    connect(mCkeybord,SIGNAL(KeyboardPressKeySignal(char)),m_devUpdatePage,SLOT(KeyboardPressKeySlots(char)));
+
+    connect(mCkeybord,SIGNAL(KeyboardPressKeySignal(char)),m_devManagePage,SLOT(KeyboardPressKeySlots(char)));
+
+    connect(m_devUpdatePage,SIGNAL(show_hide_Signal(int)),this,SLOT(show_hide_Funtion(int)));
+
+    connect(m_devManagePage,SIGNAL(show_hide_Signal(int)),this,SLOT(show_hide_Funtion(int)));
 
 
 
@@ -167,6 +181,9 @@ pvmsMenuWidget::~pvmsMenuWidget()
         m_Rs485Timer  = NULL;
     }
 
+    delete mCkeybord;
+    mCkeybord = NULL;
+
     delete m_pvmsMonitorPage;
     m_pvmsMonitorPage = NULL;
     delete m_recordPlayPage;
@@ -183,6 +200,18 @@ pvmsMenuWidget::~pvmsMenuWidget()
     }
     delete ui;
 
+}
+
+void pvmsMenuWidget::show_hide_Funtion(int value)
+{
+    if(0 == value)
+    {
+        mCkeybord->hide();
+    }
+    else
+    {
+        mCkeybord->show();
+    }
 }
 
 void pvmsMenuWidget::recvRs485Ctrl(char *pcData, int iDataLen)

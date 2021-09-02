@@ -10,6 +10,8 @@
 #include "alarmwidget.h"
 #include <QTimer>
 #include "rs485serv.h"
+#include "ckeyboard.h"
+
 
 
 
@@ -45,6 +47,8 @@ public slots:
     void blackScreenCtrlSlot();
     void blackScreenExitCtrlSlot();
 
+    void show_hide_Funtion(int value);
+
 signals:
     void registOutSignal();     //注销信号，iType:表示执行注销的页面类型，这里应该为2，表示受电弓监控页面,
     void reflushAlarmPageSignal(int iAlarmType, int iCarriageNO, int iDevPos);
@@ -65,6 +69,7 @@ private:
     int m_iAlarmPageOpenFlag;
     int m_iCheckDiskErrFlag[MAX_SERVER_NUM];  //是否检查服务器硬盘错误标志
     int m_iNoCheckDiskErrNum[MAX_SERVER_NUM];   //不检测服务器硬盘错误计数，每10秒加1
+    CKeyboard *mCkeybord;
 
     QTimer *m_Rs485Timer;
     QTimer *m_PmsgTimer;

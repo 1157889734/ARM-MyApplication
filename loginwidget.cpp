@@ -8,14 +8,19 @@
 #include "state.h"
 
 
+
 loginWidget::loginWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::loginWidget)
 {
     ui->setupUi(this);
+
+
+
     this->setWindowFlags(Qt::FramelessWindowHint);
     this->setGeometry(0,0,1024,768);
     this->showFullScreen();
+
 
     QPalette palette;
     palette.setBrush(QPalette::Background,QBrush(QPixmap(":/monres/Pantobg - 副本.bmp")));
@@ -25,8 +30,19 @@ loginWidget::loginWidget(QWidget *parent) :
     ui->ensure->setFocusPolicy(Qt::NoFocus); // 得到焦点时，不显示虚线框
     ui->cansel->setFocusPolicy(Qt::NoFocus);
 
+    ui->username_Edit->installEventFilter(this);
+    ui->Passwd_Edit->installEventFilter(this);
+
     connect(ui->ensure, SIGNAL(clicked(bool)), this, SLOT(okButtonSlot()));	   //确定按钮的按键信号连接相应槽函数
     connect(ui->cansel, SIGNAL(clicked(bool)), this, SLOT(canselButtonSlot()));	   //确定按钮的按键信号连接相应槽函数
+
+
+    mCkeybord = new CKeyboard(this,1);
+    mCkeybord->setGeometry(50,330,924,200);
+    mCkeybord->show();
+
+
+    connect(mCkeybord,SIGNAL(KeyboardPressKeySignal(char)),this,SLOT(KeyboardPressKeySlots(char)));
 
 
     ui->username_Edit->setText("admin");
@@ -38,8 +54,20 @@ loginWidget::loginWidget(QWidget *parent) :
 
 loginWidget::~loginWidget()
 {
+    delete  mCkeybord;
+    mCkeybord = NULL;
     delete ui;
 }
+
+bool loginWidget::eventFilter(QObject *obj, QEvent *e)
+{
+
+    mCkeybord->show();
+
+    return QWidget::eventFilter(obj, e);
+
+}
+
 void loginWidget::okButtonSlot()
 {
 #if 1 //TEST
@@ -170,6 +198,61 @@ void loginWidget::okButtonSlot()
 #endif
 
 }
+void loginWidget::KeyboardPressKeySlots(char key)
+{
+
+    if(key==BSPACE)
+    {
+
+        if(ui->username_Edit->hasFocus())//输入框1焦点
+        {
+            if(!ui->username_Edit->selectedText().isEmpty())
+            {
+                 ui->username_Edit->del();
+
+            }
+            else
+            {
+                ui->username_Edit->backspace();
+            }
+
+        }
+        else if(ui->Passwd_Edit->hasFocus())//输入框2焦点
+        {
+            if(!ui->Passwd_Edit->selectedText().isEmpty())
+            {
+                 ui->Passwd_Edit->del();
+
+            }
+            else
+            {
+                ui->Passwd_Edit->backspace();
+            }
+        }
+    }
+    else if(key == ENTER)
+    {
+        if (ui->Passwd_Edit->text() == "12345")
+        {
+            this->hide();
+//            STATE_SetCurrentUserType("supperManager");
+            emit gotoPvmsMenuPageSignal();
+
+        }
+    }
+    else
+    {
+        if(ui->username_Edit->hasFocus())//输入框1焦点
+        {
+            ui->username_Edit->insert(QString( key));
+        }
+        else if(ui->Passwd_Edit->hasFocus())//输入框2焦点
+        {
+            ui->Passwd_Edit->insert(QString( key));
+        }
+    }
+}
+
 void loginWidget::canselButtonSlot()
 {
     this->hide();

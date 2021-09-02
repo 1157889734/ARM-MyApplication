@@ -63,7 +63,7 @@ MyApplication::MyApplication(int & argc,char **argv) :
     printf("**********----------MyApplication\n");
     printf("**********----------MyApplication**1111111111\n");
 
-    m_blackScreenWidget = new QWidget();    //创建一个黑屏界面，黑屏监控使用，5分钟程序界面未操作黑屏，即显示该界面，否则隐藏
+    m_blackScreenWidget = new QWidget;    //创建一个黑屏界面，黑屏监控使用，5分钟程序界面未操作黑屏，即显示该界面，否则隐藏
     printf("**********----------MyApplication**2222222222222\n");
 
     m_blackScreenWidget->setGeometry(0, 0, 1024, 768);   //设置位置
@@ -193,7 +193,7 @@ bool MyApplication::notify(QObject *obj, QEvent *event)
             }
         }
     }
-    return notify(obj, event);
+    return QApplication::notify(obj, event);
 //    return true;
 }
 

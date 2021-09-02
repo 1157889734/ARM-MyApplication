@@ -3,8 +3,9 @@
 # Project created by QtCreator 2021-07-21T01:26:24
 #
 #-------------------------------------------------
+#virtualkeyboard
 
-QT       += core gui widgets virtualkeyboard multimedia multimediawidgets sql
+QT       += core gui widgets  multimedia multimediawidgets sql
 
 TARGET = MyApplication
 TEMPLATE = app
@@ -49,7 +50,8 @@ SOURCES += \
     ftpApi.c \
     rs485serv.c \
     waitloginwidget.cpp \
-    usergroupmanage.cpp
+    usergroupmanage.cpp \
+    ckeyboard.cpp
 #    usermanageconfig.cpp
 
 HEADERS += \
@@ -80,7 +82,9 @@ HEADERS += \
     ftpApi.h \
     rs485serv.h \
     waitloginwidget.h \
-    usergroupmanage.h
+    usergroupmanage.h \
+    ckeyboard.h \
+    define.h
 #    usermanageconfig.h
 
 # Default rules for deployment.
@@ -109,5 +113,6 @@ FORMS += \
     usergroupmanage.ui \
     waitloginwidget.ui \
     usermanageconfig.ui \
-    devupdatewidget_base.ui
+    devupdatewidget_base.ui \
+    ckeyboard.ui
 

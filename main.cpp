@@ -4,7 +4,7 @@
 #include "waitloginwidget.h"
 #include "loginwidget.h"
 #include "pvmsmenuwidget.h"
-#include <QtVirtualKeyboard>
+//#include <QtVirtualKeyboard>
 #include <QPixmap>
 #include <QSplashScreen>
 #include <QTextCodec>
@@ -28,9 +28,9 @@ pvmsMonitorWidget *g_monitorPage = NULL;
 
 int main(int argc, char *argv[])
 {
-    qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
+//    qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
 
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
 
     char acNvrServerIp[128] = {0}, acClientVersion[64] = {0};
     short sYear = 0;
@@ -149,7 +149,7 @@ int main(int argc, char *argv[])
 
 //    MyApplication app(argc, argv);  //创建QT运行主应用程序
 
-    a.setWindowIcon(QIcon(":/res/info.png"));   //设置窗口图标，这里主要是messagebox窗体会显示，而避免出现QT图标
+    app.setWindowIcon(QIcon(":/res/info.png"));   //设置窗口图标，这里主要是messagebox窗体会显示，而避免出现QT图标
 //    qDebug() << "drivers------------------------"<< QSqlDatabase::drivers();
 
 
@@ -177,10 +177,8 @@ int main(int argc, char *argv[])
     g_pvmsMenuPage->m_pRs485Handle = pRs485Handle;
 
 
-//    MyApplication app;
-
-//    QObject::connect(&a, SIGNAL(blackScreenSignal()), g_pvmsMenuPage, SLOT(blackScreenCtrlSlot()));
-//    QObject::connect(&a, SIGNAL(blackScreenExitSignal()), g_pvmsMenuPage, SLOT(blackScreenExitCtrlSlot()));
+//    QObject::connect(&app, SIGNAL(blackScreenSignal()), g_pvmsMenuPage, SLOT(blackScreenCtrlSlot()));
+//    QObject::connect(&app, SIGNAL(blackScreenExitSignal()), g_pvmsMenuPage, SLOT(blackScreenExitCtrlSlot()));
 
 	
 //    QObject::connect(g_pvmsMenuPage, SIGNAL(alarmHappenSignal()), &a, SLOT(alarmHappenSignalCtrl()));
@@ -198,7 +196,7 @@ int main(int argc, char *argv[])
 
     QObject::connect(g_pvmsMenuPage, SIGNAL(registOutSignal()), g_loginPage, SLOT(showPageSlot()));       //受电弓监控主菜单页面的注销信号连接登录页面的页面显示槽
 
-    a.exec();
+    app.exec();
 
 
 //    usleep(1*1000*1000);
