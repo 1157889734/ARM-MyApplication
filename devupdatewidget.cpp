@@ -63,7 +63,7 @@ devUpdateWidget::devUpdateWidget(QWidget *parent) :
 //    gusergroupManage = new usergroupManage(this);   //受电弓监控页面
 //    gusergroupManage->setGeometry(40, 120, gusergroupManage->width(), gusergroupManage->height());   //设置位置
 //    gusergroupManage->hide();
-
+#ifdef KEYBOARD
     ui->pollingTimeSetLineEdit->installEventFilter(this);
     ui->presetReturnTimeSetLineEdit->installEventFilter(this);
     ui->brightnessLineEdit->installEventFilter(this);
@@ -71,7 +71,7 @@ devUpdateWidget::devUpdateWidget(QWidget *parent) :
     ui->saturationLineEdit->installEventFilter(this);
     ui->dateEdit->installEventFilter(this);
     ui->timeEdit->installEventFilter(this);
-
+#endif
 
     connect(ui->permissonManagePushButton, SIGNAL(clicked(bool)), this, SLOT(userManageSlot()));
 
@@ -153,13 +153,7 @@ void devUpdateWidget::registOutButtonClick()
     emit registOutSignal();    //触发注销信号，带上当前设备类型
 
 }
-//ui->pollingTimeSetLineEdit->installEventFilter(this);
-//ui->presetReturnTimeSetLineEdit->installEventFilter(this);
-//ui->brightnessLineEdit->installEventFilter(this);
-//ui->contrastLineEdit->installEventFilter(this);
-//ui->saturationLineEdit->installEventFilter(this);
-//ui->dateEdit->installEventFilter(this);
-//ui->timeEdit->installEventFilter(this);
+#ifdef KEYBOARD
 
 void devUpdateWidget::KeyboardPressKeySlots(char key)
 {
@@ -292,7 +286,7 @@ bool devUpdateWidget::eventFilter(QObject *obj, QEvent *e)
     return QWidget::eventFilter(obj, e);
 
 }
-
+#endif
 
 void devUpdateWidget::monitorSysTime()
 {

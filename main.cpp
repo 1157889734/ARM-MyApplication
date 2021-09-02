@@ -4,7 +4,7 @@
 #include "waitloginwidget.h"
 #include "loginwidget.h"
 #include "pvmsmenuwidget.h"
-//#include <QtVirtualKeyboard>
+#include <QtVirtualKeyboard>
 #include <QPixmap>
 #include <QSplashScreen>
 #include <QTextCodec>
@@ -28,7 +28,7 @@ pvmsMonitorWidget *g_monitorPage = NULL;
 
 int main(int argc, char *argv[])
 {
-//    qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
+    qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
 
     QApplication app(argc, argv);
 

@@ -2,6 +2,8 @@
 #define DEFINE_H
 
 
+//#define KEYBOARD
+
 #define FONT_SIZE  16
 #define MONITOR_FONT_SIZE 14
 

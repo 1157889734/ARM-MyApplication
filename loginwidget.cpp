@@ -30,19 +30,19 @@ loginWidget::loginWidget(QWidget *parent) :
     ui->ensure->setFocusPolicy(Qt::NoFocus); // 得到焦点时，不显示虚线框
     ui->cansel->setFocusPolicy(Qt::NoFocus);
 
+#ifdef KEYBOARD
     ui->username_Edit->installEventFilter(this);
     ui->Passwd_Edit->installEventFilter(this);
-
+#endif
     connect(ui->ensure, SIGNAL(clicked(bool)), this, SLOT(okButtonSlot()));	   //确定按钮的按键信号连接相应槽函数
     connect(ui->cansel, SIGNAL(clicked(bool)), this, SLOT(canselButtonSlot()));	   //确定按钮的按键信号连接相应槽函数
 
-
+#ifdef KEYBOARD
     mCkeybord = new CKeyboard(this,1);
     mCkeybord->setGeometry(50,330,924,200);
     mCkeybord->show();
-
-
     connect(mCkeybord,SIGNAL(KeyboardPressKeySignal(char)),this,SLOT(KeyboardPressKeySlots(char)));
+#endif
 
 
     ui->username_Edit->setText("admin");
@@ -54,11 +54,14 @@ loginWidget::loginWidget(QWidget *parent) :
 
 loginWidget::~loginWidget()
 {
+#ifdef KEYBOARD
     delete  mCkeybord;
     mCkeybord = NULL;
+#endif
     delete ui;
 }
 
+#ifdef KEYBOARD
 bool loginWidget::eventFilter(QObject *obj, QEvent *e)
 {
 
@@ -67,6 +70,7 @@ bool loginWidget::eventFilter(QObject *obj, QEvent *e)
     return QWidget::eventFilter(obj, e);
 
 }
+#endif
 
 void loginWidget::okButtonSlot()
 {
@@ -198,6 +202,7 @@ void loginWidget::okButtonSlot()
 #endif
 
 }
+#ifdef KEYBOARD
 void loginWidget::KeyboardPressKeySlots(char key)
 {
 
@@ -252,6 +257,7 @@ void loginWidget::KeyboardPressKeySlots(char key)
         }
     }
 }
+#endif
 
 void loginWidget::canselButtonSlot()
 {

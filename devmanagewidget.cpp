@@ -21,9 +21,9 @@ devManageWidget::devManageWidget(QWidget *parent) :
     this->setWindowFlags(Qt::FramelessWindowHint);
     this->showFullScreen();
 
-
+#ifdef KEYBOARD
     ui->TrainNumberLineEdit->installEventFilter(this);
-
+#endif
     ui->devStorageTableWidget->setFocusPolicy(Qt::NoFocus);
     ui->devStorageTableWidget->setColumnCount(8);
     ui->devStorageTableWidget->setRowCount(7);
@@ -116,6 +116,7 @@ devManageWidget::~devManageWidget()
 {
     delete ui;
 }
+#ifdef KEYBOARD
 void devManageWidget::ShowKeyboardSlots(int nShow)
 {
     if(0 == nShow)
@@ -184,7 +185,7 @@ void devManageWidget::KeyboardPressKeySlots(char key)
         }
     }
 }
-
+#endif
 int devManageWidget::rs485Ctrl(char *pcData, int iDataLen)
 {
 

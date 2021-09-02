@@ -13,6 +13,8 @@
 
 #include "usergroupmanage.h"
 #include "ckeyboard.h"
+#include "define.h"
+
 
 
 namespace Ui {
@@ -27,8 +29,10 @@ public:
     explicit devUpdateWidget(QWidget *parent = 0);
     ~devUpdateWidget();
     QDateTime timeTd;
+#ifdef KEYBOARD
     bool eventFilter(QObject *obj, QEvent *e);
     void ShowKeyboardSlots(int nShow);
+#endif
 
 public slots:
 
@@ -58,15 +62,17 @@ public slots:
     void setTrainType();
 
     void setTimeSignalCtrl();
-
+#ifdef KEYBOARD
     void KeyboardPressKeySlots(char key);
-
+#endif
 
 signals:
     void alarmPushButoonClickSignal();
     void registOutSignal();     //注销信号，iType:表示执行注销的页面类型，这里应该为2，表示受电弓监控页面,
     void systimeSetSignal();
+#ifdef KEYBOARD
     void show_hide_Signal(int value);
+#endif
 private:
     Ui::devUpdateWidget *ui;
     QTimer *m_alarmHappenTimer;
@@ -85,7 +91,6 @@ private:
     QString m_saturationText;
     QString m_contrastText;
     usergroupManage *gusergroupManage;
-    CKeyboard *mCkeybord;
 
 
 };

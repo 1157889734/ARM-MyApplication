@@ -64,7 +64,7 @@ pvmsMenuWidget::pvmsMenuWidget(QWidget *parent) :
     m_devUpdatePage = new devUpdateWidget(this);       //设备更新页面
     m_devUpdatePage->setGeometry(0, 138, m_devUpdatePage->width(), m_devUpdatePage->height());
 
-
+#ifdef KEYBOARD
     mCkeybord = new CKeyboard(this,0);
     mCkeybord->setGeometry(50,330,924,200);
     mCkeybord->hide();
@@ -75,7 +75,7 @@ pvmsMenuWidget::pvmsMenuWidget(QWidget *parent) :
     connect(m_devUpdatePage,SIGNAL(show_hide_Signal(int)),this,SLOT(show_hide_Funtion(int)));
 
     connect(m_devManagePage,SIGNAL(show_hide_Signal(int)),this,SLOT(show_hide_Funtion(int)));
-
+#endif
 
 
     m_pvmsMonitorPage->hide();
@@ -181,9 +181,10 @@ pvmsMenuWidget::~pvmsMenuWidget()
         m_Rs485Timer  = NULL;
     }
 
+#ifdef KEYBOARD
     delete mCkeybord;
     mCkeybord = NULL;
-
+#endif
     delete m_pvmsMonitorPage;
     m_pvmsMonitorPage = NULL;
     delete m_recordPlayPage;
@@ -201,7 +202,7 @@ pvmsMenuWidget::~pvmsMenuWidget()
     delete ui;
 
 }
-
+#ifdef KEYBOARD
 void pvmsMenuWidget::show_hide_Funtion(int value)
 {
     if(0 == value)
@@ -213,6 +214,7 @@ void pvmsMenuWidget::show_hide_Funtion(int value)
         mCkeybord->show();
     }
 }
+#endif
 
 void pvmsMenuWidget::recvRs485Ctrl(char *pcData, int iDataLen)
 {

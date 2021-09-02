@@ -5,7 +5,7 @@
 #-------------------------------------------------
 #virtualkeyboard
 
-QT       += core gui widgets  multimedia multimediawidgets sql
+QT       += core gui widgets  multimedia multimediawidgets sql virtualkeyboard
 
 TARGET = MyApplication
 TEMPLATE = app
