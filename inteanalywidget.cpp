@@ -98,10 +98,14 @@ void inteAnalyWidget::alarmHappenCtrlSlot()
         if (0 == g_iDNum%2)
         {
             ui->alarmPushButton->setChecked(true);
+            ui->alarmPushButton->setStyleSheet("QPushButton{border-image: url(:/monres/alerton.bmp);background-color: rgb(255, 255, 255);}");
+
         }
         else
         {
             ui->alarmPushButton->setChecked(false);
+            ui->alarmPushButton->setStyleSheet("QPushButton{border-image: url(:/monres/alertoff.bmp);background-color: rgb(255, 255, 255);}");
+
         }
         g_iDNum++;
     }
@@ -115,6 +119,8 @@ void inteAnalyWidget::alarmClearSlot()
         m_alarmHappenTimer = NULL;
     }
     ui->alarmPushButton->setChecked(false);
+    ui->alarmPushButton->setStyleSheet("QPushButton{border-image: url(:/monres/alertoff.bmp);background-color: rgb(255, 255, 255);}");
+
 
     g_iDNum = 0;
 }

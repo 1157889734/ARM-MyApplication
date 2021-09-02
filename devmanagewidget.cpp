@@ -576,10 +576,14 @@ void devManageWidget::alarmHappenCtrlSlot()
         if (0 == g_iDNum%2)
         {
             ui->alarmPushButton->setChecked(true);
+            ui->alarmPushButton->setStyleSheet("QPushButton{border-image: url(:/monres/alerton.bmp);background-color: rgb(255, 255, 255);}");
+
         }
         else
         {
             ui->alarmPushButton->setChecked(false);
+            ui->alarmPushButton->setStyleSheet("QPushButton{border-image: url(:/monres/alertoff.bmp);background-color: rgb(255, 255, 255);}");
+
         }
         g_iDNum++;
     }
@@ -593,6 +597,8 @@ void devManageWidget::alarmClearSlot()
         m_alarmHappenTimer = NULL;
     }
     ui->alarmPushButton->setChecked(false);
+    ui->alarmPushButton->setStyleSheet("QPushButton{border-image: url(:/monres/alertoff.bmp);background-color: rgb(255, 255, 255);}");
+
 
     g_iDNum = 0;
 }
@@ -901,6 +907,7 @@ int devManageWidget::pmsgCtrl(PMSG_HANDLE pHandle, unsigned char ucMsgCmd, char 
         }
         case SERV_CLI_MSG_TYPE_VIDEO_ALARM_REPORT:
         {
+            qDebug()<<"devManage Widget get pmsg response cmd"<<ucMsgCmd<<pcMsgData[0]<<pcMsgData[1]<<pcMsgData[2]<<pcMsgData[3]<<endl;
 //            DebugPrint(DEBUG_PMSG_DATA_PRINT, "devManage Widget get pmsg response cmd 0x%x data:0x%x 0x%x 0x%x 0x%x\n", ucMsgCmd, pcMsgData[0], pcMsgData[1], pcMsgData[2],pcMsgData[3]);
 
             if (pcMsgData == NULL || iMsgDataLen != 4)

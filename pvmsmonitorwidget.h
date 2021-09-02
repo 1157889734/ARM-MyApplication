@@ -200,6 +200,7 @@ public slots:
     void chLabelDisplayCtrlSlot();   //通道状态和通道号标签是否显示的处理函数
     void alarmHappenSlot();
     void alarmClearSlot();
+    void alarmHappenCtrlSlot();
     void setRecordPlayFlag(int iFlag);
     void videoPollingSignalCtrl();
 

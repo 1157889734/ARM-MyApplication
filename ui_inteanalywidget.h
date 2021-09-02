@@ -274,7 +274,7 @@ public:
         alarmPushButton->setGeometry(QRect(800, 590, 82, 36));
         alarmPushButton->setFont(font);
         alarmPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/alerton1.bmp);\n"
+"background-image: url(:/monres/alertoff.bmp);\n"
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
 "border-style: solid;}\n"

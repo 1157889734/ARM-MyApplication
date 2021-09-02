@@ -1887,6 +1887,25 @@ void pvmsMonitorWidget::alarmHappenSlot()
     }
 
 }
+
+void pvmsMonitorWidget::alarmHappenCtrlSlot()
+{
+    if (this->isHidden() != 1)
+    {
+        if (0 == g_iPNum%2)
+        {
+            ui->alarmPushButton->setChecked(true);
+            ui->alarmPushButton->setStyleSheet("QPushButton{border-image: url(:/monres/alerton.bmp);background-color: rgb(255, 255, 255);}");
+
+        }
+        else
+        {
+            ui->alarmPushButton->setChecked(false);
+            ui->alarmPushButton->setStyleSheet("QPushButton{border-image: url(:/monres/alertoff.bmp);background-color: rgb(255, 255, 255);}");
+        }
+        g_iPNum++;
+    }
+}
 void pvmsMonitorWidget::alarmClearSlot()
 {
     /*删除样式刷新定时器，并恢复报警按钮样式为正常样式*/
@@ -1896,6 +1915,8 @@ void pvmsMonitorWidget::alarmClearSlot()
         m_alarmHappenTimer = NULL;
     }
     ui->alarmPushButton->setChecked(false);
+    ui->alarmPushButton->setStyleSheet("QPushButton{border-image: url(:/monres/alertoff.bmp);background-color: rgb(255, 255, 255);}");
+
 
     m_iAlarmNotCtrlFlag = 0;
     g_iPNum = 0;

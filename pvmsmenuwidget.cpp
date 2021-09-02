@@ -274,7 +274,7 @@ void pvmsMenuWidget::pmsgTimerFunc()
             continue;
         }
 //        DebugPrint(DEBUG_PMSG_NORMAL_PRINT, "pmsgTimerFunc get pmsg message 0x%x, msgDataLen=%d\n",(int)tPkt.ucMsgCmd, tPkt.iMsgDataLen);
-//        qDebug()<<"pmsgTimerFunc get pmsg message 0x%x, msgDataLen="<<tPkt.ucMsgCmd<<tPkt.iMsgDataLen<<endl;
+//        qDebug()<<"pmsgTimerFunc get pmsg message 0x%x, msgDataLen="<<tPkt.ucMsgCmd<<tPkt.iMsgDataLen<<__func__<<__LINE__<<endl;
 
         recvPmsgCtrl(tPkt.PHandle, tPkt.ucMsgCmd, tPkt.pcMsgData, tPkt.iMsgDataLen);
         if (tPkt.pcMsgData)
@@ -291,6 +291,7 @@ void pvmsMenuWidget::recvPmsgCtrl(PMSG_HANDLE pHandle, unsigned char ucMsgCmd, c
 {
     int iAlarmType = 0, iDevPos = 0, iShadeAlarmEnableFlag = 0, i = 0;
     T_TRAIN_CONFIG tTrainConfigInfo;
+    int iCarriageNO;
 //    qDebug()<<"**************recvPmsgCtrl------"<<ucMsgCmd<<endl;
     switch(ucMsgCmd)    //不同的应答消息类型分发给不同的页面处理
     {
@@ -437,6 +438,7 @@ void pvmsMenuWidget::recvPmsgCtrl(PMSG_HANDLE pHandle, unsigned char ucMsgCmd, c
                         {
                             break;
                         }
+
                         emit reflushAlarmPageSignal(iAlarmType, tTrainConfigInfo.tNvrServerInfo[i].iCarriageNO, iDevPos);
                         break;
                     }
@@ -444,6 +446,57 @@ void pvmsMenuWidget::recvPmsgCtrl(PMSG_HANDLE pHandle, unsigned char ucMsgCmd, c
                 break;
             }
         }
+        #if 1
+        case SERV_CLI_MSG_TYPE_HDISK_ALARM_REPORT:
+        {
+//            DebugPrint(DEBUG_PMSG_DATA_PRINT, "pvmsMenu Widget get pmsg message data:\n%s\n",pcMsgData);
+
+            if (pcMsgData == NULL || iMsgDataLen != 2)
+            {
+                break;
+            }
+            else
+            {
+                if (m_devManagePage != NULL)
+                {
+                    m_devManagePage->pmsgCtrl(pHandle, ucMsgCmd, pcMsgData, iMsgDataLen);
+                }
+
+                T_HDISK_ALARM_STATUS *ptHdiskAlarmStatus = (T_HDISK_ALARM_STATUS *)pcMsgData;
+
+                if (1 == ptHdiskAlarmStatus->i8HdiskLost)
+                {
+                    iAlarmType = ALARM_HDISK_LOST;
+                }
+                else if (1 == ptHdiskAlarmStatus->i8HdiskBad)
+                {
+                    iAlarmType = ALARM_HDISK_ERR;
+                }
+                else
+                {
+                    iAlarmType = ALARM_HDISK_CLEAR;
+                }
+
+                memset(&tTrainConfigInfo, 0, sizeof(T_TRAIN_CONFIG));
+                STATE_GetCurrentTrainConfigInfo(&tTrainConfigInfo);
+                for (i = 0; i < tTrainConfigInfo.iNvrServerCount; i++)
+                {
+                    if (pHandle == STATE_GetNvrServerPmsgHandle(i))
+                    {
+                        iCarriageNO = tTrainConfigInfo.tNvrServerInfo[i].iCarriageNO;
+                        break;
+                    }
+                }
+                if (iCarriageNO <= 0)
+                {
+                    break;
+                }
+
+                emit reflushAlarmPageSignal(iAlarmType, iCarriageNO, 0);
+            }
+            break;
+        }
+        #endif
         default:
             break;
     }
@@ -470,6 +523,8 @@ void pvmsMenuWidget::alarmPageShowSlot()
         connect(m_alarmPage, SIGNAL(alarmClearSignal()), m_devManagePage, SLOT(alarmClearSlot()));
         connect(m_alarmPage, SIGNAL(alarmHappenSignal()), m_devUpdatePage, SLOT(alarmHappenSlot()));
         connect(m_alarmPage, SIGNAL(alarmClearSignal()), m_devUpdatePage, SLOT(alarmClearSlot()));
+        connect(m_alarmPage, SIGNAL(alarmHappenSignal()), m_inteAnalyPage, SLOT(alarmHappenSlot()));
+        connect(m_alarmPage, SIGNAL(alarmClearSignal()), m_inteAnalyPage, SLOT(alarmClearSlot()));
 
     }
     else
@@ -510,6 +565,9 @@ void pvmsMenuWidget::showPageSlot()
         connect(m_alarmPage, SIGNAL(alarmClearSignal()), m_devManagePage, SLOT(alarmClearSlot()));
         connect(m_alarmPage, SIGNAL(alarmHappenSignal()), m_devUpdatePage, SLOT(alarmHappenSlot()));
         connect(m_alarmPage, SIGNAL(alarmClearSignal()), m_devUpdatePage, SLOT(alarmClearSlot()));
+        connect(m_alarmPage, SIGNAL(alarmHappenSignal()), m_inteAnalyPage, SLOT(alarmHappenSlot()));
+        connect(m_alarmPage, SIGNAL(alarmClearSignal()), m_inteAnalyPage, SLOT(alarmClearSlot()));
+
     }
 
 }

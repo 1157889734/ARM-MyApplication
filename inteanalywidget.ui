@@ -645,7 +645,7 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-background-image: url(:/monres/alerton1.bmp);
+background-image: url(:/monres/alertoff.bmp);
 border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
