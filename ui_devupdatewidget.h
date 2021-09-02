@@ -76,7 +76,7 @@ public:
     QLabel *label_18;
     QLabel *label_5;
     QPushButton *updateBeginPushButton;
-    QPushButton *clientRebootPushButton_2;
+    QPushButton *downLoadLogPushButton;
     QTextEdit *updateStatueTextEdit;
     QLineEdit *lineEdit;
     QLineEdit *lineEdit_2;
@@ -441,11 +441,11 @@ public:
 "\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
-        clientRebootPushButton_2 = new QPushButton(deviceManagewidget);
-        clientRebootPushButton_2->setObjectName(QString::fromUtf8("clientRebootPushButton_2"));
-        clientRebootPushButton_2->setGeometry(QRect(300, 350, 112, 32));
-        clientRebootPushButton_2->setFont(font);
-        clientRebootPushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        downLoadLogPushButton = new QPushButton(deviceManagewidget);
+        downLoadLogPushButton->setObjectName(QString::fromUtf8("downLoadLogPushButton"));
+        downLoadLogPushButton->setGeometry(QRect(300, 350, 112, 32));
+        downLoadLogPushButton->setFont(font);
+        downLoadLogPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-image: url(:/monres/downlog.bmp);\n"
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
@@ -556,7 +556,7 @@ public:
         label_9->raise();
         sysDataAdjustLabel->raise();
         timeAdjustPushButton->raise();
-        clientRebootPushButton_2->raise();
+        downLoadLogPushButton->raise();
         systimeAdjustLabel->raise();
         updateStatueTextEdit->raise();
         configFileDisplayLineEdit_2->raise();
@@ -683,7 +683,7 @@ public:
         label_18->setText(QCoreApplication::translate("devUpdateWidget", "\350\256\276\345\244\207\351\200\211\346\213\251:", nullptr));
         label_5->setText(QCoreApplication::translate("devUpdateWidget", "\347\263\273\347\273\237\346\227\266\351\227\264", nullptr));
         updateBeginPushButton->setText(QString());
-        clientRebootPushButton_2->setText(QString());
+        downLoadLogPushButton->setText(QString());
         label_19->setText(QCoreApplication::translate("devUpdateWidget", "\351\200\211\346\213\251\345\215\207\347\272\247\346\226\207\344\273\266:", nullptr));
         configFilelookPushButton_2->setText(QString());
         label_8->setText(QCoreApplication::translate("devUpdateWidget", "\346\227\245\346\234\237", nullptr));

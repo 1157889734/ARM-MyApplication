@@ -1134,7 +1134,7 @@ QPushButton:pressed
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="clientRebootPushButton_2">
+   <widget class="QPushButton" name="downLoadLogPushButton">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -1437,7 +1437,7 @@ QPushButton:pressed
    <zorder>label_9</zorder>
    <zorder>sysDataAdjustLabel</zorder>
    <zorder>timeAdjustPushButton</zorder>
-   <zorder>clientRebootPushButton_2</zorder>
+   <zorder>downLoadLogPushButton</zorder>
    <zorder>systimeAdjustLabel</zorder>
    <zorder>updateStatueTextEdit</zorder>
    <zorder>configFileDisplayLineEdit_2</zorder>

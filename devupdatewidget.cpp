@@ -77,12 +77,12 @@ devUpdateWidget::devUpdateWidget(QWidget *parent) :
 
     connect(ui->configFilelookPushButton,   SIGNAL(clicked(bool)),   this, SLOT(configFileSelectionSlot()));
 
-//    connect(ui->configFilelookPushButton_2, SIGNAL(clicked(bool)), this, SLOT(configUpdateFileSLOT()));
+    connect(ui->configFilelookPushButton_2, SIGNAL(clicked(bool)), this, SLOT(configUpdateFileSLOT()));
 
     connect(ui->configFileImportPushButton, SIGNAL(clicked(bool)), this, SLOT(configFileImportSlot()));
 
 
-//    connect(ui->configFileIOutPushButton, SIGNAL(clicked(bool)), this, SLOT(configFileImportSlot()));
+    connect(ui->downLoadLogPushButton, SIGNAL(clicked(bool)), this, SLOT(downLoadLogSlot()));
 
 
     connect(ui->updateBeginPushButton, SIGNAL(clicked(bool)), this, SLOT(devUpdateSlot()));
@@ -677,7 +677,7 @@ void devUpdateWidget::configFileSelectionSlot()
         }
         else
         {
-            if (access("//mnt/sdcard/", F_OK) < 0)
+            if (access("/mnt/usb/u/", F_OK) < 0)
             {
 //                DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget::%s %d not get USB device!\n",__FUNCTION__,__LINE__);
                 QMessageBox msgBox(QMessageBox::Warning,QString(tr("注意")),QString(tr("未检测到U盘,请插入!")));
@@ -711,7 +711,7 @@ void devUpdateWidget::configFileSelectionSlot()
                 return;
             }
 #endif
-            filename = QFileDialog::getOpenFileName(this, "打开文件", "/mnt/sdcard/", "ini文件(*.ini)");
+            filename = QFileDialog::getOpenFileName(this, "打开文件", "/mnt/usb/u/", "ini文件(*.ini)");
             if (!filename.isNull())
             {
                 //QMessageBox::information(this, "Document", "Has document", QMessageBox::Ok | QMessageBox::Cancel);
@@ -721,7 +721,7 @@ void devUpdateWidget::configFileSelectionSlot()
 
 }
 
-#if 0
+#if 1
 void devUpdateWidget::configUpdateFileSLOT()
 {
 
@@ -742,7 +742,7 @@ void devUpdateWidget::configUpdateFileSLOT()
         }
         else
         {
-            if (access("//mnt/sdcard/", F_OK) < 0)
+            if (access("/mnt/usb/u/", F_OK) < 0)
             {
 //                DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget::%s %d not get USB device!\n",__FUNCTION__,__LINE__);
                 QMessageBox msgBox(QMessageBox::Warning,QString(tr("注意")),QString(tr("未检测到U盘,请插入!")));
@@ -766,22 +766,24 @@ void devUpdateWidget::configUpdateFileSLOT()
                 }
             }
 
-            if (STATE_ParseUsbLicense("/mnt/sdcard/") < 0)
-            {
-//                DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget configFileSelection check License error!\n");
-                QMessageBox box(QMessageBox::Warning,QString::fromUtf8("错误"),QString::fromUtf8("授权失败!"));
-                box.setStandardButtons (QMessageBox::Ok);
-                box.setButtonText (QMessageBox::Ok,QString::fromUtf8("确 定"));
-                box.exec();
-                return;
-            }
+//            if (STATE_ParseUsbLicense("/mnt/usb/u/") < 0)
+//            {
+////                DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget configFileSelection check License error!\n");
+//                QMessageBox box(QMessageBox::Warning,QString::fromUtf8("错误"),QString::fromUtf8("授权失败!"));
+//                box.setStandardButtons (QMessageBox::Ok);
+//                box.setButtonText (QMessageBox::Ok,QString::fromUtf8("确 定"));
+//                box.exec();
+//                return;
+//            }
 
-            filename = QFileDialog::getOpenFileName(this, "打开文件", "/mnt/sdcard/", "ini文件(*.bin)");
+            filename = QFileDialog::getOpenFileName(this, "打开文件", "/mnt/usb/u/", "文件(*)");
             if (!filename.isNull())
             {
                 //QMessageBox::information(this, "Document", "Has document", QMessageBox::Ok | QMessageBox::Cancel);
                 ui->configFileDisplayLineEdit_2->setText(filename);
             }
+
+
         }
 
 }
@@ -794,6 +796,7 @@ void devUpdateWidget::devUpdateSlot()
     FILE *fp = NULL;
     char acUserType[64] = {0};
     T_LOG_INFO tLogInfo;
+    char *pcfileName = NULL;
 
 //    DebugPrint(DEBUG_UI_OPTION_PRINT, "devUpdateWidget update device!\n");
 
@@ -834,19 +837,33 @@ void devUpdateWidget::devUpdateSlot()
                 return;
             }
         }
-#if 0  //test ?????
-        if (STATE_ParseUsbLicense("/mnt/usb/u/") < 0)
-        {
-//            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget update check License error!\n");
-            QMessageBox box(QMessageBox::Warning,QString::fromUtf8("错误"),QString::fromUtf8("授权失败!"));
-            box.setStandardButtons (QMessageBox::Ok);
-            box.setButtonText (QMessageBox::Ok,QString::fromUtf8("确 定"));
-            box.exec();
-            return;
-        }
-#endif
         ui->updateStatueTextEdit->append(tr("发现USB，已准备好"));
 
+        if (0 == strlen(ui->configFileDisplayLineEdit_2->text().toLatin1().data()))
+        {
+//            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget not select any config file!\n");
+            QMessageBox msgBox(QMessageBox::Question,QString(tr("注意")),QString(tr("请选升级文件")));
+            msgBox.setStandardButtons(QMessageBox::Yes);
+            msgBox.button(QMessageBox::Yes)->setText("确 定");
+            msgBox.exec();
+            return;
+        }
+
+        pcfileName = parseFileNameFromPath(ui->configFileDisplayLineEdit_2->text().toLatin1().data());
+        if (NULL == pcfileName)
+        {
+            return;
+        }
+
+        if (strncmp(pcfileName, "x86MyApplication", strlen(pcfileName)) != 0)
+        {
+//            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget select error config file!\n");
+            QMessageBox msgBox(QMessageBox::Question,QString(tr("注意")),QString(tr("升级文件选择错误")));
+            msgBox.setStandardButtons(QMessageBox::Yes);
+            msgBox.button(QMessageBox::Yes)->setText("确 定");
+            msgBox.exec();
+            return;
+        }
 
 //        if ((access("/mnt/usb/u/mornitorapp.exe", F_OK) < 0) || (access("/mnt/usb/u/version.ini", F_OK) < 0))
         if ((access("/mnt/usb/u/x86MyApplication", F_OK) < 0) || (access("/mnt/usb/u/version.ini", F_OK) < 0))
@@ -969,15 +986,14 @@ void devUpdateWidget::devRebootSlot()
         QProcess::startDetached(program, arguments, workingDirectory);
         QApplication::exit();
 
-
 //        QApplication *app;
 //        app->exit();
     }
 
 
 }
-#if 0
-void devUpdateWidget::configFileOutSLot()
+
+void devUpdateWidget::downLoadLogSlot()
 {
     int iRet = 0;
     char *pcfileName = NULL;
@@ -996,19 +1012,28 @@ void devUpdateWidget::configFileOutSLot()
     }
     else
     {
+        QMessageBox msgBox(QMessageBox::Question,QString(tr("提示")),QString(tr("确认导入日志文件？")));
+        msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+        msgBox.button(QMessageBox::Yes)->setText("确 定");
+        msgBox.button(QMessageBox::No)->setText("取 消");
+        iRet=msgBox.exec();
+        if(iRet != QMessageBox::Yes)
+        {
+            return;
+        }
 
+//        system("cp /mnt/usb/u/Station.ini /home/data/emuVideoMornitorClient/Station.ini");
+        system("cp /userdata/sys.log /mnt/usb/u/");
 
+        system("sync");
 
-
-
+        QMessageBox msgBox2(QMessageBox::Information,QString(tr("注意")),QString(tr("导入成功，请拔出U盘!")));
+        msgBox2.setStandardButtons(QMessageBox::Yes);
+        msgBox2.button(QMessageBox::Yes)->setText("确 定");
+        msgBox2.exec();
+        return;
     }
-
-
-
-
 }
-
-#endif
 
 void devUpdateWidget::configFileImportSlot()
 {
