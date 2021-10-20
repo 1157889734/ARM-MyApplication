@@ -21,7 +21,7 @@ static int g_iVNum = 0;
 #define PVMSPAGETYPE  2    //此页面类型，2表示受电弓监控页面
 
 #define NVR_RESTART_PORT 11001
-QButtonGroup *g_buttonGroup1 = NULL, *g_buttonGroup2 = NULL, *g_buttonGroup3 = NULL;
+QButtonGroup *g_buttonGroup1 = NULL, *g_buttonGroup2 = NULL;
 devUpdateWidget *g_devUpdateThis = NULL;
 
 char *parseFileNameFromPath(char *pcSrcStr)     //根据导入文件路径全名解析得到单纯的导入文件名
@@ -60,9 +60,9 @@ devUpdateWidget::devUpdateWidget(QWidget *parent) :
     m_alarmHappenTimer = NULL;
 
 
-//    gusergroupManage = new usergroupManage(this);   //受电弓监控页面
-//    gusergroupManage->setGeometry(40, 120, gusergroupManage->width(), gusergroupManage->height());   //设置位置
-//    gusergroupManage->hide();
+    gusergroupManage = new usergroupManage(this);   //受电弓监控页面
+    gusergroupManage->setGeometry(40, 120, gusergroupManage->width(), gusergroupManage->height());   //设置位置
+    gusergroupManage->hide();
 #ifdef KEYBOARD
     ui->pollingTimeSetLineEdit->installEventFilter(this);
     ui->presetReturnTimeSetLineEdit->installEventFilter(this);
@@ -101,9 +101,7 @@ devUpdateWidget::devUpdateWidget(QWidget *parent) :
     g_buttonGroup2->addButton(ui->presetReturnTimeSetRadioButton_3,3);
     g_buttonGroup2->addButton(ui->presetReturnTimeSetRadioButton_4,4);
 
-//    g_buttonGroup3 = new QButtonGroup();
-//    g_buttonGroup3->addButton(ui->setManalTimeRadioButton,0);
-//    g_buttonGroup3->addButton(ui->setSysTimeRadioButton,1);
+
     connect(ui->canselPushButton, SIGNAL(clicked()), this, SLOT(registOutButtonClick()));
 
     connect(g_buttonGroup1, SIGNAL(buttonClicked(int)), this, SLOT(pollingTimeChange(int)));     //单选按钮组按键信号连接响应槽函数
@@ -142,15 +140,28 @@ devUpdateWidget::devUpdateWidget(QWidget *parent) :
 
 devUpdateWidget::~devUpdateWidget()
 {
+    if (gusergroupManage != NULL)
+    {
+        delete gusergroupManage;
+        gusergroupManage = NULL;
+    }
+
+    delete g_buttonGroup1;
+    g_buttonGroup1 = NULL;
+
+    delete g_buttonGroup2;
+    g_buttonGroup2 = NULL;
+
+    delete m_sys_timer;
+    m_sys_timer = NULL;
     delete ui;
 }
 
 void devUpdateWidget::registOutButtonClick()
 {
-
-//    m_pvmsMonitorPage->m_iPresetPasswdOkFlag = 0;
+    int update_page = 4;
     this->hide();
-    emit registOutSignal();    //触发注销信号，带上当前设备类型
+    emit registOutSignal(update_page);    //触发注销信号，带上当前设备类型
 
 }
 #ifdef KEYBOARD
@@ -575,8 +586,14 @@ void devUpdateWidget::setTrainType()
             snprintf(tLogInfo.acLogDesc, sizeof(tLogInfo.acLogDesc), "change traintype to %s and monitor Client reboot!", acTrainType);
             LOG_WriteLog(&tLogInfo);
 
-            QApplication *app;
-            app->exit();
+//            QApplication *app;
+//            app->exit();
+            QString program = QApplication::applicationFilePath();
+            QStringList arguments = QApplication::arguments();
+            QString workingDirectory = QDir::currentPath();
+
+            QProcess::startDetached(program, arguments, workingDirectory);
+            QApplication::exit();
         }
     }
 }
@@ -677,7 +694,7 @@ void devUpdateWidget::configFileSelectionSlot()
         }
         else
         {
-            if (access("/mnt/usb/u/", F_OK) < 0)
+            if (access("/media/usb0/", F_OK) < 0)
             {
 //                DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget::%s %d not get USB device!\n",__FUNCTION__,__LINE__);
                 QMessageBox msgBox(QMessageBox::Warning,QString(tr("注意")),QString(tr("未检测到U盘,请插入!")));
@@ -711,7 +728,7 @@ void devUpdateWidget::configFileSelectionSlot()
                 return;
             }
 #endif
-            filename = QFileDialog::getOpenFileName(this, "打开文件", "/mnt/usb/u/", "ini文件(*.ini)");
+            filename = QFileDialog::getOpenFileName(this, "打开文件", "/media/usb0/", "ini文件(*.ini)");
             if (!filename.isNull())
             {
                 //QMessageBox::information(this, "Document", "Has document", QMessageBox::Ok | QMessageBox::Cancel);
@@ -742,7 +759,7 @@ void devUpdateWidget::configUpdateFileSLOT()
         }
         else
         {
-            if (access("/mnt/usb/u/", F_OK) < 0)
+            if (access("/media/usb0/", F_OK) < 0)
             {
 //                DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget::%s %d not get USB device!\n",__FUNCTION__,__LINE__);
                 QMessageBox msgBox(QMessageBox::Warning,QString(tr("注意")),QString(tr("未检测到U盘,请插入!")));
@@ -776,7 +793,7 @@ void devUpdateWidget::configUpdateFileSLOT()
 //                return;
 //            }
 
-            filename = QFileDialog::getOpenFileName(this, "打开文件", "/mnt/usb/u/", "文件(*)");
+            filename = QFileDialog::getOpenFileName(this, "打开文件", "/media/usb0/", "文件(*)");
             if (!filename.isNull())
             {
                 //QMessageBox::information(this, "Document", "Has document", QMessageBox::Ok | QMessageBox::Cancel);
@@ -814,7 +831,7 @@ void devUpdateWidget::devUpdateSlot()
         ui->updateStatueTextEdit->clear();
         ui->clientRebootPushButton->setEnabled(false);    //更新开始，设置重启按钮不可操作
 
-        if (access("/mnt/usb/u/", F_OK) < 0)
+        if (access("/media/usb0/", F_OK) < 0)
         {
 //            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget::%s %d not get USB device!\n",__FUNCTION__,__LINE__);
             QMessageBox msgBox(QMessageBox::Warning,QString(tr("注意")),QString(tr("未检测到U盘,请插入!")));
@@ -877,7 +894,7 @@ void devUpdateWidget::devUpdateSlot()
             return;
         }
 
-        fp = fopen("/mnt/usb/u/version.ini","rb");
+        fp = fopen("/media/usb0/version.ini","rb");
         if (NULL == fp)
         {
 //            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget open update file fail in USB device!\n");
@@ -932,16 +949,16 @@ void devUpdateWidget::devUpdateSlot()
 //        DebugPrint(DEBUG_UI_NOMAL_PRINT, "[%s] update device from version:%s to version:%s\n", __FUNCTION__, acLocalVersion, acUpdateVersion);
 
         ui->updateStatueTextEdit->append(tr("正在复制文件..."));
-        if (access("/userdata/backup",F_OK) < 0)
+        if (access("/home/data/backup",F_OK) < 0)
         {
-            system("mkdir /userdata/backup");
+            system("mkdir /home/data/backup");
         }
 
 //        system("cp /mnt/usb/u/mornitorapp.exe /home/data/emuVideoMornitorClient/mornitorapp.exe");
 
-        system("cp /userdata/x86MyApplication /userdata/backup/");
-        system("rm /userdata/x86MyApplication");
-        system("cp /mnt/usb/u/x86MyApplication /userdata/x86MyApplication");
+        system("cp /home/data/x86MyApplication /home/data/backup/");
+        system("rm /home/data/x86MyApplication");
+        system("cp /media/usb0/x86MyApplication /home/data/x86MyApplication");
         system("sync");
 
         ui->updateStatueTextEdit->append(tr("复制文件完成"));
@@ -977,17 +994,15 @@ void devUpdateWidget::devRebootSlot()
         QString program = QApplication::applicationFilePath();
         QStringList arguments = QApplication::arguments();
         QString workingDirectory = QDir::currentPath();
-        if("/userdata/x86MyApplication" != program)
+        if("/home/data/x86MyApplication" != program)
         {
-            system("cp /userdata/backup/x86MyApplication /userdata/ ");
-            program = "/userdata/x86MyApplication";
+            system("cp /home/data/backup/x86MyApplication /home/data/ ");
+            program = "/home/data/x86MyApplication";
         }
 
         QProcess::startDetached(program, arguments, workingDirectory);
         QApplication::exit();
 
-//        QApplication *app;
-//        app->exit();
     }
 
 
@@ -1023,7 +1038,7 @@ void devUpdateWidget::downLoadLogSlot()
         }
 
 //        system("cp /mnt/usb/u/Station.ini /home/data/emuVideoMornitorClient/Station.ini");
-        system("cp /userdata/sys.log /mnt/usb/u/");
+        system("cp /home/data/sys.log /media/usb0/");
 
         system("sync");
 
@@ -1092,7 +1107,7 @@ void devUpdateWidget::configFileImportSlot()
         }
 
 //        system("cp /mnt/usb/u/Station.ini /home/data/emuVideoMornitorClient/Station.ini");
-        system("cp /mnt/usb/u/Station.ini /userdata/Station.ini");
+        system("cp /media/usb0/Station.ini /home/data/Station.ini");
 
         system("sync");
 

@@ -7,7 +7,7 @@
 
 QT       += core gui widgets  multimedia multimediawidgets sql virtualkeyboard
 
-TARGET = MyApplication
+TARGET = ARMMyApplication
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -24,6 +24,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    cmplayer.cpp \
         main.cpp \
     MyApplication.cpp \
     choicelogindevwidget.cpp \
@@ -57,6 +58,7 @@ SOURCES += \
 HEADERS += \
     MyApplication.h \
     choicelogindevwidget.h \
+    cmplayer.h \
     loginwidget.h \
     pvmsmenuwidget.h \
     pvmsmonitorwidget.h \

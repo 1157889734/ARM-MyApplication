@@ -24,7 +24,7 @@ public slots:
     void alarmClearSlot();
 
 signals:
-    void registOutSignal();     //注销信号，iType:表示执行注销的页面类型，这里应该为2，表示受电弓监控页面,
+    void registOutSignal(int page);     //注销信号，iType:表示执行注销的页面类型，这里应该为2，表示受电弓监控页面,
     void alarmPushButoonClickSignal();
 
 private:

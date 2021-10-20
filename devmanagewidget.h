@@ -55,7 +55,7 @@ signals:
     void alarmPushButoonClickSignal();
     void systimeSetSignal();
     void serverOffLine(int iDex);
-    void registOutSignal();     //注销信号，iType:表示执行注销的页面类型，这里应该为2，表示受电弓监控页面,
+    void registOutSignal(int page);     //注销信号，iType:表示执行注销的页面类型，这里应该为2，表示受电弓监控页面,
 #ifdef KEYBOARD
     void show_hide_Signal(int value);
 #endif

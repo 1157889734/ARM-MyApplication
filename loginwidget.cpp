@@ -74,7 +74,7 @@ bool loginWidget::eventFilter(QObject *obj, QEvent *e)
 
 void loginWidget::okButtonSlot()
 {
-#if 1 //TEST
+#if 0 //TEST
 
     this->hide();
     emit gotoPvmsMenuPageSignal();

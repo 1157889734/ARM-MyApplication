@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_devManageWidget_t {
-    QByteArrayData data[16];
-    char stringdata0[275];
+    QByteArrayData data[17];
+    char stringdata0[280];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,20 +39,21 @@ QT_MOC_LITERAL(3, 44, 16), // "systimeSetSignal"
 QT_MOC_LITERAL(4, 61, 13), // "serverOffLine"
 QT_MOC_LITERAL(5, 75, 4), // "iDex"
 QT_MOC_LITERAL(6, 80, 15), // "registOutSignal"
-QT_MOC_LITERAL(7, 96, 17), // "trainNumberChange"
-QT_MOC_LITERAL(8, 114, 14), // "TrainNumberStr"
-QT_MOC_LITERAL(9, 129, 21), // "getDevStateSignalCtrl"
-QT_MOC_LITERAL(10, 151, 24), // "alarmPushButoonClickSlot"
-QT_MOC_LITERAL(11, 176, 15), // "alarmHappenSlot"
-QT_MOC_LITERAL(12, 192, 19), // "alarmHappenCtrlSlot"
-QT_MOC_LITERAL(13, 212, 14), // "alarmClearSlot"
-QT_MOC_LITERAL(14, 227, 26), // "trainNumberButtonClickSlot"
-QT_MOC_LITERAL(15, 254, 20) // "registOutButtonClick"
+QT_MOC_LITERAL(7, 96, 4), // "page"
+QT_MOC_LITERAL(8, 101, 17), // "trainNumberChange"
+QT_MOC_LITERAL(9, 119, 14), // "TrainNumberStr"
+QT_MOC_LITERAL(10, 134, 21), // "getDevStateSignalCtrl"
+QT_MOC_LITERAL(11, 156, 24), // "alarmPushButoonClickSlot"
+QT_MOC_LITERAL(12, 181, 15), // "alarmHappenSlot"
+QT_MOC_LITERAL(13, 197, 19), // "alarmHappenCtrlSlot"
+QT_MOC_LITERAL(14, 217, 14), // "alarmClearSlot"
+QT_MOC_LITERAL(15, 232, 26), // "trainNumberButtonClickSlot"
+QT_MOC_LITERAL(16, 259, 20) // "registOutButtonClick"
 
     },
     "devManageWidget\0alarmPushButoonClickSignal\0"
     "\0systimeSetSignal\0serverOffLine\0iDex\0"
-    "registOutSignal\0trainNumberChange\0"
+    "registOutSignal\0page\0trainNumberChange\0"
     "TrainNumberStr\0getDevStateSignalCtrl\0"
     "alarmPushButoonClickSlot\0alarmHappenSlot\0"
     "alarmHappenCtrlSlot\0alarmClearSlot\0"
@@ -78,26 +79,26 @@ static const uint qt_meta_data_devManageWidget[] = {
        1,    0,   74,    2, 0x06 /* Public */,
        3,    0,   75,    2, 0x06 /* Public */,
        4,    1,   76,    2, 0x06 /* Public */,
-       6,    0,   79,    2, 0x06 /* Public */,
+       6,    1,   79,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       7,    1,   80,    2, 0x0a /* Public */,
-       9,    0,   83,    2, 0x0a /* Public */,
-      10,    0,   84,    2, 0x0a /* Public */,
-      11,    0,   85,    2, 0x0a /* Public */,
-      12,    0,   86,    2, 0x0a /* Public */,
-      13,    0,   87,    2, 0x0a /* Public */,
-      14,    0,   88,    2, 0x0a /* Public */,
-      15,    0,   89,    2, 0x0a /* Public */,
+       8,    1,   82,    2, 0x0a /* Public */,
+      10,    0,   85,    2, 0x0a /* Public */,
+      11,    0,   86,    2, 0x0a /* Public */,
+      12,    0,   87,    2, 0x0a /* Public */,
+      13,    0,   88,    2, 0x0a /* Public */,
+      14,    0,   89,    2, 0x0a /* Public */,
+      15,    0,   90,    2, 0x0a /* Public */,
+      16,    0,   91,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,    5,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    7,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString,    8,
+    QMetaType::Void, QMetaType::QString,    9,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -118,7 +119,7 @@ void devManageWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 0: _t->alarmPushButoonClickSignal(); break;
         case 1: _t->systimeSetSignal(); break;
         case 2: _t->serverOffLine((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 3: _t->registOutSignal(); break;
+        case 3: _t->registOutSignal((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 4: _t->trainNumberChange((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 5: _t->getDevStateSignalCtrl(); break;
         case 6: _t->alarmPushButoonClickSlot(); break;
@@ -153,7 +154,7 @@ void devManageWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
             }
         }
         {
-            using _t = void (devManageWidget::*)();
+            using _t = void (devManageWidget::*)(int );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&devManageWidget::registOutSignal)) {
                 *result = 3;
                 return;
@@ -222,9 +223,10 @@ void devManageWidget::serverOffLine(int _t1)
 }
 
 // SIGNAL 3
-void devManageWidget::registOutSignal()
+void devManageWidget::registOutSignal(int _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 3, nullptr);
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 3, _a);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

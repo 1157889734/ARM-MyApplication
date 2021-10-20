@@ -14,8 +14,8 @@
 #include <QMediaPlaylist>
 #include <QMediaPlayer>
 #include "qplayer.h"
-
-
+#include <QPainter>
+#include "cmplayer.h"
 
 namespace Ui {
 class pvmsMonitorWidget;
@@ -84,7 +84,7 @@ typedef struct _T_CAMERA_INFO
     int iStreamState;
     time_t tPtzOprateTime;    //云台操作时间
     PMSG_HANDLE phandle;   //所属服务器的通信句柄
-/*    CMPHandle cmpHandle;    //客户端媒体播放句柄*/
+    CMPHandle cmpHandle;    //客户端媒体播放句柄
 } __attribute__((packed)) T_CAMERA_INFO, *PT_CAMERA_INFO;
 
 
@@ -101,12 +101,11 @@ public:
     time_t m_lastActionTime;    //界面最后一次操作时间
     int pmsgCtrl(PMSG_HANDLE pHandle, unsigned char ucMsgCmd, char *pcMsgData, int iMsgDataLen);   //与服务器通信消息处理
     void pvmsUpdownCtrl(char *pcMsgData);
-    int  openMedia(const char *pcRtspFile);
-    int  closeMedia(const char *pcRtspFile);
 
 
     QLabel *m_channelStateLabel;
     QLabel *m_channelNoLabel;
+    int pageType;
 
     int m_iSelectPresetNo;   //保存选中的预置点编号
     int m_iAlarmNotCtrlFlag;   //有报警信息未处理标志
@@ -131,8 +130,7 @@ public:
     int m_iSystimeChangeFlag;   //系统时间改变标志
 
     PMSG_HANDLE m_PisServerPhandle;    //pis服务器PMSG通信句柄
-
-    QVideoWidget *m_playWin;    //播放窗体
+    QWidget *m_playWin;    //播放窗体
     int m_iMousePosX;
     int m_iMousePosY;
 
@@ -162,7 +160,7 @@ public:
 
 signals:
     void alarmPushButoonClickSignal();
-    void registOutSignal();     //注销信号，iType:表示执行注销的页面类型，这里应该为2，表示受电弓监控页面,
+    void registOutSignal(int page);     //注销信号，iType:表示执行注销的页面类型，这里应该为2，表示受电弓监控页面,
     void chStateLabelTextCtrlSignal(int iFlag);   //通道状态标签文本显示的处理信号，0-显示关闭，1-显示开启
     void camSwitchButtonTextCtrlSignal(int iFlag);   //摄像机开关状态按钮文本显示的处理信号，0-显示关闭，1-显示开启
     void chLabelDisplayCtrlSignal();   //通道状态和通道号标签是否显示的处理信号
@@ -234,10 +232,7 @@ private:
     QTimer *m_fillLightSwitchTimer;
     QTimer *m_cameraSwitchTimer;
 
-    QMediaPlayer player;
-    QMediaPlaylist *list;
-    QVideoWidget *videoViewer;
-    QList<QMediaPlaylist*> *multiPlayList;
+
 
 };
 

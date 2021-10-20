@@ -5,11 +5,11 @@
 
 #define VERSION "V2.0.0"
 
-#define SYSCONFIGFILEPATH "/userdata/C3SysConfig.ini"
-#define DATACONFIGFILEPATH "/userdata/C3DataConfig.ini"
-#define CFGCONFIGFILEPATH "/userdata/cfg"
-#define STATIONCONFIGFILEPATH "/userdata/Station.ini"
-#define NETCONFIGFILEPATH "/home/conf/netconf.ini"
+#define SYSCONFIGFILEPATH "/home/data/C3SysConfig.ini"
+#define DATACONFIGFILEPATH "/home/data/C3DataConfig.ini"
+#define CFGCONFIGFILEPATH "/home/data/cfg"
+#define STATIONCONFIGFILEPATH "/home/data/Station.ini"
+#define NETCONFIGFILEPATH "/home/data/netconf.ini"
 
 static char g_acTrainType[32] = {0};    //列车车型
 static char g_acTrainNumber[32] = {0};     //列车车次

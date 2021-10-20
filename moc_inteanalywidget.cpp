@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_inteAnalyWidget_t {
-    QByteArrayData data[9];
-    char stringdata0[157];
+    QByteArrayData data[10];
+    char stringdata0[162];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,15 +35,16 @@ static const qt_meta_stringdata_inteAnalyWidget_t qt_meta_stringdata_inteAnalyWi
 QT_MOC_LITERAL(0, 0, 15), // "inteAnalyWidget"
 QT_MOC_LITERAL(1, 16, 15), // "registOutSignal"
 QT_MOC_LITERAL(2, 32, 0), // ""
-QT_MOC_LITERAL(3, 33, 26), // "alarmPushButoonClickSignal"
-QT_MOC_LITERAL(4, 60, 20), // "registOutButtonClick"
-QT_MOC_LITERAL(5, 81, 24), // "alarmPushButoonClickSlot"
-QT_MOC_LITERAL(6, 106, 15), // "alarmHappenSlot"
-QT_MOC_LITERAL(7, 122, 19), // "alarmHappenCtrlSlot"
-QT_MOC_LITERAL(8, 142, 14) // "alarmClearSlot"
+QT_MOC_LITERAL(3, 33, 4), // "page"
+QT_MOC_LITERAL(4, 38, 26), // "alarmPushButoonClickSignal"
+QT_MOC_LITERAL(5, 65, 20), // "registOutButtonClick"
+QT_MOC_LITERAL(6, 86, 24), // "alarmPushButoonClickSlot"
+QT_MOC_LITERAL(7, 111, 15), // "alarmHappenSlot"
+QT_MOC_LITERAL(8, 127, 19), // "alarmHappenCtrlSlot"
+QT_MOC_LITERAL(9, 147, 14) // "alarmClearSlot"
 
     },
-    "inteAnalyWidget\0registOutSignal\0\0"
+    "inteAnalyWidget\0registOutSignal\0\0page\0"
     "alarmPushButoonClickSignal\0"
     "registOutButtonClick\0alarmPushButoonClickSlot\0"
     "alarmHappenSlot\0alarmHappenCtrlSlot\0"
@@ -65,18 +66,18 @@ static const uint qt_meta_data_inteAnalyWidget[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   49,    2, 0x06 /* Public */,
-       3,    0,   50,    2, 0x06 /* Public */,
+       1,    1,   49,    2, 0x06 /* Public */,
+       4,    0,   52,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       4,    0,   51,    2, 0x0a /* Public */,
-       5,    0,   52,    2, 0x0a /* Public */,
-       6,    0,   53,    2, 0x0a /* Public */,
-       7,    0,   54,    2, 0x0a /* Public */,
-       8,    0,   55,    2, 0x0a /* Public */,
+       5,    0,   53,    2, 0x0a /* Public */,
+       6,    0,   54,    2, 0x0a /* Public */,
+       7,    0,   55,    2, 0x0a /* Public */,
+       8,    0,   56,    2, 0x0a /* Public */,
+       9,    0,   57,    2, 0x0a /* Public */,
 
  // signals: parameters
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    3,
     QMetaType::Void,
 
  // slots: parameters
@@ -95,7 +96,7 @@ void inteAnalyWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         auto *_t = static_cast<inteAnalyWidget *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->registOutSignal(); break;
+        case 0: _t->registOutSignal((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 1: _t->alarmPushButoonClickSignal(); break;
         case 2: _t->registOutButtonClick(); break;
         case 3: _t->alarmPushButoonClickSlot(); break;
@@ -107,7 +108,7 @@ void inteAnalyWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (inteAnalyWidget::*)();
+            using _t = void (inteAnalyWidget::*)(int );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&inteAnalyWidget::registOutSignal)) {
                 *result = 0;
                 return;
@@ -121,7 +122,6 @@ void inteAnalyWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
             }
         }
     }
-    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject inteAnalyWidget::staticMetaObject = { {
@@ -165,9 +165,10 @@ int inteAnalyWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void inteAnalyWidget::registOutSignal()
+void inteAnalyWidget::registOutSignal(int _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 
 // SIGNAL 1

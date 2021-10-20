@@ -619,8 +619,9 @@ void devManageWidget::registOutButtonClick()
 {
 
 //    m_pvmsMonitorPage->m_iPresetPasswdOkFlag = 0;
+    int manage_page = 3;
     this->hide();
-    emit registOutSignal();    //触发注销信号，带上当前设备类型
+    emit registOutSignal(manage_page);    //触发注销信号，带上当前设备类型
 
 }
 
@@ -907,7 +908,6 @@ int devManageWidget::pmsgCtrl(PMSG_HANDLE pHandle, unsigned char ucMsgCmd, char 
         }
         case SERV_CLI_MSG_TYPE_VIDEO_ALARM_REPORT:
         {
-            qDebug()<<"devManage Widget get pmsg response cmd"<<ucMsgCmd<<pcMsgData[0]<<pcMsgData[1]<<pcMsgData[2]<<pcMsgData[3]<<endl;
 //            DebugPrint(DEBUG_PMSG_DATA_PRINT, "devManage Widget get pmsg response cmd 0x%x data:0x%x 0x%x 0x%x 0x%x\n", ucMsgCmd, pcMsgData[0], pcMsgData[1], pcMsgData[2],pcMsgData[3]);
 
             if (pcMsgData == NULL || iMsgDataLen != 4)

@@ -54,6 +54,15 @@ usergroupManage::usergroupManage(QWidget *parent) :
 
 
 }
+
+usergroupManage::~usergroupManage()
+{
+    delete g_buttonGroup;
+    g_buttonGroup = NULL;
+
+    delete ui;
+}
+
 void usergroupManage::init_datavase()
 {
     QSqlDatabase db;
@@ -81,6 +90,9 @@ void usergroupManage::init_datavase()
 
 void usergroupManage::on_addpushButton_clicked()
 {
+    ui->passwdlineEdit->clear();
+    ui->usernamelineEdit->clear();
+    ui->surelineEdit->clear();
     ui->usernamelineEdit->setFocus();
 }
 
@@ -157,11 +169,13 @@ void usergroupManage::on_savepushButton_clicked()
     bool T2=true;
     while(query.next())
    {
+
        QString id1= query.value(1).toString();
        if(ui->usernamelineEdit->text().compare(id1)==0)
         {
             QMessageBox::information(this ,tr("提示") , tr("该用户已存在不允许再次添加!"));
             T2=false;
+            return;
         }
    }
 
@@ -227,11 +241,6 @@ void usergroupManage::on_savepushButton_clicked()
 }
 
 
-
-usergroupManage::~usergroupManage()
-{
-    delete ui;
-}
 
 void usergroupManage::on_deletepushButton_clicked()
 {

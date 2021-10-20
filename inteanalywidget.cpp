@@ -64,9 +64,10 @@ inteAnalyWidget::~inteAnalyWidget()
 
 void inteAnalyWidget::registOutButtonClick()
 {
+    int update_page = 5;
 
     this->hide();
-    emit registOutSignal();    //触发注销信号，带上当前设备类型
+    emit registOutSignal(update_page);    //触发注销信号，带上当前设备类型
 
 }
 void inteAnalyWidget::alarmPushButoonClickSlot()

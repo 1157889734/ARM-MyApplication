@@ -33,7 +33,7 @@ public:
 
 
 public slots:
-    void registOutButtonClick();
+    void registOutButtonClick(int page);
     void menuButtonClick();
     void alarmPageShowSlot();
     void closeAlarmWidget();

@@ -13,33 +13,6 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>794</x>
-     <y>220</y>
-     <width>226</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#label_6 { 
-	color: rgb(33, 131, 229);
-    background-color: rgb(255, 255, 255);
-  } 
- #label_6 * { 
-     background-color:; 
- }</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QPushButton" name="presetNoPushButton_8">
    <property name="geometry">
     <rect>
@@ -454,33 +427,6 @@ QPushButton:pressed
     </size>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>794</x>
-     <y>40</y>
-     <width>231</width>
-     <height>131</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"> #label_4 { 
-	color: rgb(33, 131, 229);
-    background-color: rgb(255, 255, 255);
-  } 
- #label_4 * { 
-     background-color:; 
- }</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QPushButton" name="presetSetPushButton">
    <property name="geometry">
     <rect>
@@ -696,28 +642,6 @@ QPushButton:pressed
    </property>
    <property name="checkable">
     <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_9">
-   <property name="geometry">
-    <rect>
-     <x>794</x>
-     <y>550</y>
-     <width>231</width>
-     <height>111</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"> #label_9 { 
-    background-color: rgb(255, 255, 255);
-  } 
- #label_9 * { 
-	 color: rgb(33, 131, 229);
-     background-color:; 
- }</string>
-   </property>
-   <property name="text">
-    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pollingNextOnePushButton">
@@ -946,54 +870,6 @@ QPushButton:pressed
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>794</x>
-     <y>170</y>
-     <width>231</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"> #label_5 { 
-	color: rgb(33, 131, 229);
-    background-color: rgb(255, 255, 255);
-  } 
- #label_5 * { 
-     background-color:; 
- }</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_8">
-   <property name="geometry">
-    <rect>
-     <x>795</x>
-     <y>310</y>
-     <width>231</width>
-     <height>251</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"> #label_8 { 
-    background-color: rgb(255, 255, 255);
-  } 
- #label_8 * { 
-     background-color:; 
- }</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QPushButton" name="presetGetPushButton">
    <property name="geometry">
     <rect>
@@ -1103,16 +979,27 @@ QPushButton:pressed
     <string/>
    </property>
   </widget>
-  <zorder>label_9</zorder>
-  <zorder>label_8</zorder>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>782</width>
+     <height>630</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>label_11</zorder>
-  <zorder>label_6</zorder>
   <zorder>label_2</zorder>
-  <zorder>label_4</zorder>
   <zorder>ptzDownPushButton</zorder>
   <zorder>ptzUpPushButton</zorder>
   <zorder>label_3</zorder>
-  <zorder>label_5</zorder>
   <zorder>presetGetPushButton</zorder>
   <zorder>label_7</zorder>
   <zorder>zoomOutPushButton</zorder>
@@ -1141,6 +1028,7 @@ QPushButton:pressed
   <zorder>focusNearPushButton</zorder>
   <zorder>canselPushButton</zorder>
   <zorder>presetNoPushButton</zorder>
+  <zorder>label_4</zorder>
  </widget>
  <resources/>
  <connections/>

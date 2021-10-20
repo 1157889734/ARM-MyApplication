@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_pvmsMenuWidget_t {
-    QByteArrayData data[26];
-    char stringdata0[413];
+    QByteArrayData data[27];
+    char stringdata0[418];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -44,20 +44,21 @@ QT_MOC_LITERAL(8, 104, 16), // "alarmClearSignal"
 QT_MOC_LITERAL(9, 121, 17), // "blackScreenSignal"
 QT_MOC_LITERAL(10, 139, 21), // "blackScreenExitSignal"
 QT_MOC_LITERAL(11, 161, 20), // "registOutButtonClick"
-QT_MOC_LITERAL(12, 182, 15), // "menuButtonClick"
-QT_MOC_LITERAL(13, 198, 17), // "alarmPageShowSlot"
-QT_MOC_LITERAL(14, 216, 16), // "closeAlarmWidget"
-QT_MOC_LITERAL(15, 233, 15), // "alarmHappenSlot"
-QT_MOC_LITERAL(16, 249, 14), // "alarmClearSlot"
-QT_MOC_LITERAL(17, 264, 17), // "serverOffLineSlot"
-QT_MOC_LITERAL(18, 282, 4), // "iDex"
-QT_MOC_LITERAL(19, 287, 19), // "hideAlarmWidgetSlot"
-QT_MOC_LITERAL(20, 307, 19), // "showAlarmWidgetSlot"
-QT_MOC_LITERAL(21, 327, 19), // "blackScreenCtrlSlot"
-QT_MOC_LITERAL(22, 347, 23), // "blackScreenExitCtrlSlot"
-QT_MOC_LITERAL(23, 371, 12), // "showPageSlot"
-QT_MOC_LITERAL(24, 384, 14), // "rs485TimerFunc"
-QT_MOC_LITERAL(25, 399, 13) // "pmsgTimerFunc"
+QT_MOC_LITERAL(12, 182, 4), // "page"
+QT_MOC_LITERAL(13, 187, 15), // "menuButtonClick"
+QT_MOC_LITERAL(14, 203, 17), // "alarmPageShowSlot"
+QT_MOC_LITERAL(15, 221, 16), // "closeAlarmWidget"
+QT_MOC_LITERAL(16, 238, 15), // "alarmHappenSlot"
+QT_MOC_LITERAL(17, 254, 14), // "alarmClearSlot"
+QT_MOC_LITERAL(18, 269, 17), // "serverOffLineSlot"
+QT_MOC_LITERAL(19, 287, 4), // "iDex"
+QT_MOC_LITERAL(20, 292, 19), // "hideAlarmWidgetSlot"
+QT_MOC_LITERAL(21, 312, 19), // "showAlarmWidgetSlot"
+QT_MOC_LITERAL(22, 332, 19), // "blackScreenCtrlSlot"
+QT_MOC_LITERAL(23, 352, 23), // "blackScreenExitCtrlSlot"
+QT_MOC_LITERAL(24, 376, 12), // "showPageSlot"
+QT_MOC_LITERAL(25, 389, 14), // "rs485TimerFunc"
+QT_MOC_LITERAL(26, 404, 13) // "pmsgTimerFunc"
 
     },
     "pvmsMenuWidget\0registOutSignal\0\0"
@@ -65,7 +66,7 @@ QT_MOC_LITERAL(25, 399, 13) // "pmsgTimerFunc"
     "iCarriageNO\0iDevPos\0alarmHappenSignal\0"
     "alarmClearSignal\0blackScreenSignal\0"
     "blackScreenExitSignal\0registOutButtonClick\0"
-    "menuButtonClick\0alarmPageShowSlot\0"
+    "page\0menuButtonClick\0alarmPageShowSlot\0"
     "closeAlarmWidget\0alarmHappenSlot\0"
     "alarmClearSlot\0serverOffLineSlot\0iDex\0"
     "hideAlarmWidgetSlot\0showAlarmWidgetSlot\0"
@@ -96,20 +97,20 @@ static const uint qt_meta_data_pvmsMenuWidget[] = {
       10,    0,  125,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      11,    0,  126,    2, 0x0a /* Public */,
-      12,    0,  127,    2, 0x0a /* Public */,
-      13,    0,  128,    2, 0x0a /* Public */,
-      14,    0,  129,    2, 0x0a /* Public */,
-      15,    0,  130,    2, 0x0a /* Public */,
-      16,    0,  131,    2, 0x0a /* Public */,
-      17,    1,  132,    2, 0x0a /* Public */,
-      19,    0,  135,    2, 0x0a /* Public */,
-      20,    0,  136,    2, 0x0a /* Public */,
-      21,    0,  137,    2, 0x0a /* Public */,
-      22,    0,  138,    2, 0x0a /* Public */,
-      23,    0,  139,    2, 0x0a /* Public */,
-      24,    0,  140,    2, 0x0a /* Public */,
-      25,    0,  141,    2, 0x0a /* Public */,
+      11,    1,  126,    2, 0x0a /* Public */,
+      13,    0,  129,    2, 0x0a /* Public */,
+      14,    0,  130,    2, 0x0a /* Public */,
+      15,    0,  131,    2, 0x0a /* Public */,
+      16,    0,  132,    2, 0x0a /* Public */,
+      17,    0,  133,    2, 0x0a /* Public */,
+      18,    1,  134,    2, 0x0a /* Public */,
+      20,    0,  137,    2, 0x0a /* Public */,
+      21,    0,  138,    2, 0x0a /* Public */,
+      22,    0,  139,    2, 0x0a /* Public */,
+      23,    0,  140,    2, 0x0a /* Public */,
+      24,    0,  141,    2, 0x0a /* Public */,
+      25,    0,  142,    2, 0x0a /* Public */,
+      26,    0,  143,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -120,13 +121,13 @@ static const uint qt_meta_data_pvmsMenuWidget[] = {
     QMetaType::Void,
 
  // slots: parameters
+    QMetaType::Void, QMetaType::Int,   12,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   18,
+    QMetaType::Void, QMetaType::Int,   19,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -150,7 +151,7 @@ void pvmsMenuWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 3: _t->alarmClearSignal(); break;
         case 4: _t->blackScreenSignal(); break;
         case 5: _t->blackScreenExitSignal(); break;
-        case 6: _t->registOutButtonClick(); break;
+        case 6: _t->registOutButtonClick((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 7: _t->menuButtonClick(); break;
         case 8: _t->alarmPageShowSlot(); break;
         case 9: _t->closeAlarmWidget(); break;

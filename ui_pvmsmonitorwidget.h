@@ -20,7 +20,6 @@ QT_BEGIN_NAMESPACE
 class Ui_pvmsMonitorWidget
 {
 public:
-    QLabel *label_6;
     QPushButton *presetNoPushButton_8;
     QPushButton *zoomOutPushButton;
     QPushButton *focusNearPushButton;
@@ -36,7 +35,6 @@ public:
     QPushButton *ptzRightPushButton;
     QLabel *label_2;
     QPushButton *ptzLeftPushButton;
-    QLabel *label_4;
     QPushButton *presetSetPushButton;
     QPushButton *presetNoPushButton_7;
     QPushButton *ptzDownPushButton;
@@ -44,7 +42,6 @@ public:
     QPushButton *alarmPushButton;
     QPushButton *fillLightSwitchPushButton;
     QPushButton *presetNoPushButton_4;
-    QLabel *label_9;
     QPushButton *pollingNextOnePushButton;
     QPushButton *ptzUpPushButton;
     QPushButton *pollingLastOnePushButton;
@@ -52,34 +49,22 @@ public:
     QPushButton *presetNoPushButton_6;
     QPushButton *presetNoPushButton;
     QPushButton *presetNoPushButton_5;
-    QLabel *label_5;
-    QLabel *label_8;
     QPushButton *presetGetPushButton;
     QLabel *label_7;
     QPushButton *canselPushButton;
     QLabel *label_11;
+    QLabel *label_4;
 
     void setupUi(QWidget *pvmsMonitorWidget)
     {
         if (pvmsMonitorWidget->objectName().isEmpty())
             pvmsMonitorWidget->setObjectName(QString::fromUtf8("pvmsMonitorWidget"));
         pvmsMonitorWidget->resize(1024, 630);
-        label_6 = new QLabel(pvmsMonitorWidget);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(794, 220, 226, 41));
-        QFont font;
-        font.setPointSize(12);
-        label_6->setFont(font);
-        label_6->setStyleSheet(QString::fromUtf8("#label_6 { \n"
-"	color: rgb(33, 131, 229);\n"
-"    background-color: rgb(255, 255, 255);\n"
-"  } \n"
-" #label_6 * { \n"
-"     background-color:; \n"
-" }"));
         presetNoPushButton_8 = new QPushButton(pvmsMonitorWidget);
         presetNoPushButton_8->setObjectName(QString::fromUtf8("presetNoPushButton_8"));
         presetNoPushButton_8->setGeometry(QRect(970, 370, 53, 32));
+        QFont font;
+        font.setPointSize(12);
         presetNoPushButton_8->setFont(font);
         presetNoPushButton_8->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-image: url(:/res/8.bmp);\n"
@@ -241,17 +226,6 @@ public:
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
 ""));
         ptzLeftPushButton->setIconSize(QSize(50, 50));
-        label_4 = new QLabel(pvmsMonitorWidget);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(794, 40, 231, 131));
-        label_4->setFont(font);
-        label_4->setStyleSheet(QString::fromUtf8(" #label_4 { \n"
-"	color: rgb(33, 131, 229);\n"
-"    background-color: rgb(255, 255, 255);\n"
-"  } \n"
-" #label_4 * { \n"
-"     background-color:; \n"
-" }"));
         presetSetPushButton = new QPushButton(pvmsMonitorWidget);
         presetSetPushButton->setObjectName(QString::fromUtf8("presetSetPushButton"));
         presetSetPushButton->setGeometry(QRect(785, 430, 112, 32));
@@ -344,16 +318,6 @@ public:
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         presetNoPushButton_4->setCheckable(true);
-        label_9 = new QLabel(pvmsMonitorWidget);
-        label_9->setObjectName(QString::fromUtf8("label_9"));
-        label_9->setGeometry(QRect(794, 550, 231, 111));
-        label_9->setStyleSheet(QString::fromUtf8(" #label_9 { \n"
-"    background-color: rgb(255, 255, 255);\n"
-"  } \n"
-" #label_9 * { \n"
-"	 color: rgb(33, 131, 229);\n"
-"     background-color:; \n"
-" }"));
         pollingNextOnePushButton = new QPushButton(pvmsMonitorWidget);
         pollingNextOnePushButton->setObjectName(QString::fromUtf8("pollingNextOnePushButton"));
         pollingNextOnePushButton->setGeometry(QRect(970, 510, 30, 31));
@@ -447,26 +411,6 @@ public:
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         presetNoPushButton_5->setCheckable(true);
-        label_5 = new QLabel(pvmsMonitorWidget);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(794, 170, 231, 51));
-        label_5->setFont(font);
-        label_5->setStyleSheet(QString::fromUtf8(" #label_5 { \n"
-"	color: rgb(33, 131, 229);\n"
-"    background-color: rgb(255, 255, 255);\n"
-"  } \n"
-" #label_5 * { \n"
-"     background-color:; \n"
-" }"));
-        label_8 = new QLabel(pvmsMonitorWidget);
-        label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setGeometry(QRect(795, 310, 231, 251));
-        label_8->setStyleSheet(QString::fromUtf8(" #label_8 { \n"
-"    background-color: rgb(255, 255, 255);\n"
-"  } \n"
-" #label_8 * { \n"
-"     background-color:; \n"
-" }"));
         presetGetPushButton = new QPushButton(pvmsMonitorWidget);
         presetGetPushButton->setObjectName(QString::fromUtf8("presetGetPushButton"));
         presetGetPushButton->setGeometry(QRect(910, 430, 112, 32));
@@ -508,16 +452,15 @@ public:
         label_11->setGeometry(QRect(0, 0, 1024, 630));
         label_11->setToolTipDuration(0);
         label_11->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        label_9->raise();
-        label_8->raise();
+        label_4 = new QLabel(pvmsMonitorWidget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(0, 0, 782, 630));
+        label_4->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);"));
         label_11->raise();
-        label_6->raise();
         label_2->raise();
-        label_4->raise();
         ptzDownPushButton->raise();
         ptzUpPushButton->raise();
         label_3->raise();
-        label_5->raise();
         presetGetPushButton->raise();
         label_7->raise();
         zoomOutPushButton->raise();
@@ -546,6 +489,7 @@ public:
         focusNearPushButton->raise();
         canselPushButton->raise();
         presetNoPushButton->raise();
+        label_4->raise();
 
         retranslateUi(pvmsMonitorWidget);
 
@@ -555,7 +499,6 @@ public:
     void retranslateUi(QWidget *pvmsMonitorWidget)
     {
         pvmsMonitorWidget->setWindowTitle(QCoreApplication::translate("pvmsMonitorWidget", "Form", nullptr));
-        label_6->setText(QString());
         presetNoPushButton_8->setText(QString());
         zoomOutPushButton->setText(QString());
         focusNearPushButton->setText(QString());
@@ -571,7 +514,6 @@ public:
         ptzRightPushButton->setText(QString());
         label_2->setText(QCoreApplication::translate("pvmsMonitorWidget", "\350\201\232\347\204\246", nullptr));
         ptzLeftPushButton->setText(QString());
-        label_4->setText(QString());
         presetSetPushButton->setText(QString());
         presetNoPushButton_7->setText(QString());
         ptzDownPushButton->setText(QString());
@@ -579,7 +521,6 @@ public:
         alarmPushButton->setText(QString());
         fillLightSwitchPushButton->setText(QString());
         presetNoPushButton_4->setText(QString());
-        label_9->setText(QString());
         pollingNextOnePushButton->setText(QString());
         ptzUpPushButton->setText(QString());
         pollingLastOnePushButton->setText(QString());
@@ -587,12 +528,11 @@ public:
         presetNoPushButton_6->setText(QString());
         presetNoPushButton->setText(QString());
         presetNoPushButton_5->setText(QString());
-        label_5->setText(QString());
-        label_8->setText(QString());
         presetGetPushButton->setText(QString());
         label_7->setText(QCoreApplication::translate("pvmsMonitorWidget", "  \351\242\204\347\275\256\347\202\271", nullptr));
         canselPushButton->setText(QString());
         label_11->setText(QString());
+        label_4->setText(QString());
     } // retranslateUi
 
 };
