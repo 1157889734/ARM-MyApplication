@@ -139,7 +139,7 @@ public:
         comboBox_5->setFont(font);
         label_12 = new QLabel(inteAnalyWidget);
         label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setGeometry(QRect(309, 7, 711, 561));
+        label_12->setGeometry(QRect(300, 2, 724, 561));
         label_12->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "background-image: url(:/res/playerbk.png);"));
         pushButton_16 = new QPushButton(inteAnalyWidget);

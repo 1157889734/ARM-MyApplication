@@ -47,9 +47,7 @@ recordPlayWidget::recordPlayWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::recordPlayWidget)
 {
-    char timestr[128] = {0};
     int i = 0;
-    int iYear = 0, iMonth= 0, iDay = 0;
     QString string = "";
     ui->setupUi(this);
     this->setWindowFlags(Qt::FramelessWindowHint);
@@ -63,7 +61,7 @@ recordPlayWidget::recordPlayWidget(QWidget *parent) :
 
     m_playSlider = new mySlider(this);    //创建播放进度条
     m_playSlider->setOrientation(Qt::Horizontal);    //设置水平方向
-    m_playSlider->setGeometry(290, 545, 730, 35);
+    m_playSlider->setGeometry(290, 545, 650, 35);
     m_playSlider->show();
     /*定义播放进度条样式*/
     m_playSlider->setStyleSheet("QSlider::groove:horizontal{border: 1px solid #4A708B;background: #C0C0C0;height: 5px;border-radius: 1px;padding-left:-1px;padding-right:-1px;}"
@@ -136,7 +134,7 @@ recordPlayWidget::recordPlayWidget(QWidget *parent) :
     getTrainConfig();
 
     m_playWin = new QWidget(this);
-    m_playWin->setGeometry(290, 0, 730, 555);
+    m_playWin->setGeometry(290, 0, 734, 540);
     m_playWin->show();
     m_playWin->setStyleSheet("QWidget{background-color: rgb(0, 0, 0);}");
 
@@ -190,7 +188,6 @@ recordPlayWidget::recordPlayWidget(QWidget *parent) :
 
     g_recordPlayThis = this;
 
-//    QObject::connect(m_playSlider,SIGNAL(QSlider::sliderMoved()),this,SLOT(setpostion()));
 }
 
 recordPlayWidget::~recordPlayWidget()
@@ -933,7 +930,7 @@ void recordPlayWidget::recordPlayStartSlot()
         if (0 == m_iPlayFlag)
         {
             m_iPlayFlag = 1;
-            m_dPlaySpeed = 1.00;
+//            m_dPlaySpeed = 1.00;
 
             CMP_PlayMedia(m_cmpHandle);
             CMP_SetPlayRate(m_cmpHandle,m_dPlaySpeed);
@@ -1049,6 +1046,8 @@ void recordPlayWidget::recordPlayFastForwardSlot()
 
     CMP_SetPlayRate(m_cmpHandle,m_dPlaySpeed);
     setPlayButtonStyleSheet();
+    qDebug()<<"***********playstate="<<CMP_GetPlayState(m_cmpHandle)<<__LINE__<<endl;
+
 
 
 }
@@ -1063,7 +1062,7 @@ void recordPlayWidget::recordPlaySlowForwardSlot()
     {
         return;
     }
-    if (m_dPlaySpeed <= 1.25)
+    if (m_dPlaySpeed <= 0.25)
     {
         return;
     }
@@ -1071,6 +1070,8 @@ void recordPlayWidget::recordPlaySlowForwardSlot()
     m_dPlaySpeed = m_dPlaySpeed/2;
 
     CMP_SetPlayRate(m_cmpHandle,m_dPlaySpeed);
+    qDebug()<<"*********m_dPlaySpeed="<<m_dPlaySpeed<<"***********playstate="<<CMP_GetPlayState(m_cmpHandle)<<__LINE__<<endl;
+
 
     setPlayButtonStyleSheet();
 }

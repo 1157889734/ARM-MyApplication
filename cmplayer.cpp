@@ -249,6 +249,7 @@ int CMP_SetPlayRate(CMPHandle hPlay,qreal rate)
 
     ptCmpInfo->pQqlayer->setPlaybackRate(rate);
 
+
     return 0;
 }
 
@@ -274,7 +275,7 @@ int CMP_GetPlayState(CMPHandle hPlay)
         qDebug()<<"****error****"<<__FUNCTION__<<__LINE__<<endl;
         return 0;
     }
-    return  ptCmpInfo->pQqlayer->state();
+    return  ptCmpInfo->pQqlayer->playbackRate();
 
 }
 

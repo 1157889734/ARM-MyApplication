@@ -43,18 +43,18 @@ public:
         devManageWidget->resize(1024, 630);
         TrainNumberLineEdit = new QLineEdit(devManageWidget);
         TrainNumberLineEdit->setObjectName(QString::fromUtf8("TrainNumberLineEdit"));
-        TrainNumberLineEdit->setGeometry(QRect(680, 10, 113, 27));
+        TrainNumberLineEdit->setGeometry(QRect(550, 10, 161, 27));
         QFont font;
         font.setPointSize(12);
         TrainNumberLineEdit->setFont(font);
         TrainNumberlabel = new QLabel(devManageWidget);
         TrainNumberlabel->setObjectName(QString::fromUtf8("TrainNumberlabel"));
-        TrainNumberlabel->setGeometry(QRect(600, 10, 71, 21));
+        TrainNumberlabel->setGeometry(QRect(470, 10, 71, 21));
         TrainNumberlabel->setFont(font);
         TrainNumberlabel->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);background-color: rgb(255, 255, 255);"));
         TrainNumberSetPushButton = new QPushButton(devManageWidget);
         TrainNumberSetPushButton->setObjectName(QString::fromUtf8("TrainNumberSetPushButton"));
-        TrainNumberSetPushButton->setGeometry(QRect(270, 10, 137, 35));
+        TrainNumberSetPushButton->setGeometry(QRect(850, 10, 137, 35));
         TrainNumberSetPushButton->setFont(font);
         TrainNumberSetPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-image: url(:/monres/ccsz.bmp);\n"
@@ -94,8 +94,8 @@ public:
         devStorageTableWidget->setGeometry(QRect(30, 360, 964, 211));
         devStorageTableWidget->setFont(font);
         devStorageTableWidget->setStyleSheet(QString::fromUtf8("border-style: none;\n"
-"background-color: rgb(204, 232, 207);\n"
-"gridline-color: rgb(255, 255, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
+"gridline-color: rgb(130, 135, 144);\n"
 "border-color: rgb(130, 135, 144);\n"
 "border-width: 1px;border-style: solid;"));
         devStorageTableWidget->setFrameShape(QFrame::StyledPanel);
@@ -115,8 +115,8 @@ public:
         devStatusTableWidget->setGeometry(QRect(30, 80, 964, 231));
         devStatusTableWidget->setFont(font);
         devStatusTableWidget->setStyleSheet(QString::fromUtf8("border-style: none;\n"
-"background-color: rgb(204, 232, 207);\n"
-"gridline-color: rgb(255, 255, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
+"gridline-color: rgb(130, 135, 144);\n"
 "border-color: rgb(130, 135, 144);\n"
 "border-width: 1px;border-style: solid;"));
         devStatusTableWidget->setProperty("showDropIndicator", QVariant(true));

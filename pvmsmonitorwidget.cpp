@@ -1597,7 +1597,7 @@ void pvmsMonitorWidget::cmpOptionCtrlSlot(int iType, int iCh)
 
         if( NULL == m_tCameraInfo[iCh].cmpHandle)
         {
-            if(pageType == 0)
+//            if(pageType == 0)
             {
                 cmpHandle = CMP_CreateMedia(m_playWin);
                 if (NULL ==cmpHandle)
@@ -1618,21 +1618,21 @@ void pvmsMonitorWidget::cmpOptionCtrlSlot(int iType, int iCh)
         }
 
     }
-    else if (CMP_CMD_DESTORY_CH == iType)
+    else if (CMP_CMD_CLOSE_DESTORY_CH == iType)
     {
-//        iRet = CMP_CloseMedia(m_tCameraInfo[iCh].cmpHandle);
-//        if (iRet != 0)
-//        {
-//            printf("[%s] CMP_CloseMedia error!iRet=%d, cameraNo=%d\n",__FUNCTION__,iRet, iCh);
-//            return;
-//        }
+        iRet = CMP_CloseMedia(m_tCameraInfo[iCh].cmpHandle);
+        if (iRet != 0)
+        {
+            printf("[%s] CMP_CloseMedia error!iRet=%d, cameraNo=%d\n",__FUNCTION__,iRet, iCh);
+            return;
+        }
 
-//        m_tCameraInfo[iCh].iCmpOpenFlag = 0;
-//        pthread_mutex_lock(&g_tCmpCtrlMutex);
-//        CMP_DestroyMedia(m_tCameraInfo[iCh].cmpHandle);
-//        m_tCameraInfo[iCh].cmpHandle = NULL;
-//        pthread_mutex_unlock(&g_tCmpCtrlMutex);
-//        qDebug()<<"************destroy***********ch="<<iCh<<m_tCameraInfo[iCh].cmpHandle<<endl;
+        m_tCameraInfo[iCh].iCmpOpenFlag = 0;
+        pthread_mutex_lock(&g_tCmpCtrlMutex);
+        CMP_DestroyMedia(m_tCameraInfo[iCh].cmpHandle);
+        m_tCameraInfo[iCh].cmpHandle = NULL;
+        pthread_mutex_unlock(&g_tCmpCtrlMutex);
+        qDebug()<<"**********close**destroy***********ch="<<iCh<<m_tCameraInfo[iCh].cmpHandle<<endl;
 
     }
     else if (CMP_CMD_ENABLE_CH == iType)
@@ -1850,7 +1850,7 @@ void pvmsMonitorWidget::closePlayWin()
     {
         if (1 == m_tCameraInfo[i].iCmpOpenFlag)
         {
-            tPkt.iMsgCmd = CMP_CMD_DESTORY_CH;
+            tPkt.iMsgCmd = CMP_CMD_CLOSE_DESTORY_CH;
             tPkt.iCh = i;
             PutNodeToCmpQueue(m_ptQueue, &tPkt);
         }

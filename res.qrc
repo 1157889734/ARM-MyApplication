@@ -222,8 +222,8 @@
         <file>monres/lighton.bmp</file>
         <file>monres/ligtoff.bmp</file>
         <file>monres/sure.bmp</file>
+        <file>monres/in.bmp</file>
         <file>monres/mfast.bmp</file>
         <file>monres/mslow.bmp</file>
-        <file>monres/in.bmp</file>
     </qresource>
 </RCC>

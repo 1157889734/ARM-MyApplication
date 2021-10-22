@@ -88,13 +88,13 @@ public:
 " }"));
         playNextOnePushButton = new QPushButton(recordPlayWidget);
         playNextOnePushButton->setObjectName(QString::fromUtf8("playNextOnePushButton"));
-        playNextOnePushButton->setGeometry(QRect(660, 575, 49, 49));
+        playNextOnePushButton->setGeometry(QRect(700, 575, 49, 49));
         playNextOnePushButton->setStyleSheet(QString::fromUtf8("border-image: url(:/monres/next.bmp);"));
         playNextOnePushButton->setIconSize(QSize(41, 41));
         playNextOnePushButton->setFlat(true);
         stopPushButton = new QPushButton(recordPlayWidget);
         stopPushButton->setObjectName(QString::fromUtf8("stopPushButton"));
-        stopPushButton->setGeometry(QRect(530, 575, 49, 49));
+        stopPushButton->setGeometry(QRect(560, 575, 49, 49));
         stopPushButton->setStyleSheet(QString::fromUtf8("border-image: url(:/monres/stop.bmp);"));
         stopPushButton->setIconSize(QSize(41, 41));
         stopPushButton->setFlat(true);
@@ -111,7 +111,7 @@ public:
 " }"));
         alarmPushButton = new QPushButton(recordPlayWidget);
         alarmPushButton->setObjectName(QString::fromUtf8("alarmPushButton"));
-        alarmPushButton->setGeometry(QRect(715, 585, 82, 36));
+        alarmPushButton->setGeometry(QRect(770, 585, 82, 36));
         alarmPushButton->setFont(font);
         alarmPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-image: url(:/monres/alertoff.bmp);\n"
@@ -162,7 +162,7 @@ public:
         recordFileTableWidget->verticalHeader()->setVisible(false);
         playLastOnePushButton = new QPushButton(recordPlayWidget);
         playLastOnePushButton->setObjectName(QString::fromUtf8("playLastOnePushButton"));
-        playLastOnePushButton->setGeometry(QRect(270, 575, 49, 49));
+        playLastOnePushButton->setGeometry(QRect(280, 575, 49, 49));
         playLastOnePushButton->setStyleSheet(QString::fromUtf8("border-image: url(:/monres/before.bmp);"));
         playLastOnePushButton->setIconSize(QSize(41, 41));
         playLastOnePushButton->setFlat(true);
@@ -216,20 +216,15 @@ public:
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         minusStepPushButton = new QPushButton(recordPlayWidget);
         minusStepPushButton->setObjectName(QString::fromUtf8("minusStepPushButton"));
-        minusStepPushButton->setGeometry(QRect(880, 570, 68, 58));
-        minusStepPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-image: url(:/monres/mslow.bmp);\n"
-"border-color: rgb(255, 255, 255);\n"
-"border-width: 1px;\n"
-"border-style: solid;}\n"
-"\n"
-"QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+        minusStepPushButton->setGeometry(QRect(945, 555, 68, 30));
+        minusStepPushButton->setStyleSheet(QString::fromUtf8("\n"
+"background-image: url(:/monres/mslow.bmp);"));
+        minusStepPushButton->setLocale(QLocale(QLocale::English, QLocale::TuvaluCountry));
         minusStepPushButton->setIconSize(QSize(41, 41));
         minusStepPushButton->setFlat(true);
         playPushButton = new QPushButton(recordPlayWidget);
         playPushButton->setObjectName(QString::fromUtf8("playPushButton"));
-        playPushButton->setGeometry(QRect(400, 575, 49, 49));
+        playPushButton->setGeometry(QRect(420, 575, 49, 49));
         playPushButton->setStyleSheet(QString::fromUtf8("border-image: url(:/monres/start.bmp);"));
         playPushButton->setIconSize(QSize(41, 41));
         playPushButton->setFlat(true);
@@ -257,7 +252,7 @@ public:
 " }"));
         fastForwardPushButton = new QPushButton(recordPlayWidget);
         fastForwardPushButton->setObjectName(QString::fromUtf8("fastForwardPushButton"));
-        fastForwardPushButton->setGeometry(QRect(590, 575, 49, 49));
+        fastForwardPushButton->setGeometry(QRect(630, 575, 49, 49));
         fastForwardPushButton->setStyleSheet(QString::fromUtf8("border-image: url(:/monres/fast.bmp);"));
         fastForwardPushButton->setIconSize(QSize(41, 41));
         fastForwardPushButton->setFlat(true);
@@ -274,7 +269,7 @@ public:
 " }"));
         slowForwardPushButton = new QPushButton(recordPlayWidget);
         slowForwardPushButton->setObjectName(QString::fromUtf8("slowForwardPushButton"));
-        slowForwardPushButton->setGeometry(QRect(330, 575, 49, 49));
+        slowForwardPushButton->setGeometry(QRect(350, 575, 49, 49));
         slowForwardPushButton->setStyleSheet(QString::fromUtf8("border-image: url(:/monres/slow.bmp);"));
         slowForwardPushButton->setIconSize(QSize(41, 41));
         slowForwardPushButton->setFlat(true);
@@ -295,7 +290,7 @@ public:
         carSeletionComboBox->setFont(font);
         plusStepPushButton = new QPushButton(recordPlayWidget);
         plusStepPushButton->setObjectName(QString::fromUtf8("plusStepPushButton"));
-        plusStepPushButton->setGeometry(QRect(950, 570, 68, 58));
+        plusStepPushButton->setGeometry(QRect(945, 590, 68, 30));
         plusStepPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-image: url(:/monres/mfast.bmp);\n"
 "border-color: rgb(255, 255, 255);\n"
@@ -337,7 +332,7 @@ public:
         label_14->setGeometry(QRect(190, 95, 31, 21));
         canselPushButton = new QPushButton(recordPlayWidget);
         canselPushButton->setObjectName(QString::fromUtf8("canselPushButton"));
-        canselPushButton->setGeometry(QRect(800, 585, 82, 36));
+        canselPushButton->setGeometry(QRect(860, 585, 82, 36));
         canselPushButton->setFont(font);
         canselPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-image: url(:/monres/cancel.bmp);\n"
@@ -350,7 +345,7 @@ public:
         canselPushButton->setCheckable(true);
         pushButton = new QPushButton(recordPlayWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(460, 575, 49, 49));
+        pushButton->setGeometry(QRect(490, 575, 49, 49));
         pushButton->setStyleSheet(QString::fromUtf8("border-image: url(:/monres/pause1.bmp);"));
         label_12 = new QLabel(recordPlayWidget);
         label_12->setObjectName(QString::fromUtf8("label_12"));

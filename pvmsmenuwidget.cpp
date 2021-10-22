@@ -124,9 +124,6 @@ pvmsMenuWidget::pvmsMenuWidget(QWidget *parent) :
 
 
 
-
-
-//    connect(ui->loginOutPushButton, SIGNAL(clicked()), this, SLOT(registOutButtonClick()));
     connect(ui->pvmsMonitorMenuPushButton, SIGNAL(clicked()), this, SLOT(menuButtonClick()));     //连接受电弓监控菜单按钮的按键信号和响应函数
     connect(ui->recordPlayMenuPushButton, SIGNAL(clicked()), this, SLOT(menuButtonClick()));	  //连接录像回放菜单按钮的按键信号和响应函数
     connect(ui->inteAnalyMenuPushButton, SIGNAL(clicked()), this, SLOT(menuButtonClick()));		  //连接智能分析菜单按钮的按键信号和响应函数
@@ -237,7 +234,6 @@ void pvmsMenuWidget::recvRs485Ctrl(char *pcData, int iDataLen)
 
 void pvmsMenuWidget::rs485TimerFunc()
 {
-#if 1
     int iRet = 0;
      T_RS485_PACKET tPkt;
 
@@ -260,7 +256,6 @@ void pvmsMenuWidget::rs485TimerFunc()
          free(tPkt.pcData);
          tPkt.pcData = NULL;
      }
-#endif
 
 }
 void pvmsMenuWidget::pmsgTimerFunc()
@@ -302,7 +297,6 @@ void pvmsMenuWidget::recvPmsgCtrl(PMSG_HANDLE pHandle, unsigned char ucMsgCmd, c
     int iAlarmType = 0, iDevPos = 0, iShadeAlarmEnableFlag = 0, i = 0;
     T_TRAIN_CONFIG tTrainConfigInfo;
     int iCarriageNO;
-//    qDebug()<<"**************recvPmsgCtrl------"<<ucMsgCmd<<endl;
     switch(ucMsgCmd)    //不同的应答消息类型分发给不同的页面处理
     {
         case SERV_CLI_MSG_TYPE_SET_PTZ_RESP:
@@ -789,7 +783,6 @@ void pvmsMenuWidget::menuButtonClick()
         m_recordPlayPage->show();
 
         m_pvmsMonitorPage->enableVideoPlay(0);   //禁止受电弓监控页面解码显示
-
         m_pvmsMonitorPage->m_playWin->hide();
 
         m_pvmsMonitorPage->m_channelStateLabel->hide();
@@ -804,14 +797,16 @@ void pvmsMenuWidget::menuButtonClick()
     else if (Sender->objectName() == "inteAnalyMenuPushButton")      //智能分析按钮被按，则切换到智能分析页面
     {
         m_pvmsMonitorPage->hide();
-        m_pvmsMonitorPage->m_playWin->hide();
-        m_pvmsMonitorPage->enableVideoPlay(0);   //禁止受电弓监控页面解码显示
         m_recordPlayPage->hide();
-        m_recordPlayPage->closePlayWin();   //关闭录像回放界面的播放窗口
         m_devManagePage->hide();
         m_devUpdatePage->hide();
         m_inteAnalyPage->show();
 
+        m_recordPlayPage->closePlayWin();   //关闭录像回放界面的播放窗口
+
+
+        m_pvmsMonitorPage->m_playWin->hide();
+        m_pvmsMonitorPage->enableVideoPlay(0);   //禁止受电弓监控页面解码显示
 
         ui->pvmsMonitorMenuPushButton->setChecked(false);
         ui->recordPlayMenuPushButton->setChecked(false);
@@ -840,7 +835,6 @@ void pvmsMenuWidget::menuButtonClick()
         m_devManagePage->show();
 
         m_pvmsMonitorPage->enableVideoPlay(0);   //禁止受电弓监控页面解码显示
-
         m_pvmsMonitorPage->m_playWin->hide();
         m_recordPlayPage->closePlayWin();   //关闭录像回放界面的播放窗口
 
