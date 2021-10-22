@@ -38,7 +38,6 @@ public:
     QPushButton *playLastOnePushButton;
     QPushButton *queryPushButton;
     QLabel *label_2;
-    QLabel *label_11;
     QPushButton *downLoadPushButton;
     QPushButton *minusStepPushButton;
     QPushButton *playPushButton;
@@ -100,7 +99,7 @@ public:
         stopPushButton->setFlat(true);
         label_7 = new QLabel(recordPlayWidget);
         label_7->setObjectName(QString::fromUtf8("label_7"));
-        label_7->setGeometry(QRect(140, 150, 151, 41));
+        label_7->setGeometry(QRect(140, 150, 121, 41));
         label_7->setFont(font);
         label_7->setStyleSheet(QString::fromUtf8(" #label_7 { \n"
 "	color: rgb(0, 0, 0);\n"
@@ -181,25 +180,13 @@ public:
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         label_2 = new QLabel(recordPlayWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(0, 0, 101, 46));
+        label_2->setGeometry(QRect(0, 0, 111, 51));
         label_2->setFont(font1);
         label_2->setStyleSheet(QString::fromUtf8(" #label_2 { \n"
 "	color: rgb(0, 0, 0);\n"
 "    background-color: rgb(255, 255, 255);\n"
 "  } \n"
 " #label_2 * { \n"
-"     background-color:; \n"
-" }"));
-        label_11 = new QLabel(recordPlayWidget);
-        label_11->setObjectName(QString::fromUtf8("label_11"));
-        label_11->setGeometry(QRect(0, 640, 311, 31));
-        QFont font3;
-        font3.setPointSize(15);
-        label_11->setFont(font3);
-        label_11->setStyleSheet(QString::fromUtf8(" #label_11 { \n"
-"    background-color: rgb(255, 255, 255);\n"
-"  } \n"
-" #label_11 * { \n"
 "     background-color:; \n"
 " }"));
         downLoadPushButton = new QPushButton(recordPlayWidget);
@@ -258,7 +245,7 @@ public:
         fastForwardPushButton->setFlat(true);
         label_9 = new QLabel(recordPlayWidget);
         label_9->setObjectName(QString::fromUtf8("label_9"));
-        label_9->setGeometry(QRect(0, 220, 101, 41));
+        label_9->setGeometry(QRect(0, 220, 121, 41));
         label_9->setFont(font1);
         label_9->setStyleSheet(QString::fromUtf8(" #label_9 { \n"
 "	color: rgb(0, 0, 0);\n"
@@ -372,7 +359,6 @@ public:
 "   text-align: center;\n"
 "}"));
         fileDownloadProgressBar->setValue(0);
-        label_11->raise();
         label_12->raise();
         label_5->raise();
         stopPushButton->raise();
@@ -427,7 +413,6 @@ public:
         playLastOnePushButton->setText(QString());
         queryPushButton->setText(QString());
         label_2->setText(QCoreApplication::translate("recordPlayWidget", " \345\233\236\346\224\276\350\256\276\347\275\256", nullptr));
-        label_11->setText(QString());
         downLoadPushButton->setText(QString());
         minusStepPushButton->setText(QString());
         playPushButton->setText(QString());

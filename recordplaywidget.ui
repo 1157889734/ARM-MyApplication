@@ -113,7 +113,7 @@
     <rect>
      <x>140</x>
      <y>150</y>
-     <width>151</width>
+     <width>121</width>
      <height>41</height>
     </rect>
    </property>
@@ -335,8 +335,8 @@ QPushButton:pressed
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>101</width>
-     <height>46</height>
+     <width>111</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
@@ -355,32 +355,6 @@ QPushButton:pressed
    </property>
    <property name="text">
     <string> 回放设置</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_11">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>640</y>
-     <width>311</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>15</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"> #label_11 { 
-    background-color: rgb(255, 255, 255);
-  } 
- #label_11 * { 
-     background-color:; 
- }</string>
-   </property>
-   <property name="text">
-    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="downLoadPushButton">
@@ -549,7 +523,7 @@ background-image: url(:/monres/mslow.bmp);</string>
     <rect>
      <x>0</x>
      <y>220</y>
-     <width>101</width>
+     <width>121</width>
      <height>41</height>
     </rect>
    </property>
@@ -884,7 +858,6 @@ QProgressBar {
     <number>0</number>
    </property>
   </widget>
-  <zorder>label_11</zorder>
   <zorder>label_12</zorder>
   <zorder>label_5</zorder>
   <zorder>stopPushButton</zorder>

@@ -1076,6 +1076,25 @@ void recordPlayWidget::recordPlaySlowForwardSlot()
     setPlayButtonStyleSheet();
 }
 
+void recordPlayWidget::manualSwitchVideoEndSlot()
+{
+
+    ui->playLastOnePushButton->setEnabled(true);
+    ui->playNextOnePushButton->setEnabled(true);
+
+    if (m_VideoSwitchTimer != NULL)
+    {
+        if (m_VideoSwitchTimer->isActive())
+        {
+            m_VideoSwitchTimer->stop();
+        }
+        delete m_VideoSwitchTimer;
+        m_VideoSwitchTimer = NULL;
+    }
+
+
+}
+
 void recordPlayWidget::recordPlayLastOneSlot()
 {
     int iRow = 0, iDex = 0;
@@ -1086,25 +1105,34 @@ void recordPlayWidget::recordPlayLastOneSlot()
     {
         return;
     }
-
     iDex = ui->carSeletionComboBox->currentIndex();
     if (iDex < 0)
     {
         return;
     }
-
     iRow = m_iRecordIdex - 1;
     if (iRow < 0)
     {
         return;
     }
-
+    qDebug()<<"*********recordPlayLastOneSlot****m_iRecordIdex="<<m_iRecordIdex<<__LINE__<<endl;
 
     closePlayWin();   //先关闭之前的
     setPlayButtonStyleSheet();
     emit setRecordPlayFlagSignal(1);
 
     recordPlayCtrl(iRow, iDex);
+    ui->playNextOnePushButton->setEnabled(false);
+    ui->playLastOnePushButton->setEnabled(false);
+
+    if(m_VideoSwitchTimer == NULL)
+    {
+        m_VideoSwitchTimer = new QTimer(this);
+        m_VideoSwitchTimer->start(1*1000);
+        connect(m_VideoSwitchTimer,SIGNAL(timeout()), this,SLOT(manualSwitchVideoEndSlot()));
+    }
+
+
 }
 void recordPlayWidget::recordPlayNextOneSlot()
 {
@@ -1130,12 +1158,23 @@ void recordPlayWidget::recordPlayNextOneSlot()
         return;
     }
 
+    qDebug()<<"*********recordPlayNextOneSlot****m_iRecordIdex="<<m_iRecordIdex<<__LINE__<<endl;
 
     closePlayWin();   //先关闭之前的
     setPlayButtonStyleSheet();
     emit setRecordPlayFlagSignal(1);
-
     recordPlayCtrl(iRow, iDex);
+
+    ui->playNextOnePushButton->setEnabled(false);
+    ui->playLastOnePushButton->setEnabled(false);
+
+    if(m_VideoSwitchTimer == NULL)
+    {
+        m_VideoSwitchTimer = new QTimer(this);
+        m_VideoSwitchTimer->start(1*1000);
+        connect(m_VideoSwitchTimer,SIGNAL(timeout()), this,SLOT(manualSwitchVideoEndSlot()));
+    }
+
 
 }
 

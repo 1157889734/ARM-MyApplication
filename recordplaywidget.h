@@ -82,6 +82,9 @@ public slots:
     void playMinusStepSlot();
     void carNoChangeSlot();
 
+    void manualSwitchVideoEndSlot();
+
+
     void recordSelectionSlot(QTableWidgetItem *item);
     void recordPlaySlot(QTableWidgetItem *item);
 
@@ -129,6 +132,7 @@ private:
     void setPlayButtonStyleSheet();
     void getTrainConfig();     //获取车型配置信息
 
+    QTimer *m_VideoSwitchTimer;
 
     int m_iRecordIdex;
     QTimer *m_recordTabelWidgetFillTimer;
