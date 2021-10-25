@@ -46,7 +46,7 @@ public:
     {
         if (usergroupManage->objectName().isEmpty())
             usergroupManage->setObjectName(QString::fromUtf8("usergroupManage"));
-        usergroupManage->resize(944, 435);
+        usergroupManage->resize(944, 400);
         label_2 = new QLabel(usergroupManage);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(470, 25, 67, 17));
@@ -128,7 +128,7 @@ public:
         lineEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         label = new QLabel(usergroupManage);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(0, 0, 1024, 431));
+        label->setGeometry(QRect(0, 0, 1024, 401));
         label->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         label->raise();
         lineEdit->raise();

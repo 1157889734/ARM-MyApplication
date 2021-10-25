@@ -24,7 +24,7 @@ static int g_iVNum = 0;
 QButtonGroup *g_buttonGroup1 = NULL, *g_buttonGroup2 = NULL;
 devUpdateWidget *g_devUpdateThis = NULL;
 
-char *parseFileNameFromPath(char *pcSrcStr)     //根据导入文件路径全名解析得到单纯的导入文件名
+char* parseFileNameFromPath(char *pcSrcStr)     //根据导入文件路径全名解析得到单纯的导入文件名
 {
     char *pcTmp = NULL;
 
@@ -45,7 +45,6 @@ char *parseFileNameFromPath(char *pcSrcStr)     //根据导入文件路径全名
     }
     return pcTmp+1;
 }
-
 
 devUpdateWidget::devUpdateWidget(QWidget *parent) :
     QWidget(parent),
@@ -301,14 +300,28 @@ bool devUpdateWidget::eventFilter(QObject *obj, QEvent *e)
 
 void devUpdateWidget::monitorSysTime()
 {
+     char acTimeStr[128] = {0};
     timeTd = QDateTime::currentDateTime();
 
     timeTd.setDate(ui->dateEdit->date());
     timeTd.setTime(ui->timeEdit->time());
 
+
     time_t tt = (time_t)timeTd.toTime_t();
     stime(&tt);
 
+    QDateTime time = QDateTime::currentDateTime(); // 获取当前时间
+    int year = time.date().year(); // 年
+    int month = time.date().month(); // 月
+    int day = time.date().day(); // 日
+    int hour = time.time().hour(); // 时
+    int sec = time.time().second(); // 分
+    int msec = time.time().msec(); // 秒
+
+
+    snprintf(acTimeStr, sizeof(acTimeStr), "date %02d%02d%02d%02d%4d.%02d", month, day, hour, sec,year, msec);
+    system(acTimeStr);
+    system("hwclock -w");
 
 }
 
@@ -345,16 +358,7 @@ void devUpdateWidget::systimeSlot()
     }
     else
     {
-        QDate date = QDate::currentDate();
-        QTime time_t = QTime::currentTime();
-        year = date.year();
-        month = date.month();
-        day = date.day();
-        hour = time_t.hour();
-        minute = time_t.minute();
-        second = time_t.second();
 
-#if 0  //////add
         if (strlen(ui->dateEdit->text().toLatin1().data()) > 0)
         {
             sscanf(ui->dateEdit->text().toLatin1().data(), "%4d-%02d-%02d", &year, &month, &day);
@@ -363,7 +367,6 @@ void devUpdateWidget::systimeSlot()
         {
             sscanf(ui->timeEdit->text().toLatin1().data(), "%2d:%02d:%02d", &hour, &minute, &second);
         }
-#endif
 
         snprintf(acTimeStr, sizeof(acTimeStr), "date %02d%02d%02d%02d%4d.%02d", month, day, hour, second,year, minute);
         system(acTimeStr);
