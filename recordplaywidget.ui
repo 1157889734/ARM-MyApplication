@@ -63,12 +63,22 @@
     <rect>
      <x>700</x>
      <y>575</y>
-     <width>49</width>
-     <height>49</height>
+     <width>51</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/monres/next.bmp);</string>
+    <string notr="true">QPushButton{
+background-image: url(:/monres/next.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);
+color: rgb(255, 255, 255);
+border-color: rgb(170, 170, 170);
+border-width: 2px;border-style: solid;}</string>
    </property>
    <property name="text">
     <string/>
@@ -79,6 +89,15 @@
      <height>41</height>
     </size>
    </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeatDelay">
+    <number>1000</number>
+   </property>
+   <property name="autoRepeatInterval">
+    <number>1000</number>
+   </property>
    <property name="flat">
     <bool>true</bool>
    </property>
@@ -88,12 +107,23 @@
     <rect>
      <x>560</x>
      <y>575</y>
-     <width>49</width>
-     <height>49</height>
+     <width>51</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/monres/stop.bmp);</string>
+    <string notr="true">QPushButton{
+background-image: url(:/monres/stop.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);
+color: rgb(255, 255, 255);
+border-color: rgb(170, 170, 170);
+border-width: 2px;border-style: solid;}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -183,8 +213,8 @@ QPushButton:pressed
    </property>
    <property name="styleSheet">
     <string notr="true">border-style: none;
-background-color: rgb(204, 232, 207);
-gridline-color: rgb(255, 255, 255);
+background-color: rgb(255,255,255);
+gridline-color: rgb(130, 135, 144);
 border-color: rgb(130, 135, 144);
 border-width: 1px;border-style: solid;</string>
    </property>
@@ -281,12 +311,23 @@ border-width: 1px;border-style: solid;</string>
     <rect>
      <x>280</x>
      <y>575</y>
-     <width>49</width>
-     <height>49</height>
+     <width>51</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/monres/before.bmp);</string>
+    <string notr="true">QPushButton{
+background-image: url(:/monres/before.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);
+color: rgb(255, 255, 255);
+border-color: rgb(170, 170, 170);
+border-width: 2px;border-style: solid;}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -296,6 +337,15 @@ border-width: 1px;border-style: solid;</string>
      <width>41</width>
      <height>41</height>
     </size>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeatDelay">
+    <number>1000</number>
+   </property>
+   <property name="autoRepeatInterval">
+    <number>1000</number>
    </property>
    <property name="flat">
     <bool>true</bool>
@@ -390,13 +440,23 @@ QPushButton:pressed
     <rect>
      <x>945</x>
      <y>555</y>
-     <width>68</width>
-     <height>30</height>
+     <width>69</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">
-background-image: url(:/monres/mslow.bmp);</string>
+QPushButton{
+background-image: url(:/monres/mslow.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);
+color: rgb(255, 255, 255);
+border-color: rgb(170, 170, 170);
+border-width: 2px;border-style: solid;}</string>
    </property>
    <property name="locale">
     <locale language="English" country="TuvaluCountry"/>
@@ -419,12 +479,23 @@ background-image: url(:/monres/mslow.bmp);</string>
     <rect>
      <x>420</x>
      <y>575</y>
-     <width>49</width>
-     <height>49</height>
+     <width>51</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/monres/start.bmp);</string>
+    <string notr="true">QPushButton{
+background-image: url(:/monres/start.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);
+color: rgb(255, 255, 255);
+border-color: rgb(170, 170, 170);
+border-width: 2px;border-style: solid;}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -498,12 +569,23 @@ background-image: url(:/monres/mslow.bmp);</string>
     <rect>
      <x>630</x>
      <y>575</y>
-     <width>49</width>
-     <height>49</height>
+     <width>51</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/monres/fast.bmp);</string>
+    <string notr="true">QPushButton{
+background-image: url(:/monres/fast.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);
+color: rgb(255, 255, 255);
+border-color: rgb(170, 170, 170);
+border-width: 2px;border-style: solid;}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -550,12 +632,23 @@ background-image: url(:/monres/mslow.bmp);</string>
     <rect>
      <x>350</x>
      <y>575</y>
-     <width>49</width>
-     <height>49</height>
+     <width>51</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/monres/slow.bmp);</string>
+    <string notr="true">QPushButton{
+background-image: url(:/monres/slow.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);
+color: rgb(255, 255, 255);
+border-color: rgb(170, 170, 170);
+border-width: 2px;border-style: solid;}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -799,12 +892,23 @@ QPushButton:pressed
     <rect>
      <x>490</x>
      <y>575</y>
-     <width>49</width>
-     <height>49</height>
+     <width>51</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/monres/pause1.bmp);</string>
+    <string notr="true">QPushButton{
+background-image: url(:/monres/pause1.bmp);
+border-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;}
+
+QPushButton:pressed
+{background-color: rgb(86, 164, 246);
+color: rgb(255, 255, 255);
+border-color: rgb(170, 170, 170);
+border-width: 2px;border-style: solid;}
+</string>
    </property>
    <property name="text">
     <string/>

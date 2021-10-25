@@ -201,8 +201,8 @@ public:
         recordFileTableWidget->setGeometry(QRect(0, 280, 291, 281));
         recordFileTableWidget->setFont(font);
         recordFileTableWidget->setStyleSheet(QString::fromUtf8("border-style: none;\n"
-"background-color: rgb(204, 232, 207);\n"
-"gridline-color: rgb(255, 255, 255);\n"
+"background-color: rgb(255,255,255);\n"
+"gridline-color: rgb(130, 135, 144);\n"
 "border-color: rgb(130, 135, 144);\n"
 "border-width: 1px;border-style: solid;"));
         recordFileTableWidget->setShowGrid(false);

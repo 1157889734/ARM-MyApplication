@@ -13,8 +13,7 @@ class MyApplication : public QApplication
     Q_OBJECT
 
 public:
-//    MyApplication(QWidget *parent = 0);
-    MyApplication(int &argc, char **argv);
+     MyApplication(int &argc, char **argv);
 
     ~MyApplication();
 

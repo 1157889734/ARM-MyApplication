@@ -616,8 +616,6 @@ void devManageWidget::trainNumberButtonClickSlot()
 
 void devManageWidget::registOutButtonClick()
 {
-
-//    m_pvmsMonitorPage->m_iPresetPasswdOkFlag = 0;
     int manage_page = 3;
     this->hide();
     emit registOutSignal(manage_page);    //触发注销信号，带上当前设备类型

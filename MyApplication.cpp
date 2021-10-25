@@ -5,11 +5,10 @@
 #include "log.h"
 #include <QMouseEvent>
 #include <QDebug>
-#define BLACKSCREN_MONITOR_TIME 1*30    //黑屏监控时间5分钟
+#define BLACKSCREN_MONITOR_TIME 5*60    //黑屏监控时间5分钟
 #define MOUSE_MONITOR_TIME 10    //鼠标监控时间10秒
 
 static int g_iMonitorNum = 0;  //黑屏监控计数，每秒加1
-
 
 void *blackScreenMonitorThread(void *param)
 {
@@ -35,9 +34,7 @@ void *blackScreenMonitorThread(void *param)
 
         if (g_iMonitorNum >= BLACKSCREN_MONITOR_TIME)
         {
-//            DebugPrint(DEBUG_UI_NOMAL_PRINT, "black screen monitor time out,trigger black screen signal!\n");
             iBlackScreenFlag = STATE_GetBlackScreenFlag();
-//            qDebug()<<"********************blackScreenMonitorThread***---:"<<iBlackScreenFlag<<__FUNCTION__<<__LINE__<<endl;
             if (1 == iBlackScreenFlag)   //根据配置文件的配置决定是否触发黑屏信号
             {
                 myApplication->triggerBlackScreenSignal();   //5分钟界面没操作，触发黑屏信号
@@ -46,7 +43,6 @@ void *blackScreenMonitorThread(void *param)
         }
         else if (g_iMonitorNum >= MOUSE_MONITOR_TIME)
         {
-//            qDebug()<<"********************triggerMouseHideSignal***---:"<<iBlackScreenFlag<<__FUNCTION__<<__LINE__<<endl;
             myApplication->triggerMouseHideSignal();    //10秒界面没操作，隐藏鼠标
         }
 
@@ -55,12 +51,10 @@ void *blackScreenMonitorThread(void *param)
     return NULL;
 }
 
-//MyApplication::MyApplication(QWidget *parent)
-//    : QWidget(parent)
-MyApplication::MyApplication(int & argc,char **argv) :
+MyApplication::MyApplication(int &argc,char **argv) :
     QApplication(argc, argv)
 {
-
+    qDebug()<<"***********************MyApplication"<<__FUNCTION__<<__LINE__<<endl;
     m_blackScreenWidget = new QWidget();    //创建一个黑屏界面，黑屏监控使用，5分钟程序界面未操作黑屏，即显示该界面，否则隐藏
 
     m_blackScreenWidget->setGeometry(0, 0, 1024, 768);   //设置位置
@@ -99,6 +93,8 @@ MyApplication::~MyApplication()
 
 }
 
+
+
 void MyApplication::triggerBlackScreenSignal()
 {
 
@@ -119,15 +115,12 @@ void MyApplication::triggerMouseHideSignal()
 
 void MyApplication::blackScreenSignalCtrl()
 {
-//    QWSServer::sendKeyEvent(0x01000003, Qt::Key_Escape, Qt::NoModifier, true, false);  //发送一个模拟键盘ESC键，以免messagebox未关闭导致黑屏后无法单击退出黑屏
-//    DebugPrint(DEBUG_UI_NOMAL_PRINT, "black screen show!\n");
     this->m_blackScreenWidget->show();
 }
 
 void MyApplication::mouseHideSignalCtrl()
 {
-//    QWSServer::setCursorVisible(false);
-//    this->setCursor(Qt::BlankCursor);
+
     QApplication::setOverrideCursor(Qt::BlankCursor);
     m_iMouseHideFlag = 1;
 }
@@ -187,8 +180,6 @@ bool MyApplication::notify(QObject *obj, QEvent *event)
             }
         }
     }
-    return notify(obj, event);
-//    return true;
+    return  QApplication::notify(obj, event);
 }
-
 

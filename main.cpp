@@ -30,7 +30,8 @@ int main(int argc, char *argv[])
 {
     qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
 
-    QApplication app(argc, argv);
+    MyApplication app(argc, argv);
+
 
     char acNvrServerIp[128] = {0}, acClientVersion[64] = {0};
     short sYear = 0;
@@ -147,8 +148,7 @@ int main(int argc, char *argv[])
         }
     }
 
-//    MyApplication app(argc, argv);  //创建QT运行主应用程序
-
+  //创建QT运行主应用程序
     app.setWindowIcon(QIcon(":/res/info.png"));   //设置窗口图标，这里主要是messagebox窗体会显示，而避免出现QT图标
 //    qDebug() << "drivers------------------------"<< QSqlDatabase::drivers();
 
@@ -166,6 +166,7 @@ int main(int argc, char *argv[])
 
 //    g_waitLoginPage = new waitLoginWidget();
     g_choiceLoginDevPage = new choiceLoginDevWidget();
+
     g_loginPage = new loginWidget();
     g_pvmsMenuPage = new pvmsMenuWidget();
 
@@ -177,12 +178,13 @@ int main(int argc, char *argv[])
     g_pvmsMenuPage->m_pRs485Handle = pRs485Handle;
 
 
-//    QObject::connect(&app, SIGNAL(blackScreenSignal()), g_pvmsMenuPage, SLOT(blackScreenCtrlSlot()));
-//    QObject::connect(&app, SIGNAL(blackScreenExitSignal()), g_pvmsMenuPage, SLOT(blackScreenExitCtrlSlot()));
+
+    QObject::connect(&app, SIGNAL(blackScreenSignal()), g_pvmsMenuPage, SLOT(blackScreenCtrlSlot()));
+    QObject::connect(&app, SIGNAL(blackScreenExitSignal()), g_pvmsMenuPage, SLOT(blackScreenExitCtrlSlot()));
 
 	
-//    QObject::connect(g_pvmsMenuPage, SIGNAL(alarmHappenSignal()), &a, SLOT(alarmHappenSignalCtrl()));
-//    QObject::connect(g_pvmsMenuPage, SIGNAL(alarmClearSignal()), &a, SLOT(alarmClearSignalCtrl()));
+    QObject::connect(g_pvmsMenuPage, SIGNAL(alarmHappenSignal()), &app, SLOT(alarmHappenSignalCtrl()));
+    QObject::connect(g_pvmsMenuPage, SIGNAL(alarmClearSignal()), &app, SLOT(alarmClearSignalCtrl()));
 
 
 	
@@ -195,6 +197,9 @@ int main(int argc, char *argv[])
     QObject::connect(g_loginPage,SIGNAL(gotoPvmsMenuPageSignal()),g_pvmsMenuPage,SLOT(showPageSlot()));
 
     QObject::connect(g_pvmsMenuPage, SIGNAL(registOutSignal()), g_loginPage, SLOT(showPageSlot()));       //受电弓监控主菜单页面的注销信号连接登录页面的页面显示槽
+
+
+
 
     app.exec();
 
@@ -215,8 +220,8 @@ int main(int argc, char *argv[])
 
 
     usleep(1*1000*1000);
-    delete g_waitLoginPage;
-    g_waitLoginPage = NULL;
+//    delete g_waitLoginPage;
+//    g_waitLoginPage = NULL;
     delete g_choiceLoginDevPage;
     g_choiceLoginDevPage = NULL;
     delete g_loginPage;
