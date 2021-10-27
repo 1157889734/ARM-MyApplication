@@ -9,6 +9,7 @@
 #ifndef UI_DEVUPDATEWIDGET_H
 #define UI_DEVUPDATEWIDGET_H
 
+#include <QtCore/QDate>
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
@@ -87,10 +88,10 @@ public:
     QPushButton *configFilelookPushButton_2;
     QLabel *label_8;
     QLabel *label_12;
-    QDateEdit *dateEdit;
     QTimeEdit *timeEdit;
     QPushButton *timeSetPushButton;
     QLabel *label_11;
+    QDateEdit *dateEdit;
     QLabel *label_6;
     QComboBox *PISSetcomboBox;
     QLabel *label_10;
@@ -357,7 +358,7 @@ public:
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         systimeAdjustLabel = new QLabel(deviceManagewidget);
         systimeAdjustLabel->setObjectName(QString::fromUtf8("systimeAdjustLabel"));
-        systimeAdjustLabel->setGeometry(QRect(260, 115, 91, 21));
+        systimeAdjustLabel->setGeometry(QRect(260, 120, 91, 21));
         saturationLabel = new QLabel(deviceManagewidget);
         saturationLabel->setObjectName(QString::fromUtf8("saturationLabel"));
         saturationLabel->setGeometry(QRect(660, 295, 52, 24));
@@ -408,7 +409,7 @@ public:
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
         sysDataAdjustLabel = new QLabel(deviceManagewidget);
         sysDataAdjustLabel->setObjectName(QString::fromUtf8("sysDataAdjustLabel"));
-        sysDataAdjustLabel->setGeometry(QRect(110, 115, 131, 21));
+        sysDataAdjustLabel->setGeometry(QRect(110, 120, 131, 21));
         QFont font1;
         font1.setPointSize(10);
         sysDataAdjustLabel->setFont(font1);
@@ -504,15 +505,10 @@ public:
         label_8->setGeometry(QRect(40, 45, 51, 17));
         label_12 = new QLabel(deviceManagewidget);
         label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setGeometry(QRect(40, 75, 51, 17));
-        dateEdit = new QDateEdit(deviceManagewidget);
-        dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
-        dateEdit->setGeometry(QRect(110, 45, 118, 26));
-        dateEdit->setDateTime(QDateTime(QDate(2021, 8, 1), QTime(0, 0, 0)));
-        dateEdit->setMaximumTime(QTime(23, 59, 59));
+        label_12->setGeometry(QRect(40, 85, 51, 17));
         timeEdit = new QTimeEdit(deviceManagewidget);
         timeEdit->setObjectName(QString::fromUtf8("timeEdit"));
-        timeEdit->setGeometry(QRect(110, 75, 118, 26));
+        timeEdit->setGeometry(QRect(110, 80, 118, 35));
         timeEdit->setDateTime(QDateTime(QDate(2000, 1, 1), QTime(10, 3, 3)));
         timeSetPushButton = new QPushButton(deviceManagewidget);
         timeSetPushButton->setObjectName(QString::fromUtf8("timeSetPushButton"));
@@ -529,6 +525,10 @@ public:
         label_11 = new QLabel(deviceManagewidget);
         label_11->setObjectName(QString::fromUtf8("label_11"));
         label_11->setGeometry(QRect(70, 20, 91, 17));
+        dateEdit = new QDateEdit(deviceManagewidget);
+        dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
+        dateEdit->setGeometry(QRect(110, 40, 118, 35));
+        dateEdit->setDate(QDate(2020, 1, 1));
         lineEdit_4->raise();
         lineEdit_3->raise();
         lineEdit_2->raise();
@@ -567,10 +567,10 @@ public:
         configFilelookPushButton_2->raise();
         label_8->raise();
         label_12->raise();
-        dateEdit->raise();
         timeEdit->raise();
         timeSetPushButton->raise();
         label_11->raise();
+        dateEdit->raise();
         label_6 = new QLabel(devUpdateWidget);
         label_6->setObjectName(QString::fromUtf8("label_6"));
         label_6->setGeometry(QRect(0, 0, 1024, 630));
@@ -692,10 +692,10 @@ public:
         configFilelookPushButton_2->setText(QString());
         label_8->setText(QCoreApplication::translate("devUpdateWidget", "\346\227\245\346\234\237", nullptr));
         label_12->setText(QCoreApplication::translate("devUpdateWidget", "\346\227\266\351\227\264", nullptr));
-        dateEdit->setDisplayFormat(QCoreApplication::translate("devUpdateWidget", "yyyy-MM-dd", nullptr));
         timeEdit->setDisplayFormat(QCoreApplication::translate("devUpdateWidget", "hh:mm:ss", nullptr));
         timeSetPushButton->setText(QString());
         label_11->setText(QCoreApplication::translate("devUpdateWidget", "\346\233\264\346\224\271\347\263\273\347\273\237\346\227\266\351\227\264", nullptr));
+        dateEdit->setDisplayFormat(QCoreApplication::translate("devUpdateWidget", "yyyy-MM-dd", nullptr));
         label_6->setText(QString());
         label_10->setText(QCoreApplication::translate("devUpdateWidget", "PIS\350\256\276\347\275\256:", nullptr));
         PISSetPushButton->setText(QString());

@@ -123,6 +123,22 @@ devUpdateWidget::devUpdateWidget(QWidget *parent) :
     connect(ui->trainTypeSetPushButton, SIGNAL(clicked(bool)), this, SLOT(setTrainType()));
 
 
+    ui->dateEdit->setCalendarPopup(true);
+    ui->dateEdit->setDate(QDate::currentDate());
+
+    ui->dateEdit->dumpObjectTree();
+    QLineEdit* lEdit = ui->dateEdit->findChild<QLineEdit*>();
+    if(lEdit)
+        lEdit->setReadOnly(true);
+
+    ui->dateEdit->setLocale(QLocale::Chinese);
+
+    ui->timeEdit->dumpObjectTree();
+    lEdit = ui->timeEdit->findChild<QLineEdit*>();
+    if(lEdit)
+        lEdit->setReadOnly(true);
+
+
     m_sys_timer = new QTimer(this);
     connect(m_sys_timer,SIGNAL(timeout()),this,SLOT(showSysTime()));
     m_sys_timer->start(1000);

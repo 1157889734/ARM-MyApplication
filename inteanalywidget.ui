@@ -453,7 +453,7 @@ border-width: 1px;border-style: solid;</string>
     <rect>
      <x>0</x>
      <y>2</y>
-     <width>281</width>
+     <width>111</width>
      <height>46</height>
     </rect>
    </property>
@@ -531,82 +531,10 @@ QPushButton:pressed
     <string/>
    </property>
   </widget>
-  <widget class="QDateEdit" name="EnddateEdit">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>90</y>
-     <width>111</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="keyboardTracking">
-    <bool>false</bool>
-   </property>
-   <property name="displayFormat">
-    <string>yyyy-MM-dd</string>
-   </property>
-   <property name="date">
-    <date>
-     <year>2000</year>
-     <month>2</month>
-     <day>2</day>
-    </date>
-   </property>
-  </widget>
-  <widget class="QTimeEdit" name="StarttimeEdit">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>50</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="displayFormat">
-    <string>h时</string>
-   </property>
-  </widget>
-  <widget class="QTimeEdit" name="EndtimeEdit">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>90</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="displayFormat">
-    <string>h时</string>
-   </property>
-  </widget>
-  <widget class="QDateEdit" name="StartdateEdit">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>50</y>
-     <width>111</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="keyboardTracking">
-    <bool>false</bool>
-   </property>
-   <property name="displayFormat">
-    <string>yyyy-MM-dd</string>
-   </property>
-   <property name="date">
-    <date>
-     <year>2000</year>
-     <month>2</month>
-     <day>2</day>
-    </date>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_15">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>190</x>
      <y>92</y>
      <width>41</width>
      <height>21</height>
@@ -619,9 +547,9 @@ QPushButton:pressed
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>190</x>
      <y>55</y>
-     <width>41</width>
+     <width>31</width>
      <height>21</height>
     </rect>
    </property>
@@ -702,6 +630,306 @@ QPushButton:pressed
     <string/>
    </property>
   </widget>
+  <widget class="QComboBox" name="StartcomboBox">
+   <property name="geometry">
+    <rect>
+     <x>225</x>
+     <y>50</y>
+     <width>71</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>0时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>5时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>6时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>7时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>9时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>11时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>12时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>13时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>14时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>15时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>17时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>18时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>19时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>20时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>21时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>22时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>23时</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="EndcomboBox">
+   <property name="geometry">
+    <rect>
+     <x>225</x>
+     <y>90</y>
+     <width>71</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>0时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>5时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>6时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>7时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>9时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>11时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>12时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>13时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>14时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>15时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>17时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>18时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>19时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>20时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>21时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>22时</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>23时</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QDateEdit" name="StartdateEdit">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>50</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="displayFormat">
+    <string>yyyy-MM-dd</string>
+   </property>
+   <property name="date">
+    <date>
+     <year>2020</year>
+     <month>1</month>
+     <day>1</day>
+    </date>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="EnddateEdit">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>90</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="displayFormat">
+    <string>yyyy-MM-dd</string>
+   </property>
+   <property name="date">
+    <date>
+     <year>2020</year>
+     <month>1</month>
+     <day>1</day>
+    </date>
+   </property>
+  </widget>
   <zorder>label_11</zorder>
   <zorder>pushButton_15</zorder>
   <zorder>label_3</zorder>
@@ -720,15 +948,15 @@ QPushButton:pressed
   <zorder>comboBox_3</zorder>
   <zorder>pushButton_8</zorder>
   <zorder>recordFileTableWidget</zorder>
-  <zorder>StarttimeEdit</zorder>
-  <zorder>EndtimeEdit</zorder>
-  <zorder>StartdateEdit</zorder>
-  <zorder>EnddateEdit</zorder>
   <zorder>label_15</zorder>
   <zorder>label</zorder>
   <zorder>alarmPushButton</zorder>
   <zorder>canselPushButton</zorder>
   <zorder>pushButton_16</zorder>
+  <zorder>StartcomboBox</zorder>
+  <zorder>EndcomboBox</zorder>
+  <zorder>StartdateEdit</zorder>
+  <zorder>EnddateEdit</zorder>
  </widget>
  <resources/>
  <connections/>

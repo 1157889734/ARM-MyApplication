@@ -23,9 +23,6 @@ pvmsMenuWidget::pvmsMenuWidget(QWidget *parent) :
     ui(new Ui::pvmsMenuWidget)
 {
     ui->setupUi(this);
-//    this->setWindowFlags(this->windowFlags() | Qt::WindowStaysOnTopHint | Qt::FramelessWindowHint);  //设置窗体属性，无标题栏，总是在最上端
-//    this->setGeometry(0,0,1024,768);
-//    this->setWindowFlags(this->windowFlags()&~Qt::WindowCloseButtonHint);
 
     this->showFullScreen();
 
@@ -37,8 +34,7 @@ pvmsMenuWidget::pvmsMenuWidget(QWidget *parent) :
 
     g_ipageValue = 0;
 
-//    ui->pvmsMonitorMenuPushButton->setStyleSheet("QPushButton{border-image: url(:/monres/PantoMonitor.bmp)}"
-//                                                 "QPushButton:pressed{border-image: url(:/monres/PantoMonitor1.bmp)}");
+
 
     icon.addFile(QString::fromUtf8(":/monres/PantoMonitor1.bmp"),QSize(),QIcon::Normal,QIcon::Off);
     ui->pvmsMonitorMenuPushButton->setIcon(icon);
@@ -108,7 +104,6 @@ pvmsMenuWidget::pvmsMenuWidget(QWidget *parent) :
     ui->inteAnalyMenuPushButton->setFocusPolicy(Qt::NoFocus);
     ui->devManageMenuPushButton->setFocusPolicy(Qt::NoFocus);
     ui->devUpdateMenuPushButton->setFocusPolicy(Qt::NoFocus);
-//    ui->loginOutPushButton->setFocusPolicy(Qt::NoFocus);
 
 
     connect(m_pvmsMonitorPage, SIGNAL(getDevStateSignal()), m_devManagePage, SLOT(getDevStateSignalCtrl()));
@@ -513,7 +508,6 @@ void pvmsMenuWidget::alarmPageShowSlot()
         m_alarmPage = new alarmWidget(this);      //新建报警信息显示窗体
         m_alarmPage->setGeometry(195, 189, m_alarmPage->width(), m_alarmPage->height());
         m_alarmPage->show();
-//        connect(m_alarmPage, SIGNAL(SendEscape()), this, SLOT(closeAlarmWidget()));
 
         connect(m_alarmPage, SIGNAL(SendEscape()), this, SLOT(closeAlarmWidget()));
         connect(this, SIGNAL(reflushAlarmPageSignal(int, int, int)), m_alarmPage, SLOT(reflushAlarmPageSlot(int, int, int)));

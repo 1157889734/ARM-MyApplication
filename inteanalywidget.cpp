@@ -1,5 +1,6 @@
 #include "inteanalywidget.h"
 #include "ui_inteanalywidget.h"
+#include <QLineEdit>
 #define PVMSPAGETYPE  2    //此页面类型，2表示受电弓监控页面
 
 static int g_iDNum = 0;
@@ -44,11 +45,30 @@ inteAnalyWidget::inteAnalyWidget(QWidget *parent) :
     ui->EnddateEdit->setCalendarPopup(true);
 
     ui->EnddateEdit->setDateTime(QDateTime::currentDateTime());
-    ui->EndtimeEdit->setDateTime(QDateTime::currentDateTime());
-
+//    ui->EndtimeEdit->setDateTime(QDateTime::currentDateTime());
 
     ui->StartdateEdit->setDateTime(QDateTime::currentDateTime());
 //    ui->StarttimeEdit->setDateTime(QDateTime::currentDateTime());
+
+    ui->StartdateEdit->dumpObjectTree();
+    QLineEdit* lEdit = ui->StartdateEdit->findChild<QLineEdit*>();
+    if(lEdit)
+        lEdit->setReadOnly(true);
+
+
+    ui->StartdateEdit->setLocale(QLocale::Chinese);
+
+    ui->EnddateEdit->dumpObjectTree();
+    QLineEdit* lEdit2 = ui->EnddateEdit->findChild<QLineEdit*>();
+    if(lEdit2)
+        lEdit2->setReadOnly(true);
+    ui->EnddateEdit->setLocale(QLocale::Chinese);
+
+
+
+    int value = QTime::currentTime().hour();
+    ui->EndcomboBox->setCurrentIndex(value);
+    ui->StartcomboBox->setCurrentIndex(0);
 
     m_alarmHappenTimer = NULL;
 
@@ -67,7 +87,9 @@ void inteAnalyWidget::pageShowCtrl()  //每次切换到当前页面，则更新�
 
     ui->StartdateEdit->setDate(time.date());
     ui->EnddateEdit->setDate(time.date());
-    ui->EndtimeEdit->setTime(time.time());
+    int value = QTime::currentTime().hour();
+     ui->EndcomboBox->setCurrentIndex(value);
+//    ui->EndtimeEdit->setTime(time.time());
 
 }
 
