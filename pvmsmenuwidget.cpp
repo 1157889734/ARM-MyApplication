@@ -785,6 +785,8 @@ void pvmsMenuWidget::menuButtonClick()
         m_pvmsMonitorPage->enableVideoPlay(0);   //禁止受电弓监控页面解码显示
         m_pvmsMonitorPage->m_playWin->hide();
 
+        m_recordPlayPage->pageShowCtrl();
+
         m_pvmsMonitorPage->m_channelStateLabel->hide();
         m_pvmsMonitorPage->m_channelNoLabel->hide();
         ui->pvmsMonitorMenuPushButton->setChecked(false);
@@ -804,6 +806,7 @@ void pvmsMenuWidget::menuButtonClick()
 
         m_recordPlayPage->closePlayWin();   //关闭录像回放界面的播放窗口
 
+        m_inteAnalyPage->pageShowCtrl();
 
         m_pvmsMonitorPage->m_playWin->hide();
         m_pvmsMonitorPage->enableVideoPlay(0);   //禁止受电弓监控页面解码显示

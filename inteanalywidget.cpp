@@ -61,6 +61,15 @@ inteAnalyWidget::~inteAnalyWidget()
     delete ui;
 }
 
+void inteAnalyWidget::pageShowCtrl()  //每次切换到当前页面，则更新查询起始和结束时间控件显示
+{
+    QDateTime time = QDateTime::currentDateTime();
+
+    ui->StartdateEdit->setDate(time.date());
+    ui->EnddateEdit->setDate(time.date());
+    ui->EndtimeEdit->setTime(time.time());
+
+}
 
 void inteAnalyWidget::registOutButtonClick()
 {

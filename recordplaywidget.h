@@ -60,6 +60,7 @@ public:
     void triggerCloseRecordPlaySignal();
     void triggerDownloadProcessBarDisplaySignal(int iEnableFlag);   //触发是否显示文件下载进度条的信号，iEnableFlag为1，显示，为0不显示
     void triggerSetDownloadProcessBarValueSignal(int iValue);   //触发设置文件下载进度条的值的信号
+    void pageShowCtrl();
 
 
 public slots:

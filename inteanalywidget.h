@@ -15,6 +15,7 @@ class inteAnalyWidget : public QWidget
 public:
     explicit inteAnalyWidget(QWidget *parent = 0);
     ~inteAnalyWidget();
+    void pageShowCtrl();
 
 public slots:
     void registOutButtonClick();

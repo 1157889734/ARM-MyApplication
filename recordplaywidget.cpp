@@ -930,7 +930,7 @@ void recordPlayWidget::recordPlayStartSlot()
         if (0 == m_iPlayFlag)
         {
             m_iPlayFlag = 1;
-//            m_dPlaySpeed = 1.00;
+            m_dPlaySpeed = 1.00;
 
             CMP_PlayMedia(m_cmpHandle);
             CMP_SetPlayRate(m_cmpHandle,m_dPlaySpeed);
@@ -1023,6 +1023,15 @@ void recordPlayWidget::triggerDownloadProcessBarDisplaySignal(int iEnableFlag)	/
 void recordPlayWidget::triggerSetDownloadProcessBarValueSignal(int iValue)	//触发设置文件下载进度条的值的信号
 {
     emit setDownloadProcessBarValueSignal(iValue);
+}
+void recordPlayWidget::pageShowCtrl()  //每次切换到当前页面，则更新查询起始和结束时间控件显示
+{
+    QDateTime time = QDateTime::currentDateTime();
+
+    ui->StartdateEdit->setDate(time.date());
+    ui->EnddateEdit->setDate(time.date());
+    ui->EndtimeEdit->setTime(time.time());
+
 }
 
 void recordPlayWidget::recordPlayFastForwardSlot()
