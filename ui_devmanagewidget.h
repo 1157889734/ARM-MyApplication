@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -33,8 +34,8 @@ public:
     QLabel *devStatusLabel;
     QLabel *devStorageLabel;
     QLabel *label_2;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
+    QGroupBox *groupBox;
+    QGroupBox *groupBox_2;
 
     void setupUi(QWidget *devManageWidget)
     {
@@ -101,7 +102,7 @@ public:
         devStorageTableWidget->setFrameShape(QFrame::StyledPanel);
         devStorageTableWidget->setShowGrid(false);
         devStorageTableWidget->setColumnCount(0);
-        devStorageTableWidget->horizontalHeader()->setVisible(true);
+        devStorageTableWidget->horizontalHeader()->setVisible(false);
         devStorageTableWidget->horizontalHeader()->setCascadingSectionResizes(false);
         devStorageTableWidget->horizontalHeader()->setMinimumSectionSize(61);
         devStorageTableWidget->horizontalHeader()->setDefaultSectionSize(100);
@@ -136,29 +137,34 @@ public:
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(0, 0, 1024, 661));
         label_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lineEdit = new QLineEdit(devManageWidget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setEnabled(false);
-        lineEdit->setGeometry(QRect(12, 50, 1000, 271));
-        lineEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lineEdit_2 = new QLineEdit(devManageWidget);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setEnabled(false);
-        lineEdit_2->setGeometry(QRect(12, 330, 1000, 251));
-        lineEdit_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"background-color: rgb(255, 255, 255);"));
+        groupBox = new QGroupBox(devManageWidget);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setGeometry(QRect(12, 50, 1000, 271));
+        groupBox->setStyleSheet(QString::fromUtf8("QGroupBox{\n"
+"	border-width:1px;\n"
+"	border-style:solid;\n"
+"	border-color:black;\n"
+"}"));
+        groupBox_2 = new QGroupBox(devManageWidget);
+        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
+        groupBox_2->setGeometry(QRect(12, 330, 1000, 251));
+        groupBox_2->setStyleSheet(QString::fromUtf8("QGroupBox{\n"
+"	border-width:1px;\n"
+"	border-style:solid;\n"
+"	border-color:black;\n"
+"}"));
         label_2->raise();
         alarmPushButton->raise();
         TrainNumberLineEdit->raise();
         TrainNumberlabel->raise();
         TrainNumberSetPushButton->raise();
         canselPushButton->raise();
-        lineEdit->raise();
         devStatusTableWidget->raise();
         devStatusLabel->raise();
-        lineEdit_2->raise();
         devStorageLabel->raise();
         devStorageTableWidget->raise();
+        groupBox->raise();
+        groupBox_2->raise();
 
         retranslateUi(devManageWidget);
 
@@ -175,6 +181,8 @@ public:
         devStatusLabel->setText(QCoreApplication::translate("devManageWidget", "\350\256\276\345\244\207\347\212\266\346\200\201", nullptr));
         devStorageLabel->setText(QCoreApplication::translate("devManageWidget", "\345\255\230\345\202\250\347\212\266\346\200\201", nullptr));
         label_2->setText(QString());
+        groupBox->setTitle(QString());
+        groupBox_2->setTitle(QString());
     } // retranslateUi
 
 };

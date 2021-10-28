@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -39,8 +40,8 @@ public:
     QLineEdit *surelineEdit;
     QPushButton *savepushButton;
     QLabel *label_7;
-    QLineEdit *lineEdit;
     QLabel *label;
+    QGroupBox *groupBox_2;
 
     void setupUi(QWidget *usergroupManage)
     {
@@ -121,17 +122,19 @@ public:
         label_7 = new QLabel(usergroupManage);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setGeometry(QRect(60, 35, 67, 17));
-        lineEdit = new QLineEdit(usergroupManage);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setEnabled(false);
-        lineEdit->setGeometry(QRect(10, 5, 901, 391));
-        lineEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         label = new QLabel(usergroupManage);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(0, 0, 1024, 401));
         label->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        groupBox_2 = new QGroupBox(usergroupManage);
+        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
+        groupBox_2->setGeometry(QRect(460, 50, 471, 341));
+        groupBox_2->setStyleSheet(QString::fromUtf8("QGroupBox{\n"
+"	border-width:1px;\n"
+"	border-style:solid;\n"
+"	border-color:black;\n"
+"}"));
         label->raise();
-        lineEdit->raise();
         label_2->raise();
         addpushButton->raise();
         deletepushButton->raise();
@@ -147,6 +150,7 @@ public:
         savepushButton->raise();
         label_7->raise();
         tableWidget->raise();
+        groupBox_2->raise();
 
         retranslateUi(usergroupManage);
 
@@ -168,6 +172,7 @@ public:
         savepushButton->setText(QString());
         label_7->setText(QCoreApplication::translate("usergroupManage", "\347\224\250\346\210\267\345\210\227\350\241\250", nullptr));
         label->setText(QString());
+        groupBox_2->setTitle(QString());
     } // retranslateUi
 
 };
