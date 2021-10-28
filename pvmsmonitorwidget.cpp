@@ -558,8 +558,8 @@ void pvmsMonitorWidget::startVideoPolling()    //开启视频轮询的处理
     {
         m_playWin = new QWidget(this->parentWidget());   //新建一个与目前窗体同属一个父窗体的播放子窗体，方便实现全屏
 
-        //    m_playWin->setGeometry(0, 0, 1024, 768);      //设置窗体在父窗体中的位置，默认一开始为全屏
-        m_playWin->setGeometry(0, 138, 782, 630);
+//        m_playWin->setGeometry(0, 0, 1024, 768);      //设置窗体在父窗体中的位置，默认一开始为全屏
+        m_playWin->setGeometry(0, 138, 782, 620);
         m_playWin->show();  //默认显示
         m_playWin->setObjectName("m_playWin");
         m_playWin->setStyleSheet("QWidget{background-color: rgb(0, 0, 0);}");     //设置播放窗口背景色为黑色
@@ -1497,7 +1497,7 @@ void pvmsMonitorWidget::presetReturnSignalCtrl(int iCameraNO)
 void pvmsMonitorWidget::noPollingChOption()
 {
     static int iDecOldState = 0;
-    T_CMP_PACKET tPkt;
+//    T_CMP_PACKET tPkt;
     /*非轮询状态下也要实时监控摄像头码流状态的，如果有变换需进行通道状态和通道号的处理，如果状态变成1(有流)则需要隐藏通道状态和通道号，变成0需要显示*/
     if ((1 == m_iDisplayEnable) && (CAMERA_ON == m_tCameraInfo[m_iCameraPlayNo].iCameraSwitchState))
     {
@@ -1638,7 +1638,7 @@ void pvmsMonitorWidget::cmpOptionCtrlSlot(int iType, int iCh)
     else if (CMP_CMD_ENABLE_CH == iType)
     {
 
-        iRet = CMP_SetWndDisplayEnable(m_tCameraInfo[iCh].cmpHandle,SHOW_VIDEO,m_playWin);
+        iRet = CMP_SetWndDisplayEnable(m_tCameraInfo[iCh].cmpHandle,SHOW_VIDEO);
         if (iRet != 0)
         {
             printf("[%s] CMP_SetWndDisplayEnable on error!iRet=%d, cameraNo=%d\n",__FUNCTION__,iRet, iCh);
@@ -1648,7 +1648,7 @@ void pvmsMonitorWidget::cmpOptionCtrlSlot(int iType, int iCh)
     }
     else if (CMP_CMD_DISABLE_CH == iType)
     {
-        iRet = CMP_SetWndDisplayEnable(m_tCameraInfo[iCh].cmpHandle,HIDE_VIDEO,m_playWin);
+        iRet = CMP_SetWndDisplayEnable(m_tCameraInfo[iCh].cmpHandle,HIDE_VIDEO);
         if (iRet != 0)
         {
             printf("[%s] CMP_SetWndDisplayEnable on error!iRet=%d, cameraNo=%d\n",__FUNCTION__,iRet, iCh);
@@ -1677,7 +1677,7 @@ void pvmsMonitorWidget::cmpOptionCtrlSlot(int iType, int iCh)
 
 void pvmsMonitorWidget::chLabelDisplayCtrlSlot()   //通道状态和通道号标签是否显示的处理函数
 {
-    T_CMP_PACKET tPkt;
+//    T_CMP_PACKET tPkt;
 
     if (1 == m_iDisplayEnable)
     {
@@ -1885,7 +1885,7 @@ void pvmsMonitorWidget::alarmHappenSlot()
         sysinfo(&s_info);
         m_lastActionTime = s_info.uptime;  //更新最后一次操作计时
         m_playWin->move(0, 138);
-        m_playWin->resize(782, 630);
+        m_playWin->resize(782, 620);
         m_iFullScreenFlag = 0;
 
         tPkt.iMsgCmd = CMP_CMD_CHG_ALL_VIDEOWIN;
@@ -1996,7 +1996,7 @@ bool pvmsMonitorWidget::eventFilter(QObject *target, QEvent *event)    //事件�
 
                 m_iFullScreenFlag = 0;
                 m_playWin->move(0, 138);
-                m_playWin->resize(782, 630);
+                m_playWin->resize(782, 620);
 
 
 
@@ -2354,7 +2354,7 @@ void pvmsMonitorWidget::blackScreenCtrlSlot()     //黑屏触发信号处理，�
         sysinfo(&s_info);
         m_lastActionTime = s_info.uptime;  //更新最后一次操作计时
         m_playWin->move(0, 138);
-        m_playWin->resize(782, 630);
+        m_playWin->resize(782, 620);
         m_iFullScreenFlag = 0;
 
         tPkt.iMsgCmd = CMP_CMD_CHG_ALL_VIDEOWIN;

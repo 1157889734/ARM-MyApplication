@@ -73,8 +73,8 @@ void usergroupManage::init_datavase()
         db=QSqlDatabase::addDatabase("QSQLITE");
 
     db.setDatabaseName("data.db");
-    bool ok=db.open();
-    if(ok)
+    query_OK=db.open();
+    if(query_OK)
     {
 //        QMessageBox::information(this,"Information","open sucessfully");
     }
@@ -255,7 +255,7 @@ void usergroupManage::on_deletepushButton_clicked()
         qDebug() << "open";
 
     QList<QTableWidgetItem*>items=ui->tableWidget->selectedItems();
-    int cout = items.count();
+//    int cout = items.count();
     QTableWidgetItem *item = items.at(0);
     QString text = item->text(); //获取内容
     QSqlQuery query;
@@ -336,7 +336,7 @@ void usergroupManage::table_choose_fuction(QTableWidgetItem *item)
 {
     g_curTextState = 1;
     QList<QTableWidgetItem*>items=ui->tableWidget->selectedItems();
-    int cout = items.count();
+//    int cout = items.count();
     QTableWidgetItem *mitem = items.at(0);
     QString text = mitem->text(); //获取内容
     ui->usernamelineEdit->setText(text);

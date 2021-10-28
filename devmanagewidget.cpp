@@ -489,7 +489,7 @@ void devManageWidget::videoAlarmCtrl(PMSG_HANDLE pHandle, char *pcMsgData)
 {
     int i = 0;
     QString devStatus = "";
-    T_LOG_INFO tLogInfo;
+//    T_LOG_INFO tLogInfo;
 
     T_VIDEO_ALARM_STATUS *ptVideoAlarmStatus = (T_VIDEO_ALARM_STATUS *)pcMsgData;
     if (1 == ptVideoAlarmStatus->i8VideoShade)

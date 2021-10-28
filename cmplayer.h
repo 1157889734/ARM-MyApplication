@@ -127,7 +127,7 @@ int CMP_CloseMedia(CMPHandle hPlay);
   输出参数:     无
   返回值:
 *************************************************/
-int CMP_SetWndDisplayEnable(CMPHandle hPlay, int iEnable,QWidget *palywidget);
+int CMP_SetWndDisplayEnable(CMPHandle hPlay, int iEnable);
 
 
 /*************************************************
