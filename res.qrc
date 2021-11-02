@@ -225,5 +225,18 @@
         <file>monres/in.bmp</file>
         <file>monres/mfast.bmp</file>
         <file>monres/mslow.bmp</file>
+        <file>res/pressed.bmp</file>
+        <file>res/preesd_user.bmp</file>
+        <file>res/pressed_alarm.bmp</file>
+        <file>res/pressed_137-39.jpg</file>
+        <file>res/press-52-32.bmp</file>
+        <file>res/pressed-71-32.bmp</file>
+        <file>res/pressed_137-39.bmp</file>
+        <file>res/pressed-207-43.bmp</file>
+        <file>res/press-180-43.bmp</file>
+        <file>res/pressed-161-46.bmp</file>
+        <file>res/pressed-137-39.bmp</file>
+        <file>res/pressed-137-35.bmp</file>
+        <file>res/press-161-43.bmp</file>
     </qresource>
 </RCC>

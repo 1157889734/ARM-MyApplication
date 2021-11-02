@@ -67,8 +67,16 @@ public:
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
 "border-style: solid;}\n"
+"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed-137-39.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+""));
         deletepushButton = new QPushButton(usergroupManage);
         deletepushButton->setObjectName(QString::fromUtf8("deletepushButton"));
         deletepushButton->setGeometry(QRect(230, 340, 137, 39));
@@ -78,7 +86,14 @@ public:
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed-137-39.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+""));
         radioButton = new QRadioButton(usergroupManage);
         radioButton->setObjectName(QString::fromUtf8("radioButton"));
         radioButton->setGeometry(QRect(570, 80, 112, 23));
@@ -118,7 +133,14 @@ public:
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed-137-39.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+""));
         label_7 = new QLabel(usergroupManage);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setGeometry(QRect(60, 35, 67, 17));
@@ -138,19 +160,19 @@ public:
         label_2->raise();
         addpushButton->raise();
         deletepushButton->raise();
-        radioButton->raise();
-        radioButton_2->raise();
-        radioButton_3->raise();
-        label_3->raise();
-        label_4->raise();
-        label_5->raise();
-        usernamelineEdit->raise();
-        passwdlineEdit->raise();
-        surelineEdit->raise();
-        savepushButton->raise();
         label_7->raise();
         tableWidget->raise();
         groupBox_2->raise();
+        label_3->raise();
+        label_4->raise();
+        label_5->raise();
+        passwdlineEdit->raise();
+        radioButton->raise();
+        radioButton_3->raise();
+        radioButton_2->raise();
+        savepushButton->raise();
+        surelineEdit->raise();
+        usernamelineEdit->raise();
 
         retranslateUi(usergroupManage);
 

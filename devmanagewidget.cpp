@@ -1,4 +1,5 @@
 #include "devmanagewidget.h"
+#include "led.h"
 #include "ui_devmanagewidget.h"
 #include <QMessageBox>
 #include <QDateTime>
@@ -11,7 +12,6 @@
 static int g_iDNum = 0;
 #define PVMSPAGETYPE  2    //此页面类型，2表示受电弓监控页面
 static int g_ibShowKeyboard = 0;
-
 
 devManageWidget::devManageWidget(QWidget *parent) :
     QWidget(parent),
@@ -104,13 +104,13 @@ devManageWidget::devManageWidget(QWidget *parent) :
 
     connect(ui->canselPushButton, SIGNAL(clicked()), this, SLOT(registOutButtonClick()));
 
-
     getTrainConfig();
 
 
     m_alarmHappenTimer = NULL;
 
 }
+
 
 devManageWidget::~devManageWidget()
 {
@@ -469,6 +469,7 @@ void devManageWidget::getNvrStatusCtrl(PMSG_HANDLE pHandle, char *pcMsgData)
                     ui->devStorageTableWidget->setItem(i, 6, new QTableWidgetItem(QString(tr("硬盘异常"))));
                     ui->devStorageTableWidget->item(i, 6)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
                 }
+                gpio_output_ctrl(LED_DEVICE,LED_OFF);
             }
             else
             {
@@ -796,18 +797,6 @@ void devManageWidget::getTrainConfig()   //获取车型配置信息，填充页�
     memset(&tTrainConfigInfo, 0, sizeof(T_TRAIN_CONFIG));
     STATE_GetCurrentTrainConfigInfo(&tTrainConfigInfo);
 
-//    /*获取编组信息，再填充编组设置单选框*/
-//    if (1 == tTrainConfigInfo.iFormationType)
-//    {
-//        ui->groupSetRadioButton->setChecked(true);
-//        ui->groupSetRadioButton_2->setChecked(false);
-//    }
-//    else if (2 == tTrainConfigInfo.iFormationType)
-//    {
-//        ui->groupSetRadioButton->setChecked(false);
-//        ui->groupSetRadioButton_2->setChecked(true);
-//    }
-
     /*获取各服务器即摄像机信息，填充相应的列表控件*/
     for (i = 0; i < tTrainConfigInfo.iNvrServerCount; i++)
     {
@@ -919,10 +908,6 @@ int devManageWidget::pmsgCtrl(PMSG_HANDLE pHandle, unsigned char ucMsgCmd, char 
         }
         case SERV_CLI_MSG_TYPE_GET_NVR_STATUS_RESP:
         {
-//            DebugPrint(DEBUG_PMSG_DATA_PRINT, "devManage Widget get pmsg response cmd 0x%x data:\n", ucMsgCmd);
-//            DebugPrint(DEBUG_PMSG_DATA_PRINT, "0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x", pcMsgData[0],pcMsgData[1],pcMsgData[2],pcMsgData[3],
-//                    pcMsgData[4],pcMsgData[5],pcMsgData[6],pcMsgData[7],pcMsgData[8],pcMsgData[9],pcMsgData[10],pcMsgData[11],pcMsgData[12],
-//                    pcMsgData[13],pcMsgData[14],pcMsgData[15],pcMsgData[16],pcMsgData[17]);
 
             if (pcMsgData == NULL || iMsgDataLen != 18)
             {
@@ -936,10 +921,6 @@ int devManageWidget::pmsgCtrl(PMSG_HANDLE pHandle, unsigned char ucMsgCmd, char 
         }
         case SERV_CLI_MSG_TYPE_GET_IPC_STATUS_RESP:
         {
-//            DebugPrint(DEBUG_PMSG_DATA_PRINT, "devManage Widget get pmsg response cmd 0x%x data:\n", ucMsgCmd);
-//            DebugPrint(DEBUG_PMSG_DATA_PRINT, "0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x", pcMsgData[0],pcMsgData[1],pcMsgData[2],pcMsgData[3],
-//                pcMsgData[4],pcMsgData[5],pcMsgData[6],pcMsgData[7],pcMsgData[8],pcMsgData[9],pcMsgData[10],pcMsgData[11],pcMsgData[12],
-//                pcMsgData[13],pcMsgData[14],pcMsgData[15]);
 
             if (pcMsgData == NULL || iMsgDataLen != 16)
             {

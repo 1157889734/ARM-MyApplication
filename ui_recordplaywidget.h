@@ -214,7 +214,12 @@ public:
 "\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         label_2 = new QLabel(recordPlayWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(0, 0, 111, 51));
@@ -237,7 +242,12 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed-207-43.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         minusStepPushButton = new QPushButton(recordPlayWidget);
         minusStepPushButton->setObjectName(QString::fromUtf8("minusStepPushButton"));
         minusStepPushButton->setGeometry(QRect(945, 555, 69, 31));

@@ -29,6 +29,7 @@ public:
     explicit devUpdateWidget(QWidget *parent = 0);
     ~devUpdateWidget();
     QDateTime timeTd;
+
 #ifdef KEYBOARD
     bool eventFilter(QObject *obj, QEvent *e);
     void ShowKeyboardSlots(int nShow);
@@ -39,6 +40,7 @@ public slots:
     void userManageSlot();
     void configFileSelectionSlot();
     void configUpdateFileSLOT();
+
     void configFileImportSlot();
     void downLoadLogSlot();
     void devUpdateSlot();
@@ -73,6 +75,7 @@ signals:
 #ifdef KEYBOARD
     void show_hide_Signal(int value);
 #endif
+
 private:
     Ui::devUpdateWidget *ui;
     QTimer *m_alarmHappenTimer;

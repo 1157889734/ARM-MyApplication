@@ -71,10 +71,15 @@ public:
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
 "border-style: solid;}\n"
-"QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
-"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/press-52-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+""));
         presetNoPushButton_8->setCheckable(true);
         zoomOutPushButton = new QPushButton(pvmsMonitorWidget);
         zoomOutPushButton->setObjectName(QString::fromUtf8("zoomOutPushButton"));
@@ -86,7 +91,14 @@ public:
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+"{\n"
+"	background-image: url(:/res/pressed-71-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+"\n"
 ""));
         focusNearPushButton = new QPushButton(pvmsMonitorWidget);
         focusNearPushButton->setObjectName(QString::fromUtf8("focusNearPushButton"));
@@ -98,7 +110,13 @@ public:
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+"{\n"
+"	background-image: url(:/res/pressed-71-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
 ""));
         startPollingPushButton = new QPushButton(pvmsMonitorWidget);
         startPollingPushButton->setObjectName(QString::fromUtf8("startPollingPushButton"));
@@ -124,7 +142,18 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+"{\n"
+"	background-color: rgb(211, 215, 207);\n"
+"	background-image: url(:/res/pressed.bmp);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
 "\n"
 ""));
         cameraSwitchPushButton->setCheckable(true);
@@ -143,7 +172,14 @@ public:
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+"{\n"
+"	background-image: url(:/res/pressed-71-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+"\n"
 ""));
         presetNoPushButton_3 = new QPushButton(pvmsMonitorWidget);
         presetNoPushButton_3->setObjectName(QString::fromUtf8("presetNoPushButton_3"));
@@ -154,10 +190,15 @@ public:
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
 "border-style: solid;}\n"
-"QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
-"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/press-52-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+""));
         presetNoPushButton_3->setCheckable(true);
         pausePollingPushButton = new QPushButton(pvmsMonitorWidget);
         pausePollingPushButton->setObjectName(QString::fromUtf8("pausePollingPushButton"));
@@ -176,7 +217,14 @@ public:
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+"{\n"
+"	background-image: url(:/res/pressed-71-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+"\n"
 "\n"
 ""));
         presetNoPushButton_2 = new QPushButton(pvmsMonitorWidget);
@@ -190,10 +238,15 @@ public:
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "\n"
-"QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
-"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/press-52-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+""));
         presetNoPushButton_2->setCheckable(true);
         ptzRightPushButton = new QPushButton(pvmsMonitorWidget);
         ptzRightPushButton->setObjectName(QString::fromUtf8("ptzRightPushButton"));
@@ -205,7 +258,14 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+"{\n"
+"	background-image: url(:/res/pressed-71-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+"\n"
 ""));
         ptzRightPushButton->setIconSize(QSize(50, 50));
         label_2 = new QLabel(pvmsMonitorWidget);
@@ -223,7 +283,14 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+"{\n"
+"	background-image: url(:/res/pressed-71-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+"\n"
 ""));
         ptzLeftPushButton->setIconSize(QSize(50, 50));
         presetSetPushButton = new QPushButton(pvmsMonitorWidget);
@@ -235,8 +302,17 @@ public:
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
 "border-style: solid;}\n"
+"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+"{\n"
+"	background-color: rgb(211, 215, 207);\n"
+"	background-image: url(:/res/pressed.bmp);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+"\n"
+"\n"
 ""));
         presetSetPushButton->setCheckable(false);
         presetSetPushButton->setChecked(false);
@@ -249,10 +325,15 @@ public:
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
 "border-style: solid;}\n"
-"QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
-"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/press-52-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+""));
         presetNoPushButton_7->setCheckable(true);
         ptzDownPushButton = new QPushButton(pvmsMonitorWidget);
         ptzDownPushButton->setObjectName(QString::fromUtf8("ptzDownPushButton"));
@@ -263,7 +344,14 @@ public:
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+"{\n"
+"	background-image: url(:/res/pressed.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+"\n"
 ""));
         ptzDownPushButton->setIconSize(QSize(50, 50));
         temporarySavePushButton = new QPushButton(pvmsMonitorWidget);
@@ -277,6 +365,7 @@ public:
 "border-style: solid;}\n"
 "QPushButton:pressed\n"
 "{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+"\n"
 ""));
         alarmPushButton = new QPushButton(pvmsMonitorWidget);
         alarmPushButton->setObjectName(QString::fromUtf8("alarmPushButton"));
@@ -288,7 +377,8 @@ public:
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+""));
         alarmPushButton->setCheckable(true);
         fillLightSwitchPushButton = new QPushButton(pvmsMonitorWidget);
         fillLightSwitchPushButton->setObjectName(QString::fromUtf8("fillLightSwitchPushButton"));
@@ -300,8 +390,20 @@ public:
 "border-width: 1px;\n"
 "border-style: solid;\n"
 "}\n"
+"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+"{\n"
+"	background-color: rgb(211, 215, 207);\n"
+"	background-image: url(:/res/pressed.bmp);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
 ""));
         fillLightSwitchPushButton->setCheckable(true);
         presetNoPushButton_4 = new QPushButton(pvmsMonitorWidget);
@@ -313,10 +415,15 @@ public:
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
 "border-style: solid;}\n"
-"QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
-"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/press-52-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+""));
         presetNoPushButton_4->setCheckable(true);
         pollingNextOnePushButton = new QPushButton(pvmsMonitorWidget);
         pollingNextOnePushButton->setObjectName(QString::fromUtf8("pollingNextOnePushButton"));
@@ -337,7 +444,13 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+"{\n"
+"	background-color: rgb(211, 215, 207);\n"
+"	background-image: url(:/res/pressed.bmp);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
 "\n"
 "\n"
 ""));
@@ -376,10 +489,15 @@ public:
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
 "border-style: solid;}\n"
-"QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
-"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/press-52-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+""));
         presetNoPushButton_6->setCheckable(true);
         presetNoPushButton = new QPushButton(pvmsMonitorWidget);
         presetNoPushButton->setObjectName(QString::fromUtf8("presetNoPushButton"));
@@ -391,9 +509,15 @@ public:
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "\n"
-"QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/press-52-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+""));
         presetNoPushButton->setCheckable(true);
         presetNoPushButton->setChecked(false);
         presetNoPushButton->setFlat(false);
@@ -406,10 +530,15 @@ public:
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
 "border-style: solid;}\n"
-"QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}\n"
-"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/press-52-32.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+""));
         presetNoPushButton_5->setCheckable(true);
         presetGetPushButton = new QPushButton(pvmsMonitorWidget);
         presetGetPushButton->setObjectName(QString::fromUtf8("presetGetPushButton"));
@@ -420,8 +549,18 @@ public:
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
 "border-style: solid;}\n"
+"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(255, 255, 255);color: rgb(255, 255, 255);border-color: rgb(86, 164, 246);border-width: 6px;border-style: solid;}"));
+"{\n"
+"	background-color: rgb(211, 215, 207);\n"
+"	background-image: url(:/res/pressed.bmp);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"\n"
+"}\n"
+"\n"
+"\n"
+""));
         label_7 = new QLabel(pvmsMonitorWidget);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setGeometry(QRect(785, 250, 231, 40));
@@ -445,7 +584,8 @@ public:
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}\n"
+""));
         canselPushButton->setCheckable(true);
         label_11 = new QLabel(pvmsMonitorWidget);
         label_11->setObjectName(QString::fromUtf8("label_11"));
@@ -455,7 +595,7 @@ public:
         label_4 = new QLabel(pvmsMonitorWidget);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setGeometry(QRect(0, 0, 782, 620));
-        label_4->setMouseTracking(true);
+        label_4->setMouseTracking(false);
         label_4->setTabletTracking(false);
         label_4->setFocusPolicy(Qt::WheelFocus);
         label_4->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);"));

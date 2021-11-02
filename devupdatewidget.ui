@@ -41,7 +41,13 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+  background-image: url(:/res/preesd_user.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -138,7 +144,12 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/pressed.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -482,9 +493,7 @@ border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
 
-
-QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+</string>
    </property>
    <property name="text">
     <string/>
@@ -625,6 +634,9 @@ QPushButton:pressed
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
 background-image: url(:/monres/browse.bmp);
@@ -632,9 +644,13 @@ border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
 
-
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/pressed.bmp);	
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -758,7 +774,12 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/pressed_137-39.jpg);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -837,7 +858,12 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/press-161-43.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -920,7 +946,12 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -955,6 +986,11 @@ QPushButton:pressed
       <width>61</width>
       <height>17</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true"/>
@@ -998,6 +1034,9 @@ QPushButton:pressed
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
 background-image: url(:/monres/in.bmp);
@@ -1005,8 +1044,14 @@ border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
 
+
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/pressed_alarm.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -1128,7 +1173,12 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/pressed.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -1148,6 +1198,9 @@ QPushButton:pressed
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
 background-image: url(:/monres/downlog.bmp);
@@ -1156,10 +1209,21 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/pressed.bmp);	
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}
+
+
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QTextEdit" name="updateStatueTextEdit">
@@ -1202,6 +1266,11 @@ QPushButton:pressed
       <height>17</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string>选择升级文件:</string>
     </property>
@@ -1220,8 +1289,15 @@ QPushButton:pressed
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
+     <string notr="true">
+QPushButton{
 background-image: url(:/monres/browse.bmp);
 border-color: rgb(255, 255, 255);
 border-width: 1px;
@@ -1229,10 +1305,28 @@ border-style: solid;}
 
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/pressed.bmp);	
+   background-color: rgb(211, 215, 207);
+   border-style: dashed; 
+   border-width: 1px; 
+}
+
+
+
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoRepeatDelay">
+     <number>300</number>
+    </property>
+    <property name="autoRepeatInterval">
+     <number>100</number>
     </property>
    </widget>
    <widget class="QLabel" name="label_8">
@@ -1243,6 +1337,11 @@ QPushButton:pressed
       <width>51</width>
       <height>17</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>日期</string>
@@ -1256,6 +1355,11 @@ QPushButton:pressed
       <width>51</width>
       <height>17</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>时间</string>
@@ -1306,7 +1410,12 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/pressed.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -1335,6 +1444,56 @@ QPushButton:pressed
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>421</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox{
+	border-width:1px;
+	border-style:solid;
+	border-color:black;
+	margin-top:1ex;
+}
+QGroupBox:title{
+	subcontrol-orgin:0 10px;
+	subcontrol-position: top left;
+	left:10px;
+	top:-1ex;
+	margin-left:0px;
+	padding:0 1px;
+}
+</string>
+    </property>
+    <property name="title">
+     <string>更改系统时间</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>0</y>
+      <width>470</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox{
+	border-width:1px;
+	border-style:solid;
+	border-color:black;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
       <x>10</x>
       <y>0</y>
       <width>461</width>
@@ -1350,61 +1509,6 @@ QPushButton:pressed
     </property>
     <property name="title">
      <string/>
-    </property>
-    <widget class="QGroupBox" name="groupBox_3">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>20</y>
-       <width>421</width>
-       <height>101</height>
-      </rect>
-     </property>
-     <property name="layoutDirection">
-      <enum>Qt::LeftToRight</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox{
-	border-width:1px;
-	border-style:solid;
-	border-color:black;
-	margin-top:1ex;
-}
-QGroupBox:title{
-	subcontrol-orgin:0 10px;
-	subcontrol-position: top left;
-	left:10px;
-	top:-1ex;
-	margin-left:0px;
-	padding:0 1px;
-}</string>
-     </property>
-     <property name="title">
-      <string> 更改系统时间</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>490</x>
-      <y>0</y>
-      <width>471</width>
-      <height>201</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QGroupBox{
-	border-width:1px;
-	border-style:solid;
-	border-color:black;
-}</string>
-    </property>
-    <property name="title">
-     <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
     </property>
    </widget>
    <widget class="QGroupBox" name="groupBox_4">
@@ -1432,7 +1536,7 @@ QGroupBox:title{
      <rect>
       <x>510</x>
       <y>215</y>
-      <width>461</width>
+      <width>464</width>
       <height>181</height>
      </rect>
     </property>
@@ -1447,6 +1551,10 @@ QGroupBox:title{
      <string/>
     </property>
    </widget>
+   <zorder>groupBox_5</zorder>
+   <zorder>groupBox_4</zorder>
+   <zorder>groupBox_3</zorder>
+   <zorder>groupBox_2</zorder>
    <zorder>label_15</zorder>
    <zorder>saturationLineEdit</zorder>
    <zorder>imageParamSetPushButton</zorder>
@@ -1479,15 +1587,12 @@ QGroupBox:title{
    <zorder>configFileDisplayLineEdit_2</zorder>
    <zorder>label_19</zorder>
    <zorder>configFilelookPushButton_2</zorder>
+   <zorder>groupBox</zorder>
    <zorder>label_8</zorder>
-   <zorder>label_12</zorder>
    <zorder>timeEdit</zorder>
    <zorder>timeSetPushButton</zorder>
    <zorder>dateEdit</zorder>
-   <zorder>groupBox</zorder>
-   <zorder>groupBox_2</zorder>
-   <zorder>groupBox_4</zorder>
-   <zorder>groupBox_5</zorder>
+   <zorder>label_12</zorder>
   </widget>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
@@ -1558,7 +1663,12 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-color: rgb(211, 215, 207);
+	background-image: url(:/res/pressed.bmp);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}</string>
    </property>
    <property name="text">
     <string/>

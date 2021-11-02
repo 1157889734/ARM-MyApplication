@@ -15,8 +15,6 @@ loginWidget::loginWidget(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
-
     this->setWindowFlags(Qt::FramelessWindowHint);
     this->setGeometry(0,0,1024,768);
     this->showFullScreen();

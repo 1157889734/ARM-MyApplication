@@ -69,9 +69,13 @@ public:
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
 "border-style: solid;}\n"
-"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         comboBox_4 = new QComboBox(inteAnalyWidget);
         comboBox_4->addItem(QString());
         comboBox_4->addItem(QString());
@@ -110,7 +114,12 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed-161-46.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         label_6 = new QLabel(inteAnalyWidget);
         label_6->setObjectName(QString::fromUtf8("label_6"));
         label_6->setGeometry(QRect(0, 164, 51, 41));
@@ -153,7 +162,12 @@ public:
 "\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed-161-46.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         pushButton_11 = new QPushButton(inteAnalyWidget);
         pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
         pushButton_11->setGeometry(QRect(610, 575, 51, 51));
@@ -245,7 +259,12 @@ public:
 "\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/press-180-43.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         label_15 = new QLabel(inteAnalyWidget);
         label_15->setObjectName(QString::fromUtf8("label_15"));
         label_15->setGeometry(QRect(190, 92, 41, 21));

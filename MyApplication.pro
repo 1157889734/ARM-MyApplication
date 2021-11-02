@@ -25,6 +25,7 @@ CONFIG += c++11
 
 SOURCES += \
     cmplayer.cpp \
+    led.c \
         main.cpp \
     MyApplication.cpp \
     choicelogindevwidget.cpp \
@@ -59,6 +60,7 @@ HEADERS += \
     MyApplication.h \
     choicelogindevwidget.h \
     cmplayer.h \
+    led.h \
     loginwidget.h \
     pvmsmenuwidget.h \
     pvmsmonitorwidget.h \

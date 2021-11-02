@@ -33,9 +33,13 @@ background-image: url(:/monres/search.bmp);
 border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
-
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/pressed.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -160,7 +164,12 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/pressed-161-46.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -293,7 +302,12 @@ border-style: solid;}
 
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/pressed-161-46.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -525,7 +539,12 @@ border-style: solid;}
 
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/press-180-43.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+}</string>
    </property>
    <property name="text">
     <string/>

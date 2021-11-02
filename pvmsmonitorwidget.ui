@@ -33,10 +33,15 @@ background-image: url(:/res/8.bmp);
 border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
-QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
-
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/press-52-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -66,7 +71,14 @@ border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+{
+	background-image: url(:/res/pressed-71-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+
 </string>
    </property>
    <property name="text">
@@ -94,7 +106,13 @@ border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+{
+	background-image: url(:/res/pressed-71-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
 </string>
    </property>
    <property name="text">
@@ -171,7 +189,18 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+{
+	background-color: rgb(211, 215, 207);
+	background-image: url(:/res/pressed.bmp);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+
+
+
+
+
 
 </string>
    </property>
@@ -220,7 +249,14 @@ border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+{
+	background-image: url(:/res/pressed-71-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+
 </string>
    </property>
    <property name="text">
@@ -247,10 +283,15 @@ background-image: url(:/res/3.bmp);
 border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
-QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
-
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/press-52-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -308,7 +349,14 @@ border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+{
+	background-image: url(:/res/pressed-71-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+
 
 </string>
    </property>
@@ -338,10 +386,15 @@ border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
 
-QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
-
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/press-52-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -367,7 +420,14 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+{
+	background-image: url(:/res/pressed-71-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+
 </string>
    </property>
    <property name="text">
@@ -414,7 +474,14 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+{
+	background-image: url(:/res/pressed-71-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+
 </string>
    </property>
    <property name="text">
@@ -447,8 +514,17 @@ background-image: url(:/res/setuse.bmp);
 border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
+
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+{
+	background-color: rgb(211, 215, 207);
+	background-image: url(:/res/pressed.bmp);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+
+
 </string>
    </property>
    <property name="text">
@@ -481,10 +557,15 @@ background-image: url(:/res/7.bmp);
 border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
-QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
-
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/press-52-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -509,7 +590,14 @@ border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+{
+	background-image: url(:/res/pressed.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+
 </string>
    </property>
    <property name="text">
@@ -544,6 +632,7 @@ border-width: 1px;
 border-style: solid;}
 QPushButton:pressed
 {background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+
 </string>
    </property>
    <property name="text">
@@ -571,7 +660,8 @@ border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -601,8 +691,20 @@ border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;
 }
+
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+{
+	background-color: rgb(211, 215, 207);
+	background-image: url(:/res/pressed.bmp);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+
+
+
+
+
 </string>
    </property>
    <property name="text">
@@ -632,10 +734,15 @@ background-image: url(:/res/4.bmp);
 border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
-QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
-
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/press-52-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -689,7 +796,13 @@ border-width: 1px;
 border-style: solid;}
 
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+{
+	background-color: rgb(211, 215, 207);
+	background-image: url(:/res/pressed.bmp);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
 
 
 </string>
@@ -788,10 +901,15 @@ background-image: url(:/res/6.bmp);
 border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
-QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
-
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/press-52-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -821,9 +939,15 @@ border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
 
-QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/press-52-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -858,10 +982,15 @@ background-image: url(:/res/5.bmp);
 border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
-QPushButton:hover{background-color: rgb(246, 246, 246);color: rgb(86, 164, 246);border-color: rgb(255, 255, 255);border-width: 2px;border-style: solid;}
-
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{
+	background-image: url(:/res/press-52-32.bmp);
+	background-color: rgb(211, 215, 207);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+</string>
    </property>
    <property name="text">
     <string/>
@@ -890,8 +1019,18 @@ background-image: url(:/res/usepreset.bmp);
 border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
+
 QPushButton:pressed
-{background-color: rgb(255, 255, 255);color: rgb(255, 255, 255);border-color: rgb(86, 164, 246);border-width: 6px;border-style: solid;}</string>
+{
+	background-color: rgb(211, 215, 207);
+	background-image: url(:/res/pressed.bmp);
+   border-style: dashed; /*边框样式*/
+   border-width: 1px;  /*边框宽度为4像素*/
+
+}
+
+
+</string>
    </property>
    <property name="text">
     <string/>
@@ -951,7 +1090,8 @@ border-color: rgb(255, 255, 255);
 border-width: 1px;
 border-style: solid;}
 QPushButton:pressed
-{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}</string>
+{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}
+</string>
    </property>
    <property name="text">
     <string/>

@@ -89,8 +89,8 @@ public:
     QPushButton *timeSetPushButton;
     QDateEdit *dateEdit;
     QGroupBox *groupBox;
-    QGroupBox *groupBox_3;
     QGroupBox *groupBox_2;
+    QGroupBox *groupBox_3;
     QGroupBox *groupBox_4;
     QGroupBox *groupBox_5;
     QLabel *label_6;
@@ -118,7 +118,13 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"  background-image: url(:/res/preesd_user.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}\n"
+""));
         presetReturnTimeSetLabel = new QLabel(devUpdateWidget);
         presetReturnTimeSetLabel->setObjectName(QString::fromUtf8("presetReturnTimeSetLabel"));
         presetReturnTimeSetLabel->setGeometry(QRect(50, 80, 211, 21));
@@ -151,7 +157,12 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         pollingTimeSetRadioButton_3 = new QRadioButton(devUpdateWidget);
         pollingTimeSetRadioButton_3->setObjectName(QString::fromUtf8("pollingTimeSetRadioButton_3"));
         pollingTimeSetRadioButton_3->setGeometry(QRect(440, 13, 61, 22));
@@ -247,9 +258,7 @@ public:
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "\n"
-"\n"
-"QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+""));
         alarmPushButton->setCheckable(true);
         label_4 = new QLabel(devUpdateWidget);
         label_4->setObjectName(QString::fromUtf8("label_4"));
@@ -290,15 +299,20 @@ public:
         configFilelookPushButton->setObjectName(QString::fromUtf8("configFilelookPushButton"));
         configFilelookPushButton->setGeometry(QRect(130, 308, 112, 32));
         configFilelookPushButton->setFont(font);
+        configFilelookPushButton->setFocusPolicy(Qt::ClickFocus);
         configFilelookPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-image: url(:/monres/browse.bmp);\n"
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "\n"
-"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed.bmp);	\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         carriageSelectionComboBox = new QComboBox(deviceManagewidget);
         carriageSelectionComboBox->addItem(QString());
         carriageSelectionComboBox->addItem(QString());
@@ -332,7 +346,12 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed_137-39.jpg);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         label_15 = new QLabel(deviceManagewidget);
         label_15->setObjectName(QString::fromUtf8("label_15"));
         label_15->setGeometry(QRect(680, 220, 101, 21));
@@ -356,7 +375,12 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/press-161-43.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         systimeAdjustLabel = new QLabel(deviceManagewidget);
         systimeAdjustLabel->setObjectName(QString::fromUtf8("systimeAdjustLabel"));
         systimeAdjustLabel->setGeometry(QRect(260, 125, 91, 21));
@@ -381,7 +405,12 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         configFileSelectionLabel = new QLabel(deviceManagewidget);
         configFileSelectionLabel->setObjectName(QString::fromUtf8("configFileSelectionLabel"));
         configFileSelectionLabel->setGeometry(QRect(10, 280, 101, 17));
@@ -390,6 +419,7 @@ public:
         cameraLabel = new QLabel(deviceManagewidget);
         cameraLabel->setObjectName(QString::fromUtf8("cameraLabel"));
         cameraLabel->setGeometry(QRect(736, 252, 61, 17));
+        cameraLabel->setFont(font);
         cameraLabel->setStyleSheet(QString::fromUtf8(""));
         contrastLabel = new QLabel(deviceManagewidget);
         contrastLabel->setObjectName(QString::fromUtf8("contrastLabel"));
@@ -400,14 +430,21 @@ public:
         configFileImportPushButton->setObjectName(QString::fromUtf8("configFileImportPushButton"));
         configFileImportPushButton->setGeometry(QRect(50, 350, 82, 37));
         configFileImportPushButton->setFont(font);
+        configFileImportPushButton->setFocusPolicy(Qt::ClickFocus);
         configFileImportPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-image: url(:/monres/in.bmp);\n"
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
 "border-style: solid;}\n"
 "\n"
+"\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed_alarm.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         sysDataAdjustLabel = new QLabel(deviceManagewidget);
         sysDataAdjustLabel->setObjectName(QString::fromUtf8("sysDataAdjustLabel"));
         sysDataAdjustLabel->setGeometry(QRect(110, 125, 131, 21));
@@ -443,11 +480,17 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         downLoadLogPushButton = new QPushButton(deviceManagewidget);
         downLoadLogPushButton->setObjectName(QString::fromUtf8("downLoadLogPushButton"));
         downLoadLogPushButton->setGeometry(QRect(300, 350, 112, 32));
         downLoadLogPushButton->setFont(font);
+        downLoadLogPushButton->setFocusPolicy(Qt::ClickFocus);
         downLoadLogPushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-image: url(:/monres/downlog.bmp);\n"
 "border-color: rgb(255, 255, 255);\n"
@@ -455,7 +498,16 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed.bmp);	\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}\n"
+"\n"
+"\n"
+""));
+        downLoadLogPushButton->setAutoDefault(false);
         updateStatueTextEdit = new QTextEdit(deviceManagewidget);
         updateStatueTextEdit->setObjectName(QString::fromUtf8("updateStatueTextEdit"));
         updateStatueTextEdit->setEnabled(false);
@@ -468,11 +520,15 @@ public:
         label_19 = new QLabel(deviceManagewidget);
         label_19->setObjectName(QString::fromUtf8("label_19"));
         label_19->setGeometry(QRect(270, 280, 101, 17));
+        label_19->setFont(font);
         configFilelookPushButton_2 = new QPushButton(deviceManagewidget);
         configFilelookPushButton_2->setObjectName(QString::fromUtf8("configFilelookPushButton_2"));
         configFilelookPushButton_2->setGeometry(QRect(380, 310, 112, 32));
         configFilelookPushButton_2->setFont(font);
-        configFilelookPushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        configFilelookPushButton_2->setFocusPolicy(Qt::ClickFocus);
+        configFilelookPushButton_2->setAcceptDrops(false);
+        configFilelookPushButton_2->setStyleSheet(QString::fromUtf8("\n"
+"QPushButton{\n"
 "background-image: url(:/monres/browse.bmp);\n"
 "border-color: rgb(255, 255, 255);\n"
 "border-width: 1px;\n"
@@ -480,13 +536,27 @@ public:
 "\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed.bmp);	\n"
+"   background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; \n"
+"   border-width: 1px; \n"
+"}\n"
+"\n"
+"\n"
+"\n"
+""));
+        configFilelookPushButton_2->setCheckable(false);
+        configFilelookPushButton_2->setAutoRepeatDelay(300);
+        configFilelookPushButton_2->setAutoRepeatInterval(100);
         label_8 = new QLabel(deviceManagewidget);
         label_8->setObjectName(QString::fromUtf8("label_8"));
         label_8->setGeometry(QRect(40, 45, 51, 17));
+        label_8->setFont(font);
         label_12 = new QLabel(deviceManagewidget);
         label_12->setObjectName(QString::fromUtf8("label_12"));
         label_12->setGeometry(QRect(40, 85, 51, 17));
+        label_12->setFont(font);
         timeEdit = new QTimeEdit(deviceManagewidget);
         timeEdit->setObjectName(QString::fromUtf8("timeEdit"));
         timeEdit->setGeometry(QRect(110, 80, 118, 35));
@@ -502,24 +572,20 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         dateEdit = new QDateEdit(deviceManagewidget);
         dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
         dateEdit->setGeometry(QRect(110, 40, 118, 35));
         dateEdit->setDate(QDate(2020, 1, 1));
         groupBox = new QGroupBox(deviceManagewidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(10, 0, 461, 201));
+        groupBox->setGeometry(QRect(30, 20, 421, 101));
         groupBox->setStyleSheet(QString::fromUtf8("QGroupBox{\n"
-"	border-width:1px;\n"
-"	border-style:solid;\n"
-"	border-color:black;\n"
-"}"));
-        groupBox_3 = new QGroupBox(groupBox);
-        groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
-        groupBox_3->setGeometry(QRect(20, 20, 421, 101));
-        groupBox_3->setLayoutDirection(Qt::LeftToRight);
-        groupBox_3->setStyleSheet(QString::fromUtf8("QGroupBox{\n"
 "	border-width:1px;\n"
 "	border-style:solid;\n"
 "	border-color:black;\n"
@@ -532,16 +598,24 @@ public:
 "	top:-1ex;\n"
 "	margin-left:0px;\n"
 "	padding:0 1px;\n"
-"}"));
+"}\n"
+""));
         groupBox_2 = new QGroupBox(deviceManagewidget);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setGeometry(QRect(490, 0, 471, 201));
+        groupBox_2->setGeometry(QRect(490, 0, 470, 201));
         groupBox_2->setStyleSheet(QString::fromUtf8("QGroupBox{\n"
 "	border-width:1px;\n"
 "	border-style:solid;\n"
 "	border-color:black;\n"
 "}"));
-        groupBox_2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+        groupBox_3 = new QGroupBox(deviceManagewidget);
+        groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
+        groupBox_3->setGeometry(QRect(10, 0, 461, 201));
+        groupBox_3->setStyleSheet(QString::fromUtf8("QGroupBox{\n"
+"	border-width:1px;\n"
+"	border-style:solid;\n"
+"	border-color:black;\n"
+"}"));
         groupBox_4 = new QGroupBox(deviceManagewidget);
         groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
         groupBox_4->setGeometry(QRect(0, 215, 501, 181));
@@ -552,12 +626,16 @@ public:
 "}"));
         groupBox_5 = new QGroupBox(deviceManagewidget);
         groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
-        groupBox_5->setGeometry(QRect(510, 215, 461, 181));
+        groupBox_5->setGeometry(QRect(510, 215, 464, 181));
         groupBox_5->setStyleSheet(QString::fromUtf8("QGroupBox{\n"
 "	border-width:1px;\n"
 "	border-style:solid;\n"
 "	border-color:black;\n"
 "}"));
+        groupBox_5->raise();
+        groupBox_4->raise();
+        groupBox_3->raise();
+        groupBox_2->raise();
         label_15->raise();
         saturationLineEdit->raise();
         imageParamSetPushButton->raise();
@@ -590,15 +668,12 @@ public:
         configFileDisplayLineEdit_2->raise();
         label_19->raise();
         configFilelookPushButton_2->raise();
+        groupBox->raise();
         label_8->raise();
-        label_12->raise();
         timeEdit->raise();
         timeSetPushButton->raise();
         dateEdit->raise();
-        groupBox->raise();
-        groupBox_2->raise();
-        groupBox_4->raise();
-        groupBox_5->raise();
+        label_12->raise();
         label_6 = new QLabel(devUpdateWidget);
         label_6->setObjectName(QString::fromUtf8("label_6"));
         label_6->setGeometry(QRect(0, 0, 1024, 630));
@@ -622,7 +697,12 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-color: rgb(211, 215, 207);\n"
+"	background-image: url(:/res/pressed.bmp);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         label_6->raise();
         label_2->raise();
         label_3->raise();
@@ -723,9 +803,9 @@ public:
         timeEdit->setDisplayFormat(QCoreApplication::translate("devUpdateWidget", "hh:mm:ss", nullptr));
         timeSetPushButton->setText(QString());
         dateEdit->setDisplayFormat(QCoreApplication::translate("devUpdateWidget", "yyyy-MM-dd", nullptr));
-        groupBox->setTitle(QString());
-        groupBox_3->setTitle(QCoreApplication::translate("devUpdateWidget", " \346\233\264\346\224\271\347\263\273\347\273\237\346\227\266\351\227\264", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("devUpdateWidget", "\346\233\264\346\224\271\347\263\273\347\273\237\346\227\266\351\227\264", nullptr));
         groupBox_2->setTitle(QString());
+        groupBox_3->setTitle(QString());
         groupBox_4->setTitle(QString());
         groupBox_5->setTitle(QString());
         label_6->setText(QString());

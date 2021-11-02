@@ -1,9 +1,11 @@
 #include "MyApplication.h"
 #include <QApplication>
+#include "led.h"
 #include "choicelogindevwidget.h"
 #include "waitloginwidget.h"
 #include "loginwidget.h"
 #include "pvmsmenuwidget.h"
+#include "devmanagewidget.h"
 #include <QtVirtualKeyboard>
 #include <QPixmap>
 #include <QSplashScreen>
@@ -15,6 +17,7 @@
 #include <arpa/inet.h>
 #include <signal.h>
 #include <stdio.h>
+#include <QFont>
 
 
 
@@ -31,7 +34,6 @@ int main(int argc, char *argv[])
     qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
 
     MyApplication app(argc, argv);
-
 
     char acNvrServerIp[128] = {0}, acClientVersion[64] = {0};
     short sYear = 0;
@@ -122,9 +124,7 @@ int main(int argc, char *argv[])
         tPvmsInfo.i8PvmsVideoNum = tTrainConfigInfo.tNvrServerInfo[i].iPvmsCameraNum;
         tPvmsInfo.i8PvmsCarriageNo = tTrainConfigInfo.tNvrServerInfo[i].iPvmsCarriageNO;
         pmsgHandle = STATE_GetNvrServerPmsgHandle(i);
-//        qDebug()<<"*******************---111111:"<<tPvmsInfo.i8PvmsVideoNum<<tPvmsInfo.i8PvmsCarriageNo<<endl;
 
-//        printf("*******************---111111=%d--=%d\n",tPvmsInfo.i8PvmsVideoNum,tPvmsInfo.i8PvmsCarriageNo);
         iRet = PMSG_SendPmsgData(pmsgHandle, CLI_SERV_MSG_TYPE_SET_PVMS_INFO, (char *)&tPvmsInfo, sizeof(T_PVMS_INFO));
         if (iRet < 0)
         {
@@ -147,22 +147,15 @@ int main(int argc, char *argv[])
             LOG_WriteLog(&tLogInfo);
         }
     }
-
+    LED_Init();
   //创建QT运行主应用程序
     app.setWindowIcon(QIcon(":/res/info.png"));   //设置窗口图标，这里主要是messagebox窗体会显示，而避免出现QT图标
 //    qDebug() << "drivers------------------------"<< QSqlDatabase::drivers();
+    QFont font;
+    font.setFamily("宋体");
+    font.setPixelSize(12);
+    app.setFont(font);
 
-
-//    QTextCodec *codec = QTextCodec::codecForName("System");
-//    QTextCodec::setCodecForLocale(codec);
-//    QTextCodec::setCodecForCStrings(codec);
-//    QTextCodec::setCodecForTr(codec);
-
-//    QPixmap pixmap(":/res/background.png");
-//    QSplashScreen splash(pixmap);
-//    splash.showFullScreen();
-//    splash.show();
-//    a.processEvents();
 
 //    g_waitLoginPage = new waitLoginWidget();
     g_choiceLoginDevPage = new choiceLoginDevWidget();

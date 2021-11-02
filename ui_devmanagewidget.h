@@ -64,7 +64,12 @@ public:
 "border-style: solid;}\n"
 "\n"
 "QPushButton:pressed\n"
-"{background-color: rgb(86, 164, 246);color: rgb(255, 255, 255);border-color: rgb(170, 170, 170);border-width: 2px;border-style: solid;}"));
+"{\n"
+"	background-image: url(:/res/pressed-137-35.bmp);\n"
+"	background-color: rgb(211, 215, 207);\n"
+"   border-style: dashed; /*\350\276\271\346\241\206\346\240\267\345\274\217*/\n"
+"   border-width: 1px;  /*\350\276\271\346\241\206\345\256\275\345\272\246\344\270\2724\345\203\217\347\264\240*/\n"
+"}"));
         alarmPushButton = new QPushButton(devManageWidget);
         alarmPushButton->setObjectName(QString::fromUtf8("alarmPushButton"));
         alarmPushButton->setGeometry(QRect(480, 590, 82, 36));
@@ -159,12 +164,12 @@ public:
         TrainNumberlabel->raise();
         TrainNumberSetPushButton->raise();
         canselPushButton->raise();
-        devStatusTableWidget->raise();
         devStatusLabel->raise();
         devStorageLabel->raise();
-        devStorageTableWidget->raise();
         groupBox->raise();
+        devStatusTableWidget->raise();
         groupBox_2->raise();
+        devStorageTableWidget->raise();
 
         retranslateUi(devManageWidget);
 

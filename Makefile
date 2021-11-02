@@ -53,6 +53,7 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = cmplayer.cpp \
+		led.c \
 		main.cpp \
 		MyApplication.cpp \
 		choicelogindevwidget.cpp \
@@ -92,6 +93,7 @@ SOURCES       = cmplayer.cpp \
 		moc_usergroupmanage.cpp \
 		moc_ckeyboard.cpp
 OBJECTS       = cmplayer.o \
+		led.o \
 		main.o \
 		MyApplication.o \
 		choicelogindevwidget.o \
@@ -287,6 +289,7 @@ DIST          = /home/cftc/toolchain/host/mkspecs/features/spec_pre.prf \
 		MyApplication.pro MyApplication.h \
 		choicelogindevwidget.h \
 		cmplayer.h \
+		led.h \
 		loginwidget.h \
 		pvmsmenuwidget.h \
 		pvmsmonitorwidget.h \
@@ -309,6 +312,7 @@ DIST          = /home/cftc/toolchain/host/mkspecs/features/spec_pre.prf \
 		usergroupmanage.h \
 		ckeyboard.h \
 		define.h cmplayer.cpp \
+		led.c \
 		main.cpp \
 		MyApplication.cpp \
 		choicelogindevwidget.cpp \
@@ -670,8 +674,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents res.qrc res.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /home/cftc/toolchain/host/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents MyApplication.h choicelogindevwidget.h cmplayer.h loginwidget.h pvmsmenuwidget.h pvmsmonitorwidget.h recordplaywidget.h inteanalywidget.h devmanagewidget.h devupdatewidget.h alarmwidget.h fileConfig.h gb2312_utf8.h log.h pmsgcli.h state.h types.h presetpasswdconfirm.h myslider.h ftpApi.h rs485serv.h waitloginwidget.h usergroupmanage.h ckeyboard.h define.h $(DISTDIR)/
-	$(COPY_FILE) --parents cmplayer.cpp main.cpp MyApplication.cpp choicelogindevwidget.cpp loginwidget.cpp pvmsmenuwidget.cpp pvmsmonitorwidget.cpp recordplaywidget.cpp inteanalywidget.cpp devmanagewidget.cpp devupdatewidget.cpp alarmwidget.cpp fileConfig.cpp state.cpp gb2312_utf8.c log.c pmsgcli.c presetpasswdconfirm.cpp myslider.cpp ftpApi.c rs485serv.c waitloginwidget.cpp usergroupmanage.cpp ckeyboard.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents MyApplication.h choicelogindevwidget.h cmplayer.h led.h loginwidget.h pvmsmenuwidget.h pvmsmonitorwidget.h recordplaywidget.h inteanalywidget.h devmanagewidget.h devupdatewidget.h alarmwidget.h fileConfig.h gb2312_utf8.h log.h pmsgcli.h state.h types.h presetpasswdconfirm.h myslider.h ftpApi.h rs485serv.h waitloginwidget.h usergroupmanage.h ckeyboard.h define.h $(DISTDIR)/
+	$(COPY_FILE) --parents cmplayer.cpp led.c main.cpp MyApplication.cpp choicelogindevwidget.cpp loginwidget.cpp pvmsmenuwidget.cpp pvmsmonitorwidget.cpp recordplaywidget.cpp inteanalywidget.cpp devmanagewidget.cpp devupdatewidget.cpp alarmwidget.cpp fileConfig.cpp state.cpp gb2312_utf8.c log.c pmsgcli.c presetpasswdconfirm.cpp myslider.cpp ftpApi.c rs485serv.c waitloginwidget.cpp usergroupmanage.cpp ckeyboard.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents choicelogindevwidget.ui loginwidget.ui pvmsmenuwidget.ui pvmsmonitorwidget.ui recordplaywidget.ui inteanalywidget.ui devmanagewidget.ui devupdatewidget.ui alarmwidget.ui presetpasswdconfirm.ui useredit.ui useradd.ui usermanage.ui usergroupmanage.ui waitloginwidget.ui usermanageconfig.ui devupdatewidget_base.ui ckeyboard.ui $(DISTDIR)/
 
 
@@ -836,10 +840,13 @@ qrc_res.cpp: res.qrc \
 		res/4.bmp \
 		res/pause_down.png \
 		res/right.bmp \
+		res/press-180-43.bmp \
 		res/time_set.png \
 		res/Pantoequip1.bmp \
+		res/pressed_137-39.jpg \
 		res/111.png \
 		res/fast_hover.png \
+		res/preesd_user.bmp \
 		res/stop_nor.png \
 		res/prev_nor.png \
 		res/sdgbt.png \
@@ -852,6 +859,7 @@ qrc_res.cpp: res.qrc \
 		res/prev_hover.png \
 		res/stop_down.png \
 		res/ptz_up.png \
+		res/pressed-137-35.bmp \
 		res/stop_hover.png \
 		res/left.bmp \
 		res/777.png \
@@ -863,6 +871,7 @@ qrc_res.cpp: res.qrc \
 		res/next_nor.png \
 		res/myCheckBox.qss \
 		res/slow_down.png \
+		res/pressed-137-39.bmp \
 		res/ck.png \
 		res/play_nor.png \
 		res/minus_down.png \
@@ -873,17 +882,20 @@ qrc_res.cpp: res.qrc \
 		res/PantoPlay1.bmp \
 		res/Password.png \
 		res/plus.bmp \
+		res/pressed-71-32.bmp \
 		res/PantoIntell.bmp \
 		res/setuse.bmp \
 		res/2.bmp \
 		res/minus_hover.png \
 		res/near.bmp \
 		res/substruct.bmp \
+		res/pressed.bmp \
 		res/savevedio.bmp \
 		res/close.png \
 		res/delete.png \
 		res/background1.png \
 		res/PantoMonitor1.bmp \
+		res/press-161-43.bmp \
 		res/slow_nor.png \
 		res/6.bmp \
 		res/plus_nor.png \
@@ -895,6 +907,7 @@ qrc_res.cpp: res.qrc \
 		res/bk2.png \
 		res/plus_down.png \
 		res/fast_nor.png \
+		res/pressed-161-46.bmp \
 		res/preview.bmp \
 		res/saveing.bmp \
 		res/sure.png \
@@ -906,7 +919,10 @@ qrc_res.cpp: res.qrc \
 		res/zxanniubk.png \
 		res/fare.bmp \
 		res/PantoPlay.bmp \
+		res/pressed-207-43.bmp \
+		res/pressed_137-39.bmp \
 		res/title.png \
+		res/press-52-32.bmp \
 		res/5.bmp \
 		res/title1.png \
 		res/up.bmp \
@@ -919,6 +935,7 @@ qrc_res.cpp: res.qrc \
 		res/user.png \
 		res/PantoMonitor.bmp \
 		res/down.bmp \
+		res/pressed_alarm.bmp \
 		res/login.png \
 		res/next_down.png \
 		res/playback.bmp \
@@ -1065,10 +1082,13 @@ qrc_res.cpp: res.qrc \
 		res/4.bmp \
 		res/pause_down.png \
 		res/right.bmp \
+		res/press-180-43.bmp \
 		res/time_set.png \
 		res/Pantoequip1.bmp \
+		res/pressed_137-39.jpg \
 		res/111.png \
 		res/fast_hover.png \
+		res/preesd_user.bmp \
 		res/stop_nor.png \
 		res/prev_nor.png \
 		res/sdgbt.png \
@@ -1081,6 +1101,7 @@ qrc_res.cpp: res.qrc \
 		res/prev_hover.png \
 		res/stop_down.png \
 		res/ptz_up.png \
+		res/pressed-137-35.bmp \
 		res/stop_hover.png \
 		res/left.bmp \
 		res/777.png \
@@ -1092,6 +1113,7 @@ qrc_res.cpp: res.qrc \
 		res/next_nor.png \
 		res/myCheckBox.qss \
 		res/slow_down.png \
+		res/pressed-137-39.bmp \
 		res/ck.png \
 		res/play_nor.png \
 		res/minus_down.png \
@@ -1102,17 +1124,20 @@ qrc_res.cpp: res.qrc \
 		res/PantoPlay1.bmp \
 		res/Password.png \
 		res/plus.bmp \
+		res/pressed-71-32.bmp \
 		res/PantoIntell.bmp \
 		res/setuse.bmp \
 		res/2.bmp \
 		res/minus_hover.png \
 		res/near.bmp \
 		res/substruct.bmp \
+		res/pressed.bmp \
 		res/savevedio.bmp \
 		res/close.png \
 		res/delete.png \
 		res/background1.png \
 		res/PantoMonitor1.bmp \
+		res/press-161-43.bmp \
 		res/slow_nor.png \
 		res/6.bmp \
 		res/plus_nor.png \
@@ -1124,6 +1149,7 @@ qrc_res.cpp: res.qrc \
 		res/bk2.png \
 		res/plus_down.png \
 		res/fast_nor.png \
+		res/pressed-161-46.bmp \
 		res/preview.bmp \
 		res/saveing.bmp \
 		res/sure.png \
@@ -1135,7 +1161,10 @@ qrc_res.cpp: res.qrc \
 		res/zxanniubk.png \
 		res/fare.bmp \
 		res/PantoPlay.bmp \
+		res/pressed-207-43.bmp \
+		res/pressed_137-39.bmp \
 		res/title.png \
+		res/press-52-32.bmp \
 		res/5.bmp \
 		res/title1.png \
 		res/up.bmp \
@@ -1148,6 +1177,7 @@ qrc_res.cpp: res.qrc \
 		res/user.png \
 		res/PantoMonitor.bmp \
 		res/down.bmp \
+		res/pressed_alarm.bmp \
 		res/login.png \
 		res/next_down.png \
 		res/playback.bmp \
@@ -3667,6 +3697,9 @@ cmplayer.o: cmplayer.cpp cmplayer.h \
 		/home/cftc/toolchain/host/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtCore/QFile
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cmplayer.o cmplayer.cpp
 
+led.o: led.c led.h
+	$(CC) -c $(CFLAGS) $(INCPATH) -o led.o led.c
+
 main.o: main.cpp MyApplication.h \
 		/home/cftc/toolchain/host/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtWidgets/QWidget \
 		/home/cftc/toolchain/host/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtWidgets/qwidget.h \
@@ -3779,6 +3812,7 @@ main.o: main.cpp MyApplication.h \
 		/home/cftc/toolchain/host/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtWidgets/qdesktopwidget.h \
 		/home/cftc/toolchain/host/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtGui/qguiapplication.h \
 		/home/cftc/toolchain/host/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtGui/qinputmethod.h \
+		led.h \
 		choicelogindevwidget.h \
 		waitloginwidget.h \
 		/home/cftc/toolchain/host/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtWidgets/QLabel \
@@ -5727,6 +5761,7 @@ devmanagewidget.o: devmanagewidget.cpp devmanagewidget.h \
 		/home/cftc/toolchain/host/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtWidgets/QMessageBox \
 		/home/cftc/toolchain/host/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtWidgets/qmessagebox.h \
 		/home/cftc/toolchain/host/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtWidgets/qdialog.h \
+		led.h \
 		ui_devmanagewidget.h \
 		/home/cftc/toolchain/host/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtCore/QVariant \
 		/home/cftc/toolchain/host/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtWidgets/QApplication \

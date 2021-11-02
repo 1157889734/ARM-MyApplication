@@ -14,6 +14,7 @@
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <QProcess>
+#include <QLabel>
 
 static int g_ibShowKeyboard = 0;
 static int g_ichagepage = 0;
@@ -74,14 +75,14 @@ devUpdateWidget::devUpdateWidget(QWidget *parent) :
 
     connect(ui->permissonManagePushButton, SIGNAL(clicked(bool)), this, SLOT(userManageSlot()));
 
-    connect(ui->configFilelookPushButton,   SIGNAL(clicked(bool)),   this, SLOT(configFileSelectionSlot()));
+    connect(ui->configFilelookPushButton,   SIGNAL(released()),   this, SLOT(configFileSelectionSlot()));
 
-    connect(ui->configFilelookPushButton_2, SIGNAL(clicked(bool)), this, SLOT(configUpdateFileSLOT()));
+    connect(ui->configFilelookPushButton_2, SIGNAL(released()), this, SLOT(configUpdateFileSLOT()));
 
-    connect(ui->configFileImportPushButton, SIGNAL(clicked(bool)), this, SLOT(configFileImportSlot()));
+    connect(ui->configFileImportPushButton, SIGNAL(released()), this, SLOT(configFileImportSlot()));
 
 
-    connect(ui->downLoadLogPushButton, SIGNAL(clicked(bool)), this, SLOT(downLoadLogSlot()));
+    connect(ui->downLoadLogPushButton, SIGNAL(released()), this, SLOT(downLoadLogSlot()));
 
 
     connect(ui->updateBeginPushButton, SIGNAL(clicked(bool)), this, SLOT(devUpdateSlot()));
@@ -361,7 +362,7 @@ void devUpdateWidget::systimeSlot()
     T_TIME_INFO tTimeInfo;
     T_TRAIN_CONFIG tTrainConfigInfo;
     T_LOG_INFO tLogInfo;
-
+    ui->timeAdjustPushButton->setEnabled(false);
     STATE_GetCurrentUserType(acUserType, sizeof(acUserType));
 //        DebugPrint(DEBUG_UI_OPTION_PRINT, "devUpdateWidget set sys time!\n");
     if (!strcmp(acUserType, "operator"))	 //操作员无权校时
@@ -371,6 +372,8 @@ void devUpdateWidget::systimeSlot()
         box.setStandardButtons (QMessageBox::Ok);	//设置提示框只有一个标准按钮
         box.setButtonText (QMessageBox::Ok,tr("确 定")); 	//将按钮显示改成"确 定"
         box.exec();
+        ui->timeAdjustPushButton->setEnabled(true);
+
     }
     else
     {
@@ -432,6 +435,7 @@ void devUpdateWidget::systimeSlot()
                 }
             }
         }
+        ui->timeAdjustPushButton->setEnabled(true);
 
     }
 
@@ -650,10 +654,6 @@ void devUpdateWidget::setCameraImageParamSlot()
         {
 //            DebugPrint(DEBUG_UI_ERROR_PRINT, "[%s] PMSG_SendPmsgData CLI_SERV_MSG_TYPE_SET_PIC_ATTRIBUTE error!iRet=%d,server=%d\n", __FUNCTION__, iRet, idex+1);
         }
-        QMessageBox box(QMessageBox::Information,QString::fromUtf8("注意"),QString::fromUtf8("图像参数设置成功!"));
-        box.setStandardButtons (QMessageBox::Ok);
-        box.setButtonText (QMessageBox::Ok,QString::fromUtf8("确 定"));
-        box.exec();
 
     }
 
@@ -735,26 +735,16 @@ void devUpdateWidget::configFileSelectionSlot()
                     return;
                 }
             }
-#if 0  //test ?????
-            if (STATE_ParseUsbLicense("//mnt/sdcard/") < 0)
-            {
-//                DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget configFileSelection check License error!\n");
-                QMessageBox box(QMessageBox::Warning,QString::fromUtf8("错误"),QString::fromUtf8("授权失败!"));
-                box.setStandardButtons (QMessageBox::Ok);
-                box.setButtonText (QMessageBox::Ok,QString::fromUtf8("确 定"));
-                box.exec();
-                return;
-            }
-#endif
+
             filename = QFileDialog::getOpenFileName(this, "打开文件", "/media/usb0/", "ini文件(*.ini)");
             if (!filename.isNull())
             {
-                //QMessageBox::information(this, "Document", "Has document", QMessageBox::Ok | QMessageBox::Cancel);
                 ui->configFileDisplayLineEdit->setText(filename);
             }
         }
 
 }
+
 
 #if 1
 void devUpdateWidget::configUpdateFileSLOT()
@@ -763,6 +753,7 @@ void devUpdateWidget::configUpdateFileSLOT()
 
     QString filename = "";
     char acUserType[64] = {0};
+    qDebug()<<"************configUpdateFileSLOT="<<__LINE__<<endl;
 
 //    DebugPrint(DEBUG_UI_OPTION_PRINT, "devUpdateWidget configFileSelection button pressed!\n");
 
@@ -801,20 +792,9 @@ void devUpdateWidget::configUpdateFileSLOT()
                 }
             }
 
-//            if (STATE_ParseUsbLicense("/mnt/usb/u/") < 0)
-//            {
-////                DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget configFileSelection check License error!\n");
-//                QMessageBox box(QMessageBox::Warning,QString::fromUtf8("错误"),QString::fromUtf8("授权失败!"));
-//                box.setStandardButtons (QMessageBox::Ok);
-//                box.setButtonText (QMessageBox::Ok,QString::fromUtf8("确 定"));
-//                box.exec();
-//                return;
-//            }
-
             filename = QFileDialog::getOpenFileName(this, "打开文件", "/media/usb0/", "文件(*)");
             if (!filename.isNull())
             {
-                //QMessageBox::information(this, "Document", "Has document", QMessageBox::Ok | QMessageBox::Cancel);
                 ui->configFileDisplayLineEdit_2->setText(filename);
             }
 
@@ -852,11 +832,9 @@ void devUpdateWidget::devUpdateSlot()
         if (access("/media/usb0/", F_OK) < 0)
         {
 //            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget::%s %d not get USB device!\n",__FUNCTION__,__LINE__);
-            QMessageBox msgBox(QMessageBox::Warning,QString(tr("注意")),QString(tr("未检测到U盘,请插入!")));
-            msgBox.setStandardButtons(QMessageBox::Yes);
-            msgBox.button(QMessageBox::Yes)->setText("确 定");
-            msgBox.exec();
             ui->clientRebootPushButton->setEnabled(true);
+            ui->updateStatueTextEdit->append(tr("没有发现USB"));
+
             return;
         }
         else
@@ -864,11 +842,9 @@ void devUpdateWidget::devUpdateSlot()
             if (0 == STATE_FindUsbDev())   //这里处理一个特殊情况:U盘拔掉时umount失败，/mnt/usb/u/路径还存在，但是实际U盘是没有再插上的
             {
 //                DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget::%s %d not get USB device!\n",__FUNCTION__,__LINE__);
-                QMessageBox msgBox(QMessageBox::Warning,QString(tr("注意")),QString(tr("未检测到U盘,请插入!")));
-                msgBox.setStandardButtons(QMessageBox::Yes);
-                msgBox.button(QMessageBox::Yes)->setText("确 定");
-                msgBox.exec();
                 ui->clientRebootPushButton->setEnabled(true);
+                ui->updateStatueTextEdit->append(tr("没有发现USB"));
+
                 return;
             }
         }
@@ -900,7 +876,6 @@ void devUpdateWidget::devUpdateSlot()
             return;
         }
 
-//        if ((access("/mnt/usb/u/mornitorapp.exe", F_OK) < 0) || (access("/mnt/usb/u/version.ini", F_OK) < 0))
         if ((access("/mnt/usb/u/x86MyApplication", F_OK) < 0) || (access("/mnt/usb/u/version.ini", F_OK) < 0))
         {
 //            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget not find update file in USB device!\n");
@@ -964,15 +939,12 @@ void devUpdateWidget::devUpdateSlot()
         snprintf(tLogInfo.acLogDesc, sizeof(tLogInfo.acLogDesc), "Update: old version:%s new version:%s", acLocalVersion, acUpdateVersion);
         LOG_WriteLog(&tLogInfo);
 
-//        DebugPrint(DEBUG_UI_NOMAL_PRINT, "[%s] update device from version:%s to version:%s\n", __FUNCTION__, acLocalVersion, acUpdateVersion);
 
         ui->updateStatueTextEdit->append(tr("正在复制文件..."));
         if (access("/home/data/backup",F_OK) < 0)
         {
             system("mkdir /home/data/backup");
         }
-
-//        system("cp /mnt/usb/u/mornitorapp.exe /home/data/emuVideoMornitorClient/mornitorapp.exe");
 
         system("cp /home/data/x86MyApplication /home/data/backup/");
         system("rm /home/data/x86MyApplication");
@@ -1071,16 +1043,6 @@ void devUpdateWidget::downLoadLogSlot()
         }
 
 
-        QMessageBox msgBox(QMessageBox::Question,QString(tr("提示")),QString(tr("确认导入日志文件？")));
-        msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-        msgBox.button(QMessageBox::Yes)->setText("确 定");
-        msgBox.button(QMessageBox::No)->setText("取 消");
-        iRet=msgBox.exec();
-        if(iRet != QMessageBox::Yes)
-        {
-            return;
-        }
-
 //        system("cp /mnt/usb/u/Station.ini /home/data/emuVideoMornitorClient/Station.ini");
         system("cp /home/data/sys.log /media/usb0/");
 
@@ -1140,15 +1102,6 @@ void devUpdateWidget::configFileImportSlot()
             return;
         }
 
-        QMessageBox msgBox(QMessageBox::Question,QString(tr("提示")),QString(tr("确认导入配置文件？")));
-        msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-        msgBox.button(QMessageBox::Yes)->setText("确 定");
-        msgBox.button(QMessageBox::No)->setText("取 消");
-        iRet=msgBox.exec();
-        if(iRet != QMessageBox::Yes)
-        {
-            return;
-        }
 
 //        system("cp /mnt/usb/u/Station.ini /home/data/emuVideoMornitorClient/Station.ini");
         system("cp /media/usb0/Station.ini /home/data/Station.ini");
@@ -1308,3 +1261,4 @@ void devUpdateWidget::presetReturnTimeChange(int iComboBoxId)
     m_presetReturnTimeText = ui->presetReturnTimeSetLineEdit->text();
     STATE_SetPresetReturnTime(m_presetReturnTimeText.toInt());
 }
+

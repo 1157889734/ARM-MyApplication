@@ -255,15 +255,21 @@ void usergroupManage::on_deletepushButton_clicked()
         qDebug() << "open";
 
     QList<QTableWidgetItem*>items=ui->tableWidget->selectedItems();
-//    int cout = items.count();
+    int cout = items.count();
+    if(!cout)
+    {
+        return;
+    }
     QTableWidgetItem *item = items.at(0);
     QString text = item->text(); //获取内容
     QSqlQuery query;
     QString sql;
+
     char acUserType[16] = {0};
     STATE_GetCurrentUserType(acUserType, sizeof(acUserType));
     int rowIndex = -1;
     rowIndex = ui->tableWidget->currentRow();
+
     if (rowIndex != -1)
     {
         if (!strcmp(acUserType, "supperManager"))   //超级管理员不能删除超级管理员
@@ -336,7 +342,11 @@ void usergroupManage::table_choose_fuction(QTableWidgetItem *item)
 {
     g_curTextState = 1;
     QList<QTableWidgetItem*>items=ui->tableWidget->selectedItems();
-//    int cout = items.count();
+    int cout = items.count();
+    if(!cout)
+    {
+        return;
+    }
     QTableWidgetItem *mitem = items.at(0);
     QString text = mitem->text(); //获取内容
     ui->usernamelineEdit->setText(text);

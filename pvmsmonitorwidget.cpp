@@ -498,7 +498,7 @@ void *monitorThread(void *param)     //实时监控线程，对通道轮询、�
         //printf("tFullScreenCurTime=%d,pvmsMonitorPage->m_lastActionTime=%d\n",tFullScreenCurTime,pvmsMonitorPage->m_lastActionTime);
         if (pvmsMonitorPage->isHidden() != 1)   //只有当前处于受电弓监控界面时才做触发全屏处理
         {
-            pvmsMonitorPage->triggerFullScreenSignal();
+//            pvmsMonitorPage->triggerFullScreenSignal();
         }
         pvmsMonitorPage->m_lastActionTime = tFullScreenCurTime;
     }
@@ -552,7 +552,9 @@ void pvmsMonitorWidget::startVideoPolling()    //开启视频轮询的处理
     m_lastActionTime = s_info.uptime;
 
     m_iFullScreenFlag = 1;
-
+    QFont font;
+    font.setFamily("宋体");
+    font.setPixelSize(24);
 
     if(NULL == m_playWin)
     {
@@ -573,6 +575,7 @@ void pvmsMonitorWidget::startVideoPolling()    //开启视频轮询的处理
 
         m_channelStateLabel->setGeometry(452, 360, 130, 50);
         m_channelStateLabel->setStyleSheet("QLabel{color:rgb(55, 82, 103);font: 24pt;background-color: rgb(0, 0, 0);}");
+        m_channelStateLabel->setFont(font);
 
         m_channelStateLabel->setAttribute(Qt::WA_TranslucentBackground, true); //设置控件背景透明
         m_channelStateLabel->show();
@@ -585,8 +588,11 @@ void pvmsMonitorWidget::startVideoPolling()    //开启视频轮询的处理
         m_channelNoLabel->setStyleSheet("QLabel{color:rgb(55, 82, 103);font: 24pt;background-color: rgb(0, 0, 0);}");
 
         m_channelNoLabel->setAttribute(Qt::WA_TranslucentBackground, true);
+        m_channelNoLabel->setFont(font);
+
         m_channelNoLabel->show();
     }
+
 
 
     memset(&tTrainConfigInfo, 0, sizeof(T_TRAIN_CONFIG));
@@ -687,6 +693,7 @@ void pvmsMonitorWidget::startVideoPolling()    //开启视频轮询的处理
 
         m_channelStateLabel->setText(tr("摄像头开启"));
         m_channelNoLabel->setText(tr("通道1"));
+
         m_iCameraPlayNo = -1;
         iFirstFlag = 0;
 
@@ -1001,21 +1008,6 @@ void pvmsMonitorWidget::temporarySaveBeginSlot()
     T_TRAIN_CONFIG tTrainConfigInfo;
     T_LOG_INFO tLogInfo;
     PMSG_HANDLE pmsgHandle = 0;
-
-//    DebugPrint(DEBUG_UI_OPTION_PRINT, "pvmsMonitorWidget temporarySave button pressed!\n");
-
-//    DebugPrint(DEBUG_UI_MESSAGE_PRINT, "pvmsMonitorWidget temporarySave confirm!\n");
-    QMessageBox msgBox(QMessageBox::Information,QString(tr("提示")),QString(tr("是否立即保存!")));
-    msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-    msgBox.button(QMessageBox::Yes)->setText("确 定");
-    msgBox.button(QMessageBox::No)->setText("取 消");
-    iRet = msgBox.exec();
-    if(iRet != QMessageBox::Yes)
-    {
-//        DebugPrint(DEBUG_UI_OPTION_PRINT, "pvmsMonitorWidget temporarySave cancle!\n");
-        return;
-    }
-//    DebugPrint(DEBUG_UI_OPTION_PRINT, "pvmsMonitorWidget temporarySave confirm!\n");
 
     ui->temporarySavePushButton->setStyleSheet("background-image:url(:/monres/saveing.bmp)");
     ui->temporarySavePushButton->setEnabled(false);

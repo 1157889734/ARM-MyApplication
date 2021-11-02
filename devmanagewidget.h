@@ -36,7 +36,6 @@ public:
 
 
 public slots:
-
     void trainNumberChange(QString TrainNumberStr);
     void getDevStateSignalCtrl();
     void alarmPushButoonClickSlot();

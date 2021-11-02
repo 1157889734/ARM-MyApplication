@@ -13,7 +13,7 @@
 #include "debug.h"
 #include "types.h"
 
-#define UART_DEV_NAME  "/dev/ttyAMA2"
+#define UART_DEV_NAME  "/dev/ttyS7"
 #define RECV_BUF_SIZE  1400
 
 typedef struct _T_RS485_PACKET_LIST
@@ -561,7 +561,9 @@ PRS485_HANDLE RS485_CreateConnect()
         return 0;	
     }
 	
-	setSpeed(fd, 115200);
+    setSpeed(fd, 115200);
+//    setSpeed(fd, 9600);
+
     setParity(fd, 8, 0, 1);
 
     memset(pRs485ConnInfo, 0, sizeof(T_RS485_CONN_INFO));
