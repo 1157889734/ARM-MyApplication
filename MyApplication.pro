@@ -7,7 +7,7 @@
 
 QT       += core gui widgets  multimedia multimediawidgets sql virtualkeyboard
 
-TARGET = ARMMyApplication
+TARGET = moittor
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use

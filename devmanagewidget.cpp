@@ -469,7 +469,6 @@ void devManageWidget::getNvrStatusCtrl(PMSG_HANDLE pHandle, char *pcMsgData)
                     ui->devStorageTableWidget->setItem(i, 6, new QTableWidgetItem(QString(tr("硬盘异常"))));
                     ui->devStorageTableWidget->item(i, 6)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
                 }
-                gpio_output_ctrl(LED_DEVICE,LED_OFF);
             }
             else
             {

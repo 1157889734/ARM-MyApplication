@@ -30,7 +30,6 @@ signals:
 
 private:
     Ui::inteAnalyWidget *ui;
-    pvmsMonitorWidget *m_pvmsMonitorPage;
     QTimer *m_alarmHappenTimer;
 
 };

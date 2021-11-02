@@ -354,11 +354,15 @@ void pvmsMenuWidget::recvPmsgCtrl(PMSG_HANDLE pHandle, unsigned char ucMsgCmd, c
                             if (1 == m_iCheckDiskErrFlag[i])
                             {
                                 iAlarmType = ALARM_HDISK_ERR;
+                                m_pvmsMonitorPage->HDiskState = ALARM_HDISK_ERR;
+
                             }
                         }
                         else
                         {
                             iAlarmType = ALARM_HDISK_CLEAR;
+                            m_pvmsMonitorPage->HDiskState = ALARM_HDISK_CLEAR;
+
                         }
 
                         if (tTrainConfigInfo.tNvrServerInfo[i].iCarriageNO <= 0)

@@ -9,13 +9,13 @@
 #include "presetpasswdconfirm.h"
 #include "pmsgcli.h"
 #include "state.h"
-
 #include <QVideoWidget>
 #include <QMediaPlaylist>
 #include <QMediaPlayer>
 #include "qplayer.h"
 #include <QPainter>
 #include "cmplayer.h"
+#include "alarmwidget.h"
 
 namespace Ui {
 class pvmsMonitorWidget;
@@ -108,6 +108,7 @@ public:
     QLabel *m_channelNoLabel;
     int pageType;
 
+    int HDiskState;
     int m_iSelectPresetNo;   //保存选中的预置点编号
     int m_iAlarmNotCtrlFlag;   //有报警信息未处理标志
     time_t tPollingOparateTime;  //轮询操作时间

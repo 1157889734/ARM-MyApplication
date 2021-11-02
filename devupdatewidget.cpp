@@ -746,14 +746,13 @@ void devUpdateWidget::configFileSelectionSlot()
 }
 
 
-#if 1
 void devUpdateWidget::configUpdateFileSLOT()
 {
 
+    char *pcfileName = NULL;
 
     QString filename = "";
     char acUserType[64] = {0};
-    qDebug()<<"************configUpdateFileSLOT="<<__LINE__<<endl;
 
 //    DebugPrint(DEBUG_UI_OPTION_PRINT, "devUpdateWidget configFileSelection button pressed!\n");
 
@@ -799,19 +798,28 @@ void devUpdateWidget::configUpdateFileSLOT()
             }
 
 
+            pcfileName = parseFileNameFromPath(ui->configFileDisplayLineEdit_2->text().toLatin1().data());
+            if (NULL == pcfileName)
+            {
+                return;
+            }
+
+            if (strncmp(pcfileName, "moittor", strlen(pcfileName)) != 0)
+            {
+    //            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget select error config file!\n");
+                QMessageBox msgBox(QMessageBox::Question,QString(tr("注意")),QString(tr("升级文件选择错误")));
+                msgBox.setStandardButtons(QMessageBox::Yes);
+                msgBox.button(QMessageBox::Yes)->setText("确 定");
+                msgBox.exec();
+                return;
+            }
         }
 
 }
-#endif
 
 void devUpdateWidget::devUpdateSlot()
 {
-    int iRet = 0;
-    char acLocalVersion[32] = {0}, acUpdateVersion[32] = {0};
-    FILE *fp = NULL;
     char acUserType[64] = {0};
-    T_LOG_INFO tLogInfo;
-    char *pcfileName = NULL;
 
 //    DebugPrint(DEBUG_UI_OPTION_PRINT, "devUpdateWidget update device!\n");
 
@@ -860,23 +868,8 @@ void devUpdateWidget::devUpdateSlot()
             return;
         }
 
-        pcfileName = parseFileNameFromPath(ui->configFileDisplayLineEdit_2->text().toLatin1().data());
-        if (NULL == pcfileName)
-        {
-            return;
-        }
 
-        if (strncmp(pcfileName, "x86MyApplication", strlen(pcfileName)) != 0)
-        {
-//            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget select error config file!\n");
-            QMessageBox msgBox(QMessageBox::Question,QString(tr("注意")),QString(tr("升级文件选择错误")));
-            msgBox.setStandardButtons(QMessageBox::Yes);
-            msgBox.button(QMessageBox::Yes)->setText("确 定");
-            msgBox.exec();
-            return;
-        }
-
-        if ((access("/mnt/usb/u/x86MyApplication", F_OK) < 0) || (access("/mnt/usb/u/version.ini", F_OK) < 0))
+        if (access("/media/usb0/moittor", F_OK) < 0)
         {
 //            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget not find update file in USB device!\n");
             QMessageBox msgBox(QMessageBox::Warning,QString(tr("注意")),QString(tr("U盘中未检测更新文件!")));
@@ -887,58 +880,6 @@ void devUpdateWidget::devUpdateSlot()
             return;
         }
 
-        fp = fopen("/media/usb0/version.ini","rb");
-        if (NULL == fp)
-        {
-//            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget open update file fail in USB device!\n");
-            QMessageBox msgBox(QMessageBox::Warning,QString(tr("注意")),QString(tr("U盘文件读取出错!")));
-            msgBox.setStandardButtons(QMessageBox::Yes);
-            msgBox.button(QMessageBox::Yes)->setText("确 定");
-            msgBox.exec();
-            ui->clientRebootPushButton->setEnabled(true);
-            return;
-        }
-        iRet = fread(acUpdateVersion, 1, sizeof(acUpdateVersion), fp);
-        if (iRet <= 0)
-        {
-//            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget read update file fail in USB device!\n");
-            QMessageBox msgBox(QMessageBox::Warning,QString(tr("注意")),QString(tr("U盘文件读取出错!")));
-            msgBox.setStandardButtons(QMessageBox::Yes);
-            msgBox.button(QMessageBox::Yes)->setText("确 定");
-            msgBox.exec();
-            fclose(fp);
-            ui->clientRebootPushButton->setEnabled(true);
-            return;        QApplication *app;
-            app->exit();
-        }
-        fclose(fp);
-
-        STATE_GetSysVersion(acLocalVersion, sizeof(acLocalVersion));
-        if (strlen(acLocalVersion) <= 0)
-        {
-//            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget update file fail, can't get app version!\n");
-            QMessageBox msgBox(QMessageBox::Warning,QString(tr("注意")),QString(tr("升级失败，本地版本号获取失败!")));
-            msgBox.setStandardButtons(QMessageBox::Yes);
-            msgBox.button(QMessageBox::Yes)->setText("确 定");
-            msgBox.exec();
-        }
-
-        if (!strcmp(acLocalVersion, acUpdateVersion))
-        {
-//            DebugPrint(DEBUG_UI_MESSAGE_PRINT, "devUpdateWidget update file fail,update version is the same as the running app version!\n");
-            QMessageBox msgBox(QMessageBox::Warning,QString(tr("注意")),QString(tr("未检测到版本更新!")));
-            msgBox.setStandardButtons(QMessageBox::Yes);
-            msgBox.button(QMessageBox::Yes)->setText("确 定");
-            msgBox.exec();
-            ui->clientRebootPushButton->setEnabled(true);
-            return;
-        }
-
-        memset(&tLogInfo, 0, sizeof(T_LOG_INFO));
-        tLogInfo.iLogType = 0;
-        snprintf(tLogInfo.acLogDesc, sizeof(tLogInfo.acLogDesc), "Update: old version:%s new version:%s", acLocalVersion, acUpdateVersion);
-        LOG_WriteLog(&tLogInfo);
-
 
         ui->updateStatueTextEdit->append(tr("正在复制文件..."));
         if (access("/home/data/backup",F_OK) < 0)
@@ -946,9 +887,9 @@ void devUpdateWidget::devUpdateSlot()
             system("mkdir /home/data/backup");
         }
 
-        system("cp /home/data/x86MyApplication /home/data/backup/");
-        system("rm /home/data/x86MyApplication");
-        system("cp /media/usb0/x86MyApplication /home/data/x86MyApplication");
+        system("cp /home/data/moittor /home/data/backup/");
+        system("rm /home/data/moittor");
+        system("cp /media/usb0/moittor /home/data/moittor");
         system("sync");
 
         ui->updateStatueTextEdit->append(tr("复制文件完成"));
@@ -984,10 +925,10 @@ void devUpdateWidget::devRebootSlot()
         QString program = QApplication::applicationFilePath();
         QStringList arguments = QApplication::arguments();
         QString workingDirectory = QDir::currentPath();
-        if("/home/data/x86MyApplication" != program)
+        if("/home/data/moittor" != program)
         {
-            system("cp /home/data/backup/x86MyApplication /home/data/ ");
-            program = "/home/data/x86MyApplication";
+            system("cp /home/data/backup/moittor /home/data/ ");
+            program = "/home/data/moittor";
         }
 
         QProcess::startDetached(program, arguments, workingDirectory);

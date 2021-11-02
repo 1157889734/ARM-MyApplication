@@ -54,7 +54,6 @@ void *blackScreenMonitorThread(void *param)
 MyApplication::MyApplication(int &argc,char **argv) :
     QApplication(argc, argv)
 {
-    qDebug()<<"***********************MyApplication"<<__FUNCTION__<<__LINE__<<endl;
     m_blackScreenWidget = new QWidget();    //创建一个黑屏界面，黑屏监控使用，5分钟程序界面未操作黑屏，即显示该界面，否则隐藏
 
     m_blackScreenWidget->setGeometry(0, 0, 1024, 768);   //设置位置

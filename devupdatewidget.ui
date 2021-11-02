@@ -596,7 +596,7 @@ QPushButton:pressed
      </font>
     </property>
     <property name="text">
-     <string>128</string>
+     <string>50</string>
     </property>
    </widget>
    <widget class="QLabel" name="carriageLabel">
@@ -736,7 +736,7 @@ QPushButton:pressed
      </font>
     </property>
     <property name="text">
-     <string>128</string>
+     <string>50</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_9">
@@ -833,7 +833,7 @@ QPushButton:pressed
      </font>
     </property>
     <property name="text">
-     <string>128</string>
+     <string>50</string>
     </property>
    </widget>
    <widget class="QPushButton" name="imageParamSetPushButton">
@@ -947,7 +947,7 @@ border-style: solid;}
 
 QPushButton:pressed
 {
-	background-image: url(:/);
+	background-image: url(:/res/pressed_alarm.bmp);
 	background-color: rgb(211, 215, 207);
    border-style: dashed; /*边框样式*/
    border-width: 1px;  /*边框宽度为4像素*/

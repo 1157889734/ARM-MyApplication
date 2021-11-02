@@ -121,7 +121,6 @@ signals:
 
 private:
     Ui::recordPlayWidget *ui;
-    pvmsMonitorWidget *m_pvmsMonitorPage;
     QTimer *m_alarmHappenTimer;
     QTimer *m_recorQueryTimer;
     QStyle *m_tableWidgetStyle;

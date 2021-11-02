@@ -895,7 +895,7 @@ void recordPlayWidget::getTrainConfig()    	//获取车型配置文件，初始�
         ui->carSeletionComboBox->addItem(item);
         m_Phandle[i] = STATE_GetNvrServerPmsgHandle(i);
 //        qDebug()<<"DEBUG_UI_NOMAL_PRINT  tTrainConfigInfo.tNvrServerInfo[i].iCarriageNO::="<<i<<":="<<tTrainConfigInfo.tNvrServerInfo[i].iCarriageNO;
-//        if (0 == i)
+        if (0 == i)
         {
 //            DebugPrint(DEBUG_UI_NOMAL_PRINT, "[%s] the first server has camera num=%d\n",__FUNCTION__,tTrainConfigInfo.tNvrServerInfo[i].iPvmsCameraNum);
 //            qDebug()<<"DEBUG_UI_NOMAL_PRINT the first server has camera num="<<tTrainConfigInfo.tNvrServerInfo[i].iPvmsCameraNum<<__FUNCTION__<<__LINE__<<endl;
