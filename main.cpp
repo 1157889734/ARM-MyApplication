@@ -6,6 +6,8 @@
 #include "loginwidget.h"
 #include "pvmsmenuwidget.h"
 #include "devmanagewidget.h"
+#include "head.h"
+#include "checkudisk.h"
 #include <QtVirtualKeyboard>
 #include <QPixmap>
 #include <QSplashScreen>
@@ -28,6 +30,8 @@ loginWidget *g_loginPage = NULL;   //登录页面
 pvmsMenuWidget *g_pvmsMenuPage = NULL;   //受电弓监控主菜单页面
 recordPlayWidget *g_recordPage = NULL;
 pvmsMonitorWidget *g_monitorPage = NULL;
+class checkUdisk;
+
 
 int main(int argc, char *argv[])
 {
@@ -148,6 +152,10 @@ int main(int argc, char *argv[])
         }
     }
     LED_Init();
+
+    checkUdisk check;
+    check.started();
+
   //创建QT运行主应用程序
     app.setWindowIcon(QIcon(":/res/info.png"));   //设置窗口图标，这里主要是messagebox窗体会显示，而避免出现QT图标
 //    qDebug() << "drivers------------------------"<< QSqlDatabase::drivers();

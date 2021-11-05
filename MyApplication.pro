@@ -7,7 +7,7 @@
 
 QT       += core gui widgets  multimedia multimediawidgets sql virtualkeyboard
 
-TARGET = moittor
+TARGET = monitor
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -53,7 +53,11 @@ SOURCES += \
     rs485serv.c \
     waitloginwidget.cpp \
     usergroupmanage.cpp \
-    ckeyboard.cpp
+    ckeyboard.cpp \
+    checkudisk.cpp \
+    runcmd.cpp \
+    usbcheck.cpp
+
 #    usermanageconfig.cpp
 
 HEADERS += \
@@ -88,7 +92,11 @@ HEADERS += \
     waitloginwidget.h \
     usergroupmanage.h \
     ckeyboard.h \
-    define.h
+    define.h \
+    checkudisk.h \
+    head.h \
+    runcmd.h \
+    usbcheck.h
 #    usermanageconfig.h
 
 # Default rules for deployment.
